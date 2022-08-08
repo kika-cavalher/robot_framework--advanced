@@ -9,9 +9,16 @@ Documentation                               Signup Test Suite
 
 Register a new User
     ${user}                                 Factory User
+    Set Suite Variable                      ${user}
 
     Go to Signup form
     Fill Signup form                        ${user}
     Submit Signup Forms
     User Should Be Registered
+
+Duplicate user
+    Go to Signup form
+    Fill Signup form                        ${user}
+    Submit Signup Forms
+    Modal Content Shoud Be                  Já temos um Geek com o email informado.
 

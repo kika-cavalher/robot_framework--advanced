@@ -6,7 +6,7 @@ BDD (Behavior Driven Development)
 > Posso fazer o meu cadastro
 > Para que eu possa buscar por prestadores de serviços (Geeks)
 
-##### Cenário: Cadastro de cliente
+##### Cenário: Cadastro de cliente --> ok
 
 Dado que acesso a página de cadastro
 Quando faço o meu cadastro com o nome completo, e-mail e senha
