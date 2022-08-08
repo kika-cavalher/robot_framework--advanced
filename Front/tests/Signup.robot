@@ -1,25 +1,29 @@
-*Settings*
+*** Settings ***
 
-Resource                                    ${EXECDIR}/Front/resources/Base.robot
+Resource                                    ../resources/Base.robot
+Resource                                    ../resources/Actions.robot
 Test Setup                                  Start Session
 Test Teardown                               Finish Session        
 
 Documentation                               Signup Test Suite
 
-* Test Cases *
+*** Test Cases ***
 
 Register a new User
-    ${user}                                 Factory User
-    Set Suite Variable                      ${user}
+    ${user}                                Factory User
 
     Go to Signup form
-    Fill Signup form                        ${user}
+    Fill Signup form                       ${user}
     Submit Signup Forms
     User Should Be Registered
 
 Duplicate user
+    [Tags]                                 dup_email
+    ${user}                                Factory User
+
+
     Go to Signup form
-    Fill Signup form                        ${user}
+    Fill Signup form                       ${user}
     Submit Signup Forms
-    Modal title Shoud Be                    Oops...
-    Modal Content Shoud Be                  Já temos um usuário com o e-mail informado.
+    Modal title Shoud Be                   Oops...
+    Modal Content Shoud Be                 Já temos um usuário com o e-mail informado.

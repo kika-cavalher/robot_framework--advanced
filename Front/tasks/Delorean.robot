@@ -1,8 +1,8 @@
-*Settings*
-Resource                                    ${EXECDIR}/Front/resources/Database.robot
+*** Settings ***
+Resource                                    ../resources/Database.robot
 Documentation                               Delorean
 
-*Tasks*
+*** Tasks ***
 Back To The Past
     Connect To Postgress
     Reset Env

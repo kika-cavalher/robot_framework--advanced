@@ -1,15 +1,15 @@
-*Settings*
+*** Settings ***
 
 Documentation                               Base Test
 
 Library                                     Browser
-Library                                     factories/Users.py
-Resource                                    Actions.robot
+Library                                     ./factories/Users.py  
 
-*Variables*
+*** Variables ***
 ${BASE_URL}                                 https://getgeeks-erica.herokuapp.com
 
-*Keywords*
+
+*** Keywords ***
 
 Start Session
     New Browser                             chromium                        headless=False                          slowMo=00:00:00.5

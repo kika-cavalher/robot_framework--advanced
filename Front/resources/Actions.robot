@@ -1,9 +1,11 @@
-*Settings*
-
+*** Settings ***
 Documentation                               Actions system
-Resource                                    Base.robot
+Library                                     Browser
 
-*Keywords*
+*** Variables ***
+${BASE_URL}                                 https://getgeeks-erica.herokuapp.com
+
+*** Keywords ***
 Go to Signup form
     Go To                                   ${BASE_URL}/signup
     Wait For Elements State                 css=.signup-form                                            visible                         5

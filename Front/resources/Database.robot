@@ -1,11 +1,10 @@
-*Settings*
+*** Settings ***
 
 Documentation                                       Database Helpers
 
 Library                                             DatabaseLibrary
 
-*Keywords*
-
+*** Keywords ***
 Connect To Postgress
     Connect To Database                             psycopg2
     ...                                             wyscmazv
