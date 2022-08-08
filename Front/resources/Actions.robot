@@ -1,6 +1,7 @@
 *Settings*
 
 Documentation                               Actions system
+Resource                                    Base.robot
 
 *Keywords*
 Go to Signup form
@@ -23,8 +24,16 @@ User Should Be Registered
 
     Wait For Elements State                 ${expect_message}                                           visible                         5
 
+Modal title Shoud Be
+    [Arguments]                             ${expect_title}
+    ${title}                                Set Variable                                                css=.swal2-title
+
+    Wait For Elements State                 ${title}                                                    visible                         5
+    Get Text                                ${title}                                                    equal                           ${expect_title} 
+
 Modal Content Shoud Be
     [Arguments]                             ${expect_text}
+    ${content}                              Set Variable                                                css=.swal2-html-container
 
-    Wait For Elements State                 css=.swal2-html-container                                   visible                         5
-    Get Text                                css=.swal2-html-container                                   equal                           ${expect_text}  
+    Wait For Elements State                 ${content}                                                  visible                         5
+    Get Text                                ${content}                                                  equal                           ${expect_text}  
