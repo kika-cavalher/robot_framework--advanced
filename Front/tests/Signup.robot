@@ -1,16 +1,15 @@
 *** Settings ***
 
 Resource                                    ../resources/Base.robot
-Resource                                    ../resources/Actions.robot
-Resource                                    ../resources/Helpers.robot
 Test Setup                                  Start Session
 Test Teardown                               Finish Session        
 
 Documentation                               Signup Test Suite
 
 *** Test Cases ***
-
 Register a new User
+    [Tags]                                  happy_way
+
     ${user}                                 Factory User
 
     Go to Signup form
@@ -19,7 +18,7 @@ Register a new User
     User Should Be Registered
 
 Duplicate user
-    [Tags]                                  dup_email
+    [Tags]                                  attempt_signup
     
     ${user}                                 Factory User
     Add User From Database                  ${user}
@@ -29,3 +28,13 @@ Duplicate user
     Submit Signup Forms
     Modal title Shoud Be                    Oops...
     Modal Content Shoud Be                  Já temos um usuário com o e-mail informado.
+
+Wrong Email
+    [Tags]                                  attempt_signup
+
+    ${user}                                 Factory Wrong Email
+
+    Go to Signup form
+    Fill Signup form                        ${user}
+    Submit Signup Forms
+    Field Notification Should Be            O email está estranho

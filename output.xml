@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.6 on win32)" generated="20220809 18:08:22.992" rpa="false" schemaversion="3">
+<suite id="s1" name="Signup" source="c:\Users\erica\Documents\apps\Q.A\robot_framework-Advanced\robot_framework--advanced\Front\tests\Signup.robot">
+<test id="s1-t1" name="robocop: disable" line="12">
+<status status="FAIL" starttime="20220809 18:08:24.100" endtime="20220809 18:08:24.103">Test contains no keywords.</status>
+</test>
+<doc>Signup Test Suite</doc>
+<status status="FAIL" starttime="20220809 18:08:22.994" endtime="20220809 18:08:24.108"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Signup">Signup</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
