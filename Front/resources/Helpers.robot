@@ -1,13 +1,13 @@
 *** Settings *** 
 
 Documentation                               Test Helpers
-Resource                                    Actions.robot        
+Resource                                    Actions.robot 
+Resource                                    Database.robot         
 
 *** Keywords ***
-Add User
+Add User From Database
     [Arguments]                            ${user}
 
-    Go to Signup form
-    Fill Signup form                       ${user}
-    Submit Signup Forms
-    User Should Be Registered
+    Connect To Postgress
+    Insert User                            ${user}
+    Disconnect From Database

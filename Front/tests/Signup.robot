@@ -13,13 +13,17 @@ Documentation                               Signup Test Suite
 Register a new User
     ${user}                                 Factory User
 
-    Add User                                ${user}
+    Go to Signup form
+    Fill Signup form                        ${user}
+    Submit Signup Forms
+    User Should Be Registered
 
 Duplicate user
     [Tags]                                  dup_email
+    
     ${user}                                 Factory User
+    Add User From Database                  ${user}
 
-    Add User                                ${user}
     Go to Signup form
     Fill Signup form                        ${user}
     Submit Signup Forms
