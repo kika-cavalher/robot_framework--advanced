@@ -40,8 +40,19 @@ Modal Content Shoud Be
     Wait For Elements State                 ${content}                                                  visible                         5
     Get Text                                ${content}                                                  equal                           ${expect_text}  
 
-Field Notification Should Be
-    [Arguments]                             ${expect_notice}
+Alert Span Should Be
+    [Arguments]                             ${expect_alert}
 
-    Wait For Elements State                css=span[class=error] >> text=${expect_notice}        
+    Wait For Elements State                css=span[class=error] >> text=${expect_alert}        
     ...                                    visible                                                       5
+
+Signup With Short Pass
+    [Arguments]                             ${short_pass}
+    ${user}                                 Create Dictionary
+    ...                                     name=Erica                             lastname=Cavalher
+    ...                                     email=erica.cavalher@gmail.com          password=${short_pass}
+
+    Go to Signup form
+    Fill Signup form                        ${user}
+    Submit Signup Forms
+    Alert Span Should Be                    Informe uma senha com pelo menos 6 caracteres
