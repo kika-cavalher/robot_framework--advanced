@@ -37,4 +37,31 @@ Wrong Email
     Go to Signup form
     Fill Signup form                        ${user}
     Submit Signup Forms
-    Field Notification Should Be            O email está estranho
+    Alert Span Should Be                    O email está estranho
+
+Required Fields
+    [Tags]                                  attempt_signup                                required_fields
+
+    Go to Signup form
+    Submit Signup Forms
+    Alert Span Should Be                    Cadê o seu nome?
+    Alert Span Should Be                    E o sobrenome?
+    Alert Span Should Be                    O email é importante também!
+    Alert Span Should Be                    Agora só falta a senha! 
+
+Short Password
+    [Tags]                                  attempt_signup                                short_pass
+
+    [Template]                              Signup With Short Pass
+    1
+    a
+    12
+    a2
+    -1
+    123
+    ab3
+    1234
+    ab3c
+    12345
+    a23bc
+    acb#1
