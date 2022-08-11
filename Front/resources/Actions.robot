@@ -1,6 +1,7 @@
 *** Settings ***
 Documentation                               Actions system
 Library                                     Browser
+Resource    Base.robot
 
 *** Variables ***
 ${BASE_URL}                                 https://getgeeks-erica.herokuapp.com
@@ -56,3 +57,9 @@ Signup With Short Pass
     Fill Signup form                        ${user}
     Submit Signup Forms
     Alert Span Should Be                    Informe uma senha com pelo menos 6 caracteres
+
+Signup Without Fill Form
+
+    Start Session
+    Go to Signup form
+    Submit Signup Forms
