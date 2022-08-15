@@ -1,11 +1,7 @@
 *** Settings ***
-Documentation                               Actions system
-Library                                           Browser
-Library                                           Collections
-Resource                                          Base.robot
+Resource                                          ../Base.robot
 
-*** Variables ***
-${BASE_URL}                                       https://getgeeks-erica.herokuapp.com
+Documentation                                     Signup Actions Tests
 
 *** Keywords ***
 Go to Signup form

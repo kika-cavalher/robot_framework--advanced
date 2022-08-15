@@ -1,7 +1,7 @@
 *** Settings *** 
 
 Documentation                               Test Helpers
-Resource                                    Actions.robot 
+Resource                                    ./actions/SignupActions.robot
 Resource                                    Database.robot         
 
 *** Keywords ***
