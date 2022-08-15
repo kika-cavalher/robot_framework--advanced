@@ -1,7 +1,7 @@
 *** Settings ***
 
 Resource                                    ../resources/Base.robot
-Suite Setup                                 Signup Without Fill Form
+Suite Setup                                 Start Session
 Test Teardown                               Finish Session        
 
 Documentation                               Login test Suite
@@ -10,8 +10,10 @@ Documentation                               Login test Suite
 
 User Login
     [Tags]                                  happy_way
-
+    ${user}                                 Factory User
+    Add User                                ${user}
+    
     Go to Login form
-    Fill Credentials
+    Fill Credentials                        ${user}
     Submit Credentials
-    User shold Be Logged in                    
+    User shold Be Logged in                 ${user}  
