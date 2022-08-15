@@ -1,8 +1,8 @@
 *** Settings ***
 Documentation                               Actions system
 Library                                           Browser
-Library    Collections
-Resource    Base.robot
+Library                                           Collections
+Resource                                          Base.robot
 
 *** Variables ***
 ${BASE_URL}                                       https://getgeeks-erica.herokuapp.com
