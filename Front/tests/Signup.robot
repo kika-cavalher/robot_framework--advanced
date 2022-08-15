@@ -41,13 +41,16 @@ Wrong Email
 
 Required Fields
     [Tags]                                  attempt_signup                                required_fields
+    
+    @{expected_alerts}                      Create List
+    ...                                     Cadê o seu nome?
+    ...                                     E o sobrenome?
+    ...                                     O email é importante também!
+    ...                                     Agora só falta a senha! 
 
     Go to Signup form
     Submit Signup Forms
-    Alert Span Should Be                    Cadê o seu nome?
-    Alert Span Should Be                    E o sobrenome?
-    Alert Span Should Be                    O email é importante também!
-    Alert Span Should Be                    Agora só falta a senha! 
+    Alert Spans Should Be                   ${expected_alerts}     
 
 Short Password
     [Tags]                                  attempt_signup                                short_pass
@@ -65,3 +68,4 @@ Short Password
     12345
     a23bc
     acb#1
+
