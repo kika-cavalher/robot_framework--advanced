@@ -30,13 +30,7 @@ Modal title Shoud Be
 
     Wait For Elements State                        ${title}                                                    visible                         5
     Get Text                                       ${title}                                                    equal                           ${expect_title} 
-
-Modal Content Shoud Be
-    [Arguments]                                    ${expect_text}
-    ${content}                                     Set Variable                                                css=.swal2-html-container
-
-    Wait For Elements State                        ${content}                                                  visible                         5
-    Get Text                                       ${content}                                                  equal                           ${expect_text}  
+ 
 
 Alert Span Should Be
     [Arguments]                                    ${expect_alert}

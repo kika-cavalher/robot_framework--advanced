@@ -8,6 +8,7 @@ Library                                     ./factories/Users.py
 
 Resource                                    ./actions/SignupActions.robot
 Resource                                    ./actions/AuthActions.robot
+Resource                                    ./actions/_SharedActions.robot
 Resource                                    Database.robot  
 Resource                                    Helpers.robot
 
