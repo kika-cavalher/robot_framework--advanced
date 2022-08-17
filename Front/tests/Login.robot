@@ -28,6 +28,16 @@ Incorrect Pass
     Modal Content Shoud Be                  Usuário e/ou senha inválidos.
 
 
+Incorrect E-mail
+    [Tags]                                  attempt_signin
+    ${user}                                 Create Dictionary                            
+    ...                                     email=erica.cavalher.com                   password=abc123
+
+    Go to Login form
+    Fill Credentials                        ${user}
+    Submit Credentials
+    Should Be Type Email
+
 User not found
     [Tags]                                  attempt_signin
     ${user}                                 Create Dictionary                            
