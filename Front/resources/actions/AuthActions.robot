@@ -3,6 +3,10 @@ Resource                                          ../Base.robot
 
 Documentation                                     Authentication Actions
 
+*** Variables ***
+${INPUT_EMAIL}                                    id=email
+${INPUT_PASS}                                     id=password 
+
 *** Keywords ***
 Go to Login form
     Go To                                          ${BASE_URL}
@@ -11,8 +15,8 @@ Go to Login form
 Fill Credentials
     [Arguments]                                    ${user}
 
-    Fill Text                                      id=email                             ${user}[email]
-    Fill Text                                      id=password                          ${user}[password]
+    Fill Text                                      ${INPUT_EMAIL}                       ${user}[email]
+    Fill Text                                      ${INPUT_PASS}                        ${user}[password]
 
 Submit Credentials
     Click                                          css=.submit-button >> text=Entrar
@@ -24,3 +28,7 @@ User shold Be Logged in
 
     Wait For Elements State                        ${profile}                           visible                        5
     Get Text                                       ${profile}                           equal                          ${fullName}
+
+Should Be Type Email
+    Get Property                                    ${INPUT_EMAIL} 
+    ...                                             type                                 equal                         email
