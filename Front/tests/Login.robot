@@ -11,7 +11,6 @@ Documentation                               Login test Suite
 User Login
     [Tags]                                  happy_way
     ${user}                                 Factory User Login
-    Add User From Database                  ${user}
     
     Go to Login form
     Fill Credentials                        ${user}
