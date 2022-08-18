@@ -39,7 +39,7 @@ Wrong Email
     Submit Signup Forms
     Alert Span Should Be                    O email está estranho
 
-Required Fields
+Required Fields SignUp
     [Tags]                                  attempt_signup                                required_fields
     
     @{expected_alerts}                      Create List

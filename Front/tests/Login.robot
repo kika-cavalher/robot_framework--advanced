@@ -47,3 +47,33 @@ User not found
     Fill Credentials                        ${user}
     Submit Credentials
     Modal Content Shoud Be                  Usuário e/ou senha inválidos.
+
+Required Email
+    [Tags]                                   attempt_signin
+    ${user}                                 Create Dictionary                            
+    ...                                     email=${EMPTY}                                password=abc123
+
+    Go to Login form
+    Fill Credentials                        ${user}
+    Submit Credentials
+    Alert Span Should Be                    E-mail obrigatório
+
+Required Password
+    [Tags]                                   attempt_signin
+    ${user}                                 Create Dictionary                            
+    ...                                     email=erica.cavalher@gmail.com                password=${EMPTY}    
+
+    Go to Login form
+    Fill Credentials                        ${user}
+    Submit Credentials
+    Alert Span Should Be                    Senha obrigatória
+
+Required Fields Login
+    [Tags]                                  attempt_signup
+    @{expected_alerts}                      Create List
+    ...                                     E-mail obrigatório
+    ...                                     Senha obrigatória
+
+    Go to Login form
+    Submit Credentials
+    Alert Spans Should Be                   ${expected_alerts}     

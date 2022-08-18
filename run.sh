@@ -12,7 +12,7 @@ robot -l NONE -o NONE -r NONE Front/tasks/Delorean.robot
 robot -d ./logs Front/tests/Login.robot
 
 ######Rodar os testes de Login filtrando######
-# robot -d ./logs -i happy_way Front/tests/Login.robot
+# robot -d ./logs -i teste Front/tests/Login.robot
 # robot -d ./logs -i attempt_login Front/tests/Login.robot
 
 
