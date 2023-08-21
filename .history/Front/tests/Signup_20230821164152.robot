@@ -1,6 +1,6 @@
 *** Settings *** 
 
-Resource                                    ../resources/0.default/Base.robot
+Resource                                    ../0.default/
 Test Setup                                  Start Session
 Test Teardown                               Finish Session        
 

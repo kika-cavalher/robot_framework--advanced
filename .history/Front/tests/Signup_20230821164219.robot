@@ -1,6 +1,6 @@
 *** Settings *** 
 
-Resource                                    ../resources/0.default/Base.robot
+Resource                                    D:\OneDrive - Novabase\Documents\1.AutomaticTests\robot_framework--advanced\Front\resources\0.default\Base.robot
 Test Setup                                  Start Session
 Test Teardown                               Finish Session        
 
