@@ -1,0 +1,30 @@
+*** Settings ***
+Documentation                                     Signup Actions Tests
+
+Resource                                          ../0.default/Base.robot
+Resource                                          ./data.robot
+
+*** Keywords ***
+#Default
+Go to Geek form
+    Click                                          ${btn_be_geek}                                      
+    Wait For Elements State                        ${element_form}
+    ...                                            visible                              5
+    ...     
+
+#Add
+Fill Geek Forms
+    [Arguments]                                    ${geek_profile}
+
+    Fill Text                                      ${input_whats}                       ${geek_profile}[whats]
+    Fill Text                                      ${input_desc}  
+    ...                      ${geek_profile}[desc]
+#Automatizar uma caixa de seleção com a lib browser
+    Select Options By                              ${input_printer_repair}              ${geek_profile}[whats]
+    Select Options By                              ${input_work}                        ${geek_profile}[whats]
+    Fill Text                                      ${input_cost}                        ${geek_profile}[whats]
+
+
+
+
+#Validate
