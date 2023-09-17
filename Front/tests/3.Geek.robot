@@ -25,9 +25,3 @@ Be a Geek
     Submit Geek Form
 #Sempre valide antes de finalizar um teste.
     User Should Be Registered               
-
-
-
-
-
-

@@ -34,3 +34,29 @@ Submit Geek Form
 User Should Be Registered
     Wait For Elements State                        ${msg_validation_register}
     ...                                            visible                              5
+
+Attempt Be a Geek
+    [Arguments]                                    ${key}                               
+    ...                                            ${input_field}                       ${output_message}
+
+    ${user}                                        Factory User                         attempt_geek
+
+#Com isso é possivel deixar dinamico testes semelhantes sem precisar refazer o fluxo varias vezes e obter o resultado esperado.
+    Set To Dictionary                              ${user}[geek_profile]                
+    ...                                            ${key}                               ${input_field}
+
+    Fill Geek Forms                                ${user}[geek_profile]
+    Submit Geek Form
+    Alert Span Should Be                           ${output_message}
+    Browser.Take Screenshot                        fullPage=True
+
+
+#Como todos os cenarios tem o mesmo inicio o ideal é criar o inicial separado e deixar programado para iniciar todos os casos do arquivo. 
+Start Session For Attempt Be geek
+    [Tags]                                         attempt_geek
+
+    ${user}                                        Factory User                         attempt_geek
+    
+    Start Session
+    Do Login                                       ${user} 
+    Go to Geek form

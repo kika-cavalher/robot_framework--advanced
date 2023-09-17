@@ -44,7 +44,20 @@ def factory_user(target):
                 'work': 'Remoto',
                 'cost': '500'
             }   
-        }
+        },
+        'attempt_geek': {
+            'name': 'Rodrigo',
+            'lastname': 'Sagaz',
+            'email': 'rodrigo.sagaz@gmail.com',
+            'password': 'Kika1234',
+            'geek_profile': {
+                'whats': '11999999999',
+                'desc': 'There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain',
+                'printer_repair': 'Sim',
+                'work': 'Remoto',
+                'cost': '500'
+            } 
+        }     
     }
 
 #otimizar a utilização dos testes
