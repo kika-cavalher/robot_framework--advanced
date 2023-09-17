@@ -14,7 +14,7 @@ Documentation                               Geek Test Suite
 Be a Geek
     [Tags]                                  happy_way
 
-    ${user}                                 Factory User Be Geek
+    ${user}                                 Factory User                                be_geek
 
 #Minha primeira pré condição é ter um cliente cadastrado e estar logado (Criei o cadastro no seeds direto no banco e o login no arquivo helpers.)
     Do Login                                ${user} 

@@ -18,7 +18,9 @@ Do Login
     [Arguments]                              ${user}
 
     Go to Login form
-    Fill Credentials                        ${user}
+    Fill Credentials                         ${user}
     Submit Credentials
-    User shold Be Logged in                 ${user}  
+    User shold Be Logged in                  ${user}  
+
+
 

@@ -10,47 +10,42 @@ def get_hashed_pass(password):
     return hashed
 
 
-def factory_user():
+def factory_user(target):
     first_name = fake.first_name()
 
-    return {
-        'name': fake.first_name(),
-        'lastname': fake.last_name(),
-        'email': first_name.lower() + '@gmail.com',
-        'password': 'Kika1234'
-    }
-
-def factory_wrong_email():
-    first_name = fake.first_name()
-
-    return {
-        'name': fake.first_name(),
-        'lastname': fake.last_name(),
-        'email': first_name.lower() + '&gmail.com',
-        'password': 'Kika1234'
-    }
-
-def factory_user_login():
-
-    return {
-        'name': 'Erica',
-        'lastname': 'Cavalher',
-        'email': 'erica.cavalher@gmail.com',
-        'password': 'Kika1234'
-    }
-
-def factory_user_be_geek():
-
-    return {
-        'name': 'Bags',
-        'lastname': 'Loli',
-        'email': 'bags.loli@gmail.com',
-        'password': 'Kika1234',
-        'geek_profile': {
-            'whats': '11999999999',
-            'desc': 'Sou bom em abrir embalagem de pc, depois me esconder e arranhar ela. Eu já destruir inumeras embalagens, as vezes com a boca, as vezes com a unha, mas pode ficar tranquilo que eu sempre consigo!',
-            'printer_repair': 'Sim',
-            'work': 'Remoto',
-            'cost': '500'
+    data = {
+        'faker': {
+            'name': fake.first_name(),
+            'lastname': fake.last_name(),
+            'email': first_name.lower() + '@gmail.com',
+            'password': 'Kika1234'
+        },
+        'wrong_email': {
+            'name': fake.first_name(),
+            'lastname': fake.last_name(),
+            'email': first_name.lower() + '&gmail.com',
+            'password': 'Kika1234'
+        },
+        'login': {
+            'name': 'Erica',
+            'lastname': 'Cavalher',
+            'email': 'erica.cavalher@gmail.com',
+            'password': 'Kika1234'
+        },
+        'be_geek': {
+            'name': 'Bags',
+            'lastname': 'Loli',
+            'email': 'bags.loli@gmail.com',
+            'password': 'Kika1234',
+            'geek_profile': {
+                'whats': '11999999999',
+                'desc': 'Sou bom em abrir embalagem de pc, depois me esconder e arranhar ela. Eu já destruir inumeras embalagens, as vezes com a boca, as vezes com a unha, mas pode ficar tranquilo que eu sempre consigo!',
+                'printer_repair': 'Sim',
+                'work': 'Remoto',
+                'cost': '500'
+            }   
         }
     }
+
+#otimizar a utilização dos testes
+    return data[target]

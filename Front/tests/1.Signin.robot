@@ -1,5 +1,3 @@
-# robot -d ./Front/.logs ./Front/tests/Signin.robot
-# robot -d ./Front/.logs -i happy_way ./Front/tests/Signin.robot
 *** Settings ***
 
 Library                                     ../resources/1.factories/Users.py
@@ -16,7 +14,7 @@ Documentation                               Login test Suite
 
 User Login
     [Tags]                                  happy_way
-    ${user}                                 Factory User Login
+    ${user}                                 Factory User                                    login
     
     Go to Login form
     Fill Credentials                        ${user}
@@ -37,7 +35,7 @@ Incorrect Pass
 Incorrect E-mail
     [Tags]                                  attempt_signin
     ${user}                                 Create Dictionary                            
-    ...                                     email=erica.cavalher.com                   password=abc123
+    ...                                     email=erica.cavalher.com                         password=abc123
 
     Go to Login form
     Fill Credentials                        ${user}
@@ -47,7 +45,7 @@ Incorrect E-mail
 User not found
     [Tags]                                  attempt_signin
     ${user}                                 Create Dictionary                            
-    ...                                     email=erica.cavalher@404.com                   password=abc123
+    ...                                     email=erica.cavalher@404.com                     password=abc123
 
     Go to Login form
     Fill Credentials                        ${user}
@@ -57,7 +55,7 @@ User not found
 Required Email
     [Tags]                                  attempt_signin
     ${user}                                 Create Dictionary                            
-    ...                                     email=${EMPTY}                                password=abc123
+    ...                                     email=${EMPTY}                                   password=abc123
 # empty -  variavel do robot, quando a lib browser recebe esse valor, ela deixa o campo vazio. 
 
     Go to Login form
@@ -68,7 +66,7 @@ Required Email
 Required Password
     [Tags]                                  attempt_signin
     ${user}                                 Create Dictionary                            
-    ...                                     email=erica.cavalher@gmail.com                password=${EMPTY}    
+    ...                                     email=erica.cavalher@gmail.com                   password=${EMPTY}    
 
     Go to Login form
     Fill Credentials                        ${user}

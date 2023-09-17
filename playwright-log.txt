@@ -1,8 +1,8 @@
-{"level":30,"time":"2023-09-04T18:00:21.821Z","pid":5456,"hostname":"LT132792","msg":"Listening on 62543"}
-{"level":30,"time":"2023-09-04T18:00:22.044Z","pid":5456,"hostname":"LT132792","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2023-09-04T18:00:22.046Z","pid":5456,"hostname":"LT132792","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2023-09-04T18:00:22.053Z","pid":5456,"hostname":"LT132792","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2023-09-04T18:00:22.053Z","pid":5456,"hostname":"LT132792","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-09-17T19:58:01.635Z","pid":23900,"hostname":"LT132792","msg":"Listening on 55006"}
+{"level":30,"time":"2023-09-17T19:58:02.078Z","pid":23900,"hostname":"LT132792","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-09-17T19:58:02.078Z","pid":23900,"hostname":"LT132792","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-09-17T19:58:02.081Z","pid":23900,"hostname":"LT132792","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-09-17T19:58:02.081Z","pid":23900,"hostname":"LT132792","msg":"End of node method getBrowserCatalog"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (C:\Python311\Lib\site-packages\Browser\wrapper\index.js:9385:15)
@@ -11,8 +11,8 @@ Error: Browser has been closed.
     at handleUnary (C:\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:833:17)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
 =============================================================
-{"level":30,"time":"2023-09-04T18:00:23.304Z","pid":5456,"hostname":"LT132792","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2023-09-04T18:00:23.304Z","pid":5456,"hostname":"LT132792","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-09-17T19:58:03.153Z","pid":23900,"hostname":"LT132792","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-09-17T19:58:03.153Z","pid":23900,"hostname":"LT132792","msg":"End of node method getBrowserCatalog"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (C:\Python311\Lib\site-packages\Browser\wrapper\index.js:9385:15)
@@ -21,7 +21,7 @@ Error: Browser has been closed.
     at handleUnary (C:\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:833:17)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
 =============================================================
-{"level":30,"time":"2023-09-04T18:00:23.309Z","pid":5456,"hostname":"LT132792","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2023-09-04T18:00:23.309Z","pid":5456,"hostname":"LT132792","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2023-09-04T18:00:23.319Z","pid":5456,"hostname":"LT132792","msg":"Start of node method closeAllBrowsers"}
-{"level":30,"time":"2023-09-04T18:00:23.319Z","pid":5456,"hostname":"LT132792","msg":"End of node method closeAllBrowsers"}
+{"level":30,"time":"2023-09-17T19:58:03.158Z","pid":23900,"hostname":"LT132792","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-09-17T19:58:03.158Z","pid":23900,"hostname":"LT132792","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-09-17T19:58:03.161Z","pid":23900,"hostname":"LT132792","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2023-09-17T19:58:03.161Z","pid":23900,"hostname":"LT132792","msg":"End of node method closeAllBrowsers"}

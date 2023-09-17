@@ -1,8 +1,4 @@
-# robot -d ./Front/.logs ./Front/tests/Signup.robot
-# robot -d ./Front/.logs -i happy_way ./Front/tests/Signup.robot
-
 *** Settings *** 
-
 Library                                     ../resources/1.factories/Users.py
 
 Resource                                    ../resources/0.default/Base.robot
@@ -16,7 +12,7 @@ Documentation                               Signup Test Suite
 *** Test Cases ***
 Register a new User
     [Tags]                                  happy_way
-    ${user}                                 Factory User
+    ${user}                                 Factory User                                faker
 
     Go to Signup form
     Fill Signup form                        ${user}
@@ -28,7 +24,7 @@ Duplicate user
     [Tags]                                  attempt_signup
     
 #Esse metodo está puxando do Helpers.robot que foi feito inserindo um user usando uma query direto no banco. 
-    ${user}                                 Factory User
+    ${user}                                 Factory User                                faker
     Add User From Database                  ${user}
 
 #O resto do teste roda normalmente gerando um teste de interface. 
@@ -43,7 +39,7 @@ Wrong Email
     [Tags]                                  attempt_signup
 
 #Array criado via python no arquivo do python Users.py
-    ${user}                                 Factory Wrong Email
+    ${user}                                 Factory User                                 wrong_email
 
     Go to Signup form
     Fill Signup form                        ${user}
