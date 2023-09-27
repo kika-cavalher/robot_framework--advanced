@@ -1,0 +1,8 @@
+datasources:e1c408e9006a937e5c5405d40acc4b1ea71b5ede
+commandlineoptions:97d170e1550eee4afc0af065b78cda302a97674c
+suitesfrom:no-suites-from-option
+file:3db7460b194e95cf605fa44575323c22fb2a0e72
+--suite Tests.1.Signin
+--suite Tests.2.Signup
+--suite Tests.3.Geek
+--suite Tests.4.AttemptBeGeek

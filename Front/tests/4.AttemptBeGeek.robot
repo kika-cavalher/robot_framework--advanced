@@ -32,8 +32,8 @@ Cost Alpha            cost                                     ${alphaNumber_cos
 Cost SpecialChars     cost                                     ${specialCarac_cost}                  Valor hora deve ser numérico
 Empty Cost            cost                                     ${empty_cost}                         Valor hora deve ser numérico
 
-#Printer- rules
-No printer repair     printer_repair                           ${empty_printer}                      Por favor, informe se você é um Geek Supremo
-
-#Modelo trabalho- rules
-No work               work                                     ${empty_work}                         Por favor, selecione o modelo de trabalho
+##Printer- rules
+#No printer repair     printer_repair                           ${empty_printer}                      Por favor, informe se você é um Geek Supremo
+#
+##Modelo trabalho- rules
+#No work               work                                     ${empty_work}                         Por favor, selecione o modelo de trabalho

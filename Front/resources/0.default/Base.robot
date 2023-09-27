@@ -14,8 +14,8 @@ ${BASE_URL}                                https://web-geek.fly.dev
 
 *** Keywords ***
 Start Session
-    New Browser                     chromium                        headless=False                          
-    ...                             slowMo=00:00:00.5
+    New Browser                     chromium                        headless=True                          
+    ...                             slowMo=00:00:00
     New Page                        ${BASE_URL}
     Set Viewport Size                       1280                            768
 

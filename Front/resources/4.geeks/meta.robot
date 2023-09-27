@@ -1,6 +1,5 @@
 *** Settings ***
 Documentation                                     Geek Actions Tests
-
 Resource                                          ../0.default/Base.robot
 Resource                                          ./data.robot
 
@@ -12,9 +11,14 @@ Go to Geek form
     ...                                            visible                              5
     ...     
 
-##Add             
+###Add
+#Reset Geek Form
+#    Execute Javascript                             document.getElementsByClassName("be-geek-form")[0].reset();                     
+
+
 Fill Geek Forms
     [Arguments]                                    ${geek_profile}
+    #Reset Geek Form                                    
     Fill Text                                      ${input_whats}                       ${geek_profile}[whats]
     Fill Text                                      ${input_desc}                        ${geek_profile}[desc]
 

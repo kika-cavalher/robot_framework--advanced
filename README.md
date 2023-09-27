@@ -35,6 +35,9 @@ pip install robotframework-databaselibrary
 ```sh
 pip install psycopg2
 ```
+```sh
+pip install -U robotframework-pabot
+```
 ### Install Vscode extensions too for better viewing
 
 <img src="https://cdn1.iconfinder.com/data/icons/material-core/23/extension-64.png" srcset="https://cdn1.iconfinder.com/data/icons/material-core/23/extension-256.png 1x, https://cdn1.iconfinder.com/data/icons/material-core/23/extension-512.png 2x" width="20" class=" lazyloaded" data-srcset="https://cdn1.iconfinder.com/data/icons/material-core/23/extension-256.png 1x, https://cdn1.iconfinder.com/data/icons/material-core/23/extension-512.png 2x"> Robocorp <br>
