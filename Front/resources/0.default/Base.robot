@@ -14,9 +14,10 @@ ${BASE_URL}                                https://web-geek.fly.dev
 
 *** Keywords ***
 Start Session
-    Browser.New Browser                     chromium                        headless=False                          
-    ...                                     slowMo=00:00:00
-    Browser.New Page                        ${BASE_URL}
+    New Browser                     chromium                        headless=False                          
+    ...                             slowMo=00:00:00.5
+    New Page                        ${BASE_URL}
+    Set Viewport Size                       1280                            768
 
 Finish Session
-    Browser.Take Screenshot                 fullPage=True
+    Take Screenshot                 fullPage=True

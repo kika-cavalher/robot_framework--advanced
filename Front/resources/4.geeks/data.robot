@@ -33,3 +33,5 @@ ${letter_cost}                      aaa
 ${alphaNumber_cost}                 a12
 ${specialCarac_cost}                10,50
 ${empty_cost}              
+${empty_printer}    
+${empty_work}           

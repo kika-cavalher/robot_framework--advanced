@@ -12,18 +12,22 @@ Go to Geek form
     ...                                            visible                              5
     ...     
 
-#Add
+##Add             
 Fill Geek Forms
     [Arguments]                                    ${geek_profile}
-
     Fill Text                                      ${input_whats}                       ${geek_profile}[whats]
     Fill Text                                      ${input_desc}                        ${geek_profile}[desc]
 
+    IF     '${geek_profile}[printer_repair]'
+            Select Options By                      ${input_printer_repair}              value                                ${geek_profile}[printer_repair]
+    END
+
+    IF     '${geek_profile}[work]'
+            Select Options By                      ${input_work}                        text                                 ${geek_profile}[work]
+    END
+
 #Automatizar uma caixa de seleção com a lib browser - Select Options By 
-    Select Options By                              ${input_printer_repair}              
-    ...                                            value                                ${geek_profile}[printer_repair]
-    Select Options By                              ${input_work}              
-    ...                                            text                                 ${geek_profile}[work]
+
     Fill Text                                      ${input_cost}                        ${geek_profile}[cost]
 
 
@@ -48,13 +52,11 @@ Attempt Be a Geek
     Fill Geek Forms                                ${user}[geek_profile]
     Submit Geek Form
     Alert Span Should Be                           ${output_message}
-    Browser.Take Screenshot                        fullPage=True
+    Take Screenshot                                fullPage=True
 
 
 #Como todos os cenarios tem o mesmo inicio o ideal é criar o inicial separado e deixar programado para iniciar todos os casos do arquivo. 
 Start Session For Attempt Be geek
-    [Tags]                                         attempt_geek
-
     ${user}                                        Factory User                         attempt_geek
     
     Start Session

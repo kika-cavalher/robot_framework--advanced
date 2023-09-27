@@ -8,7 +8,7 @@ Documentation                                     Authentication Actions
 *** Keywords ***
 #Default
 Go to Login form
-    Go To                                          ${login_url}
+    Browser.Go To                                  ${login_url}
     Wait For Elements State                        ${element_form}                      
     ...                                            visible                             5
 

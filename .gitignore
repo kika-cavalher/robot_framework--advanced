@@ -1,4 +1,5 @@
-# Logs
+
 .history
-.logs
+./logs
 __pycache__
+./playwright-log.txt

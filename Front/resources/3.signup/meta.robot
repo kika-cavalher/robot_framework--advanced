@@ -36,7 +36,7 @@ Signup With Short Pass
     ...                                             email=erica.cavalher@gmail.com                             password=${short_pass}
     # essa lista de password (que vai mudar no campo que tem a variavel criada) está definido no arquivo Signups e gera varios testes mudando somente esse mapo com a opção template
 
-    Go To                                           ${register_url}
+    Browser.Go To                                           ${register_url}
     #Está puxando o dictionary criado acima.
     Fill Signup form                                ${user} 
     Submit Signup Forms

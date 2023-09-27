@@ -1,27 +1,11 @@
-{"level":30,"time":"2023-09-18T10:25:24.207Z","pid":4320,"hostname":"LT132792","msg":"Listening on 64776"}
-{"level":30,"time":"2023-09-18T10:25:24.409Z","pid":4320,"hostname":"LT132792","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2023-09-18T10:25:24.410Z","pid":4320,"hostname":"LT132792","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2023-09-18T10:25:24.413Z","pid":4320,"hostname":"LT132792","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2023-09-18T10:25:24.413Z","pid":4320,"hostname":"LT132792","msg":"End of node method getBrowserCatalog"}
-================= Original suppressed error =================
-Error: Browser has been closed.
-    at PlaywrightState.getActiveBrowser (C:\Python311\Lib\site-packages\Browser\wrapper\index.js:9385:15)
-    at PlaywrightServer.getActiveBrowser (C:\Python311\Lib\site-packages\Browser\wrapper\index.js:9904:59)
-    at PlaywrightServer.setTimeout (C:\Python311\Lib\site-packages\Browser\wrapper\index.js:10150:57)
-    at handleUnary (C:\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:833:17)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-=============================================================
-{"level":30,"time":"2023-09-18T10:25:25.686Z","pid":4320,"hostname":"LT132792","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2023-09-18T10:25:25.686Z","pid":4320,"hostname":"LT132792","msg":"End of node method getBrowserCatalog"}
-================= Original suppressed error =================
-Error: Browser has been closed.
-    at PlaywrightState.getActiveBrowser (C:\Python311\Lib\site-packages\Browser\wrapper\index.js:9385:15)
-    at PlaywrightServer.getActiveBrowser (C:\Python311\Lib\site-packages\Browser\wrapper\index.js:9904:59)
-    at PlaywrightServer.setTimeout (C:\Python311\Lib\site-packages\Browser\wrapper\index.js:10150:57)
-    at handleUnary (C:\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:833:17)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-=============================================================
-{"level":30,"time":"2023-09-18T10:25:25.691Z","pid":4320,"hostname":"LT132792","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2023-09-18T10:25:25.691Z","pid":4320,"hostname":"LT132792","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2023-09-18T10:25:25.699Z","pid":4320,"hostname":"LT132792","msg":"Start of node method closeAllBrowsers"}
-{"level":30,"time":"2023-09-18T10:25:25.700Z","pid":4320,"hostname":"LT132792","msg":"End of node method closeAllBrowsers"}
+{"level":30,"time":"2023-09-27T15:20:57.852Z","pid":22500,"hostname":"LT132792","msg":"Listening on 63144"}
+{"level":30,"time":"2023-09-27T15:20:57.954Z","pid":22500,"hostname":"LT132792","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-09-27T15:20:57.955Z","pid":22500,"hostname":"LT132792","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-09-27T15:20:57.957Z","pid":22500,"hostname":"LT132792","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-09-27T15:20:57.957Z","pid":22500,"hostname":"LT132792","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-09-27T15:20:59.210Z","pid":22500,"hostname":"LT132792","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-09-27T15:20:59.210Z","pid":22500,"hostname":"LT132792","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-09-27T15:20:59.213Z","pid":22500,"hostname":"LT132792","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-09-27T15:20:59.213Z","pid":22500,"hostname":"LT132792","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-09-27T15:20:59.216Z","pid":22500,"hostname":"LT132792","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2023-09-27T15:20:59.216Z","pid":22500,"hostname":"LT132792","msg":"End of node method closeAllBrowsers"}
