@@ -1,13 +1,13 @@
 *** Settings ***
 Documentation                              Base Test API
 
-Library                                    Browser
-Library                                    Collections
+Library                                    RequestsLibrary
+Library                                    ./Users.py
 
 
 
 *** Variables ***
-${API_URL}                         https://api-geek.fly.dev
+${API_USERS_URL}                          https://api-geek.fly.dev
 
 
 *** Keywords ***
