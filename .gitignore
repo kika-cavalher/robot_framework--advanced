@@ -1,5 +1,6 @@
 
 .history
-logs
+./Frontend/.logs
+./Backend/logs
 __pycache__
 ./playwright-log.txt

@@ -21,6 +21,7 @@ Before starting, you need to have on your computer:
 - [X] Node
 - [X] Python
 - [X] Robot Framework
+- [X] Typora
 
 ### install everything necessary for the project to work
 ```sh
@@ -42,11 +43,11 @@ pip install -U robotframework-pabot
 
 <img src="https://cdn1.iconfinder.com/data/icons/material-core/23/extension-64.png" srcset="https://cdn1.iconfinder.com/data/icons/material-core/23/extension-256.png 1x, https://cdn1.iconfinder.com/data/icons/material-core/23/extension-512.png 2x" width="20" class=" lazyloaded" data-srcset="https://cdn1.iconfinder.com/data/icons/material-core/23/extension-256.png 1x, https://cdn1.iconfinder.com/data/icons/material-core/23/extension-512.png 2x"> Robocorp <br>
 <img src="https://cdn1.iconfinder.com/data/icons/material-core/23/extension-64.png" srcset="https://cdn1.iconfinder.com/data/icons/material-core/23/extension-256.png 1x, https://cdn1.iconfinder.com/data/icons/material-core/23/extension-512.png 2x" width="20" class=" lazyloaded" data-srcset="https://cdn1.iconfinder.com/data/icons/material-core/23/extension-256.png 1x, https://cdn1.iconfinder.com/data/icons/material-core/23/extension-512.png 2x"> Robot Framework Language Server
-
-
+<img src="https://cdn1.iconfinder.com/data/icons/material-core/23/extension-64.png" srcset="https://cdn1.iconfinder.com/data/icons/material-core/23/extension-256.png 1x, https://cdn1.iconfinder.com/data/icons/material-core/23/extension-512.png 2x" width="20" class=" lazyloaded" data-srcset="https://cdn1.iconfinder.com/data/icons/material-core/23/extension-256.png 1x, https://cdn1.iconfinder.com/data/icons/material-core/23/extension-512.png 2x"> Thunder Client
+<img src="https://cdn1.iconfinder.com/data/icons/material-core/23/extension-64.png" srcset="https://cdn1.iconfinder.com/data/icons/material-core/23/extension-256.png 1x, https://cdn1.iconfinder.com/data/icons/material-core/23/extension-512.png 2x" width="20" class=" lazyloaded" data-srcset="https://cdn1.iconfinder.com/data/icons/material-core/23/extension-256.png 1x, https://cdn1.iconfinder.com/data/icons/material-core/23/extension-512.png 2x"> Hyper Term Theme
 
 <!--<p align="center">
   <kbd>
-    <img style="border-radius: 5px" height="450" src="./Front/20220805_180552.gif" alt="preview">
+    <img style="border-radius: 5px" height="450" src="./Frontend/20220805_180552.gif" alt="preview">
   </kbd>
 </p>-->
