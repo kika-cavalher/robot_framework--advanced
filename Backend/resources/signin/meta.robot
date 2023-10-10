@@ -1,21 +1,11 @@
 *** Settings ***
 
-Documentation                Session route Actions
-Resource                     ../default/Base.robot
-Resource                     ./data.robot
+Documentation                Session Actions
+Resource                     ../../default/Base.robot
+Resource                     ../../routes/SessionsRoute.robot
 
 
 *** Keywords ***
-POST Session 
-    [Arguments]             ${user}
-
-    ${response}             POST                   
-    ...                     ${session_users_url}          
-    ...                     json=${user}           
-    ...                     expected_status=any
-    
-    [Return]                ${response}
-
 #validate status codes
 Tests status code 200 
     [Arguments]             ${user}   

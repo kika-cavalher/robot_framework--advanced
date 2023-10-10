@@ -1,19 +1,10 @@
-from base64 import encode
-import bcrypt
-from faker import Faker
-fake = Faker()
-
-#Criação de metodo que cria senhas cryptografadas. 
-# get_hashed_pass já vem da lib bcrypt 
-def get_hashed_pass(password):
-    hashed = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt(8))
-    return hashed
-
-
 def factory_api_user(target):
-    first_name = fake.first_name()
-
     data = {
+        'signin': {
+            'name': 'Lolita Bags',
+            'email': 'lolita@bag.com',
+            'password': 'Kika.1234'
+        },
         'session': {
             'email': 'lolita@bag.com',
             'password': 'Kika.1234'

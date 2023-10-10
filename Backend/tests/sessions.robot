@@ -1,15 +1,17 @@
 *** Settings ***
 
 Documentation                                    Session route test suite
-Resource                                         ../resources/meta.robot
+Resource                                         ../resources/signin/meta.robot
+Resource                                         ../resources/signup/meta.robot
 Resource                                         ../default/Base.robot
+Resource                                         ../routes/SessionsRoute.robot
     
+Test Setup                                       User Signup
 
 *** Test Cases ***
 User Session Login
     [Tags]                                       happy_way
     ${user}                                      Factory API User               session
-    
     Tests status code 200                        ${user}
     Tests Length equal                           ${user}
     Test message expired be equal                ${user}
