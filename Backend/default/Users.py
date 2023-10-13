@@ -1,10 +1,6 @@
-def factory_api_user(target):
+
+def factory_session_user(target):
     data = {
-        'signin': {
-            'name': 'Lolita Bags',
-            'email': 'lolita@bag.com',
-            'password': 'Kika.1234'
-        },
         'session': {
             'email': 'lolita@bag.com',
             'password': 'Kika.1234'
@@ -34,6 +30,21 @@ def factory_api_user(target):
         },
         'without_pass': {
             'email': 'lolita@bag.com'
+        },        
+        'session_token': {
+            'email': 'bags@lolis.com',
+            'password': 'Kika.1234'
+        }
+    }
+
+    return data[target]
+
+def factory_user(target):
+    data = {
+        'signin': {
+            'name': 'Baguera Loli',
+            'email': 'bags@lolis.com',
+            'password': 'Kika.1234'
         }
     }
 

@@ -1,14 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1 (Python 3.11.4 on win32)" generated="20231010 20:13:22.191" rpa="false" schemaversion="4">
-<suite id="s1" name="Tests" source="D:\OneDrive - Novabase\Documents\1.AutomaticTests\robot_framework--advanced\Backend\tests">
-<suite id="s1-s1" name="Sessions" source="D:\OneDrive - Novabase\Documents\1.AutomaticTests\robot_framework--advanced\Backend\tests\sessions.robot">
-<test id="s1-s1-t1" name="User Session Login" line="12">
-<kw name="User Signup" library="meta" type="SETUP">
-<kw name="Factory Api User" library="Users">
+<robot generator="Robot 6.1 (Python 3.11.4 on win32)" generated="20231013 19:54:50.926" rpa="false" schemaversion="4">
+<suite id="s1" name="Users" source="D:\OneDrive - Novabase\Documents\1.AutomaticTests\robot_framework--advanced\Backend\tests\users.robot">
+<test id="s1-t1" name="Add new user" line="10">
+<kw name="Factory User" library="Users">
 <var>${user}</var>
 <arg>signin</arg>
-<msg timestamp="20231010 20:13:22.462" level="INFO">${user} = {'name': 'Lolita Bags', 'email': 'lolita@bag.com', 'password': 'Kika.1234'}</msg>
-<status status="PASS" starttime="20231010 20:13:22.462" endtime="20231010 20:13:22.462"/>
+<msg timestamp="20231013 19:54:51.037" level="INFO">${user} = {'name': 'Baguera Loli', 'email': 'bags@lolis.com', 'password': 'Kika.1234'}</msg>
+<status status="PASS" starttime="20231013 19:54:51.037" endtime="20231013 19:54:51.037"/>
+</kw>
+<kw name="User Signup" library="meta">
+<arg>${user}</arg>
+<kw name="POST Session" library="SessionsRoute">
+<var>${response}</var>
+<arg>${user}</arg>
+<kw name="POST" library="RequestsLibrary">
+<var>${response}</var>
+<arg>${API_USERS_URL}/sessions</arg>
+<arg>json=${user}</arg>
+<arg>expected_status=any</arg>
+<doc>Sends a POST request.</doc>
+<msg timestamp="20231013 19:54:51.520" level="INFO">POST Request : url=https://api-geek.fly.dev/sessions 
+ path_url=/sessions 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '76', 'Content-Type': 'application/json'} 
+ body=b'{"name": "Baguera Loli", "email": "bags@lolis.com", "password": "Kika.1234"}' 
+ </msg>
+<msg timestamp="20231013 19:54:51.520" level="INFO">POST Response : url=https://api-geek.fly.dev/sessions 
+ status=401, reason=Unauthorized 
+ headers={'x-powered-by': 'Express', 'access-control-allow-origin': '*', 'content-type': 'application/json; charset=utf-8', 'content-encoding': 'gzip', 'etag': 'W/"18-XPDV80vbMk4yY1/PADG4jYM4rSI"', 'date': 'Fri, 13 Oct 2023 18:54:54 GMT', 'connection': 'keep-alive', 'keep-alive': 'timeout=5', 'transfer-encoding': 'chunked', 'server': 'Fly/55f8eaa0 (2023-10-09)', 'via': '1.1 fly.io', 'fly-request-id': '01HCN68FA51SDEN3PE2MG18TS4-mad'} 
+ body={"error":"Unauthorized"} 
+ </msg>
+<msg timestamp="20231013 19:54:51.520" level="INFO">${response} = &lt;Response [401]&gt;</msg>
+<status status="PASS" starttime="20231013 19:54:51.038" endtime="20231013 19:54:51.520"/>
+</kw>
+<msg timestamp="20231013 19:54:51.520" level="INFO">${response} = &lt;Response [401]&gt;</msg>
+<status status="PASS" starttime="20231013 19:54:51.038" endtime="20231013 19:54:51.520"/>
 </kw>
 <kw name="POST User" library="SessionsRoute">
 <arg>${user}</arg>
@@ -18,66 +43,38 @@
 <arg>json=${user}</arg>
 <arg>expected_status=any</arg>
 <doc>Sends a POST request.</doc>
-<msg timestamp="20231010 20:13:23.766" level="INFO">POST Request : url=https://api-geek.fly.dev/users 
+<msg timestamp="20231013 19:54:52.588" level="INFO">POST Request : url=https://api-geek.fly.dev/users 
  path_url=/users 
- headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '75', 'Content-Type': 'application/json'} 
- body=b'{"name": "Lolita Bags", "email": "lolita@bag.com", "password": "Kika.1234"}' 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '76', 'Content-Type': 'application/json'} 
+ body=b'{"name": "Baguera Loli", "email": "bags@lolis.com", "password": "Kika.1234"}' 
  </msg>
-<msg timestamp="20231010 20:13:23.766" level="INFO">POST Response : url=https://api-geek.fly.dev/users 
+<msg timestamp="20231013 19:54:52.588" level="INFO">POST Response : url=https://api-geek.fly.dev/users 
  status=201, reason=Created 
- headers={'x-powered-by': 'Express', 'access-control-allow-origin': '*', 'content-type': 'application/json; charset=utf-8', 'content-encoding': 'gzip', 'etag': 'W/"a-JOEu1Oep4OoqTvyhqbAJOOJQIEI"', 'date': 'Tue, 10 Oct 2023 19:13:26 GMT', 'connection': 'keep-alive', 'keep-alive': 'timeout=5', 'transfer-encoding': 'chunked', 'server': 'Fly/55f8eaa0 (2023-10-09)', 'via': '1.1 fly.io', 'fly-request-id': '01HCDG46Y82MDNA15H43GYVK35-mad'} 
- body={"id":182} 
+ headers={'x-powered-by': 'Express', 'access-control-allow-origin': '*', 'content-type': 'application/json; charset=utf-8', 'content-encoding': 'gzip', 'etag': 'W/"a-ZQcFYeTjrXt3Ncp4Pc1WrbJidcc"', 'date': 'Fri, 13 Oct 2023 18:54:55 GMT', 'connection': 'keep-alive', 'keep-alive': 'timeout=5', 'transfer-encoding': 'chunked', 'server': 'Fly/55f8eaa0 (2023-10-09)', 'via': '1.1 fly.io', 'fly-request-id': '01HCN68FRN3YH6SRKZ0A0VFMNB-mad'} 
+ body={"id":213} 
  </msg>
-<msg timestamp="20231010 20:13:23.766" level="INFO">${response} = &lt;Response [201]&gt;</msg>
-<status status="PASS" starttime="20231010 20:13:22.462" endtime="20231010 20:13:23.766"/>
+<msg timestamp="20231013 19:54:52.589" level="INFO">${response} = &lt;Response [201]&gt;</msg>
+<status status="PASS" starttime="20231013 19:54:51.521" endtime="20231013 19:54:52.589"/>
 </kw>
-<status status="PASS" starttime="20231010 20:13:22.462" endtime="20231010 20:13:23.766"/>
-</kw>
-<status status="PASS" starttime="20231010 20:13:22.461" endtime="20231010 20:13:23.767"/>
-</kw>
-<kw name="Factory Api User" library="Users">
-<var>${user}</var>
-<arg>session</arg>
-<msg timestamp="20231010 20:13:23.767" level="INFO">${user} = {'email': 'lolita@bag.com', 'password': 'Kika.1234'}</msg>
-<status status="PASS" starttime="20231010 20:13:23.767" endtime="20231010 20:13:23.767"/>
-</kw>
-<kw name="Tests status code 200" library="meta">
-<arg>${user}</arg>
-<kw name="POST Session" library="SessionsRoute">
-<var>${response}</var>
-<arg>${user}</arg>
-<kw name="POST" library="RequestsLibrary">
-<var>${response}</var>
-<arg>${API_USERS_URL}/sessions</arg>
-<arg>json=${user}</arg>
-<arg>expected_status=any</arg>
-<doc>Sends a POST request.</doc>
-<msg timestamp="20231010 20:13:24.251" level="INFO">POST Request : url=https://api-geek.fly.dev/sessions 
- path_url=/sessions 
- headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '52', 'Content-Type': 'application/json'} 
- body=b'{"email": "lolita@bag.com", "password": "Kika.1234"}' 
- </msg>
-<msg timestamp="20231010 20:13:24.251" level="INFO">POST Response : url=https://api-geek.fly.dev/sessions 
- status=200, reason=OK 
- headers={'x-powered-by': 'Express', 'access-control-allow-origin': '*', 'content-type': 'application/json; charset=utf-8', 'content-encoding': 'gzip', 'etag': 'W/"168-/3xc1KbON8uUOmRzh19VTxd3XfU"', 'date': 'Tue, 10 Oct 2023 19:13:26 GMT', 'connection': 'keep-alive', 'keep-alive': 'timeout=5', 'transfer-encoding': 'chunked', 'server': 'Fly/55f8eaa0 (2023-10-09)', 'via': '1.1 fly.io', 'fly-request-id': '01HCDG485D6JXJPJT3ZTXJTK9N-mad'} 
- body={"user":{"id":182,"email":"lolita@bag.com","password_hash":"$2b$08$dXn0Fw7654mnmnyfvx4OP.vNoPChm1d0li/ZJRe7E8FPEUtMm9NVe","name":"Lolita Bags","avatar":null,"whatsapp":null,"is_geek":false},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTgyLCJpYXQiOjE2OTY5NjUyMDYsImV4cCI6MTY5NzgyOTIwNn0.iqegpDJsxwJy9Vv9GsJLh_gjGX40SoXyXzu9LP5abhU","expires_in":"10d"} 
- </msg>
-<msg timestamp="20231010 20:13:24.252" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20231010 20:13:23.767" endtime="20231010 20:13:24.252"/>
-</kw>
-<msg timestamp="20231010 20:13:24.252" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20231010 20:13:23.767" endtime="20231010 20:13:24.252"/>
+<status status="PASS" starttime="20231013 19:54:51.521" endtime="20231013 19:54:52.589"/>
 </kw>
 <kw name="Status Should Be" library="RequestsLibrary">
-<arg>200</arg>
-<arg>${response}</arg>
+<arg>201</arg>
 <doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" starttime="20231010 20:13:24.252" endtime="20231010 20:13:24.252"/>
+<status status="PASS" starttime="20231013 19:54:52.589" endtime="20231013 19:54:52.589"/>
 </kw>
-<status status="PASS" starttime="20231010 20:13:23.767" endtime="20231010 20:13:24.252"/>
+<status status="PASS" starttime="20231013 19:54:51.037" endtime="20231013 19:54:52.589"/>
 </kw>
-<kw name="Tests Length equal" library="meta">
-<arg>${user}</arg>
+<kw name="Del User" library="meta">
+<kw name="DELETE User" library="SessionsRoute">
+<kw name="Token User" library="SessionsRoute">
+<var>${token}</var>
+<kw name="Factory Session User" library="Users">
+<var>${user}</var>
+<arg>session_token</arg>
+<msg timestamp="20231013 19:54:52.591" level="INFO">${user} = {'email': 'bags@lolis.com', 'password': 'Kika.1234'}</msg>
+<status status="PASS" starttime="20231013 19:54:52.591" endtime="20231013 19:54:52.591"/>
+</kw>
 <kw name="POST Session" library="SessionsRoute">
 <var>${response}</var>
 <arg>${user}</arg>
@@ -87,1265 +84,81 @@
 <arg>json=${user}</arg>
 <arg>expected_status=any</arg>
 <doc>Sends a POST request.</doc>
-<msg timestamp="20231010 20:13:24.737" level="INFO">POST Request : url=https://api-geek.fly.dev/sessions 
+<msg timestamp="20231013 19:54:53.081" level="INFO">POST Request : url=https://api-geek.fly.dev/sessions 
  path_url=/sessions 
  headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '52', 'Content-Type': 'application/json'} 
- body=b'{"email": "lolita@bag.com", "password": "Kika.1234"}' 
+ body=b'{"email": "bags@lolis.com", "password": "Kika.1234"}' 
  </msg>
-<msg timestamp="20231010 20:13:24.737" level="INFO">POST Response : url=https://api-geek.fly.dev/sessions 
+<msg timestamp="20231013 19:54:53.081" level="INFO">POST Response : url=https://api-geek.fly.dev/sessions 
  status=200, reason=OK 
- headers={'x-powered-by': 'Express', 'access-control-allow-origin': '*', 'content-type': 'application/json; charset=utf-8', 'content-encoding': 'gzip', 'etag': 'W/"168-/3xc1KbON8uUOmRzh19VTxd3XfU"', 'date': 'Tue, 10 Oct 2023 19:13:26 GMT', 'connection': 'keep-alive', 'keep-alive': 'timeout=5', 'transfer-encoding': 'chunked', 'server': 'Fly/55f8eaa0 (2023-10-09)', 'via': '1.1 fly.io', 'fly-request-id': '01HCDG48MGYAFVRSNZKFX74R63-mad'} 
- body={"user":{"id":182,"email":"lolita@bag.com","password_hash":"$2b$08$dXn0Fw7654mnmnyfvx4OP.vNoPChm1d0li/ZJRe7E8FPEUtMm9NVe","name":"Lolita Bags","avatar":null,"whatsapp":null,"is_geek":false},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTgyLCJpYXQiOjE2OTY5NjUyMDYsImV4cCI6MTY5NzgyOTIwNn0.iqegpDJsxwJy9Vv9GsJLh_gjGX40SoXyXzu9LP5abhU","expires_in":"10d"} 
+ headers={'x-powered-by': 'Express', 'access-control-allow-origin': '*', 'content-type': 'application/json; charset=utf-8', 'content-encoding': 'gzip', 'etag': 'W/"169-Q8mVxPi9ySkWxdN2aTZ9oSySTX0"', 'date': 'Fri, 13 Oct 2023 18:54:56 GMT', 'connection': 'keep-alive', 'keep-alive': 'timeout=5', 'transfer-encoding': 'chunked', 'server': 'Fly/55f8eaa0 (2023-10-09)', 'via': '1.1 fly.io', 'fly-request-id': '01HCN68GTBG538S0N89KNG92T1-mad'} 
+ body={"user":{"id":213,"email":"bags@lolis.com","password_hash":"$2b$08$IdkV3jE0vZEx92V0zcmyf.RH48sXqeDuLItUVt3AyWyItwNpgbCgG","name":"Baguera Loli","avatar":null,"whatsapp":null,"is_geek":false},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjEzLCJpYXQiOjE2OTcyMjMyOTYsImV4cCI6MTY5ODA4NzI5Nn0.osX6tun2cWJSXOjZlhrpJ5oOzaDon3TXJUTHfLD27u0","expires_in":"10d"} 
  </msg>
-<msg timestamp="20231010 20:13:24.737" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20231010 20:13:24.253" endtime="20231010 20:13:24.737"/>
+<msg timestamp="20231013 19:54:53.082" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20231013 19:54:52.591" endtime="20231013 19:54:53.082"/>
 </kw>
-<msg timestamp="20231010 20:13:24.737" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20231010 20:13:24.253" endtime="20231010 20:13:24.737"/>
+<msg timestamp="20231013 19:54:53.082" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20231013 19:54:52.591" endtime="20231013 19:54:53.082"/>
 </kw>
-<kw name="Get Length" library="BuiltIn">
-<var>${size}</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${token}</var>
 <arg>${response.json()}[token]</arg>
-<doc>Returns and logs the length of the given item as an integer.</doc>
-<msg timestamp="20231010 20:13:24.737" level="INFO">Length is 140</msg>
-<msg timestamp="20231010 20:13:24.737" level="INFO">${size} = 140</msg>
-<status status="PASS" starttime="20231010 20:13:24.737" endtime="20231010 20:13:24.737"/>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231013 19:54:53.085" level="INFO">${token} = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjEzLCJpYXQiOjE2OTcyMjMyOTYsImV4cCI6MTY5ODA4NzI5Nn0.osX6tun2cWJSXOjZlhrpJ5oOzaDon3TXJUTHfLD27u0</msg>
+<status status="PASS" starttime="20231013 19:54:53.083" endtime="20231013 19:54:53.085"/>
 </kw>
-<kw name="Convert To Integer" library="BuiltIn">
-<var>${expected_size}</var>
-<arg>140</arg>
-<doc>Converts the given item to an integer number.</doc>
-<msg timestamp="20231010 20:13:24.738" level="INFO">${expected_size} = 140</msg>
-<status status="PASS" starttime="20231010 20:13:24.737" endtime="20231010 20:13:24.738"/>
+<msg timestamp="20231013 19:54:53.085" level="INFO">${token} = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjEzLCJpYXQiOjE2OTcyMjMyOTYsImV4cCI6MTY5ODA4NzI5Nn0.osX6tun2cWJSXOjZlhrpJ5oOzaDon3TXJUTHfLD27u0</msg>
+<status status="PASS" starttime="20231013 19:54:52.591" endtime="20231013 19:54:53.085"/>
 </kw>
-<kw name="Should Be Equal" library="BuiltIn">
-<arg>${expected_size}</arg>
-<arg>${size}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20231010 20:13:24.738" endtime="20231010 20:13:24.738"/>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${headers}</var>
+<arg>Authorization=Bearer ${token}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20231013 19:54:53.087" level="INFO">${headers} = {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjEzLCJpYXQiOjE2OTcyMjMyOTYsImV4cCI6MTY5ODA4NzI5Nn0.osX6tun2cWJSXOjZlhrpJ5oOzaDon3TXJUTHfLD27u0'}</msg>
+<status status="PASS" starttime="20231013 19:54:53.086" endtime="20231013 19:54:53.087"/>
 </kw>
-<status status="PASS" starttime="20231010 20:13:24.253" endtime="20231010 20:13:24.738"/>
-</kw>
-<kw name="Test message expired be equal" library="meta">
-<arg>${user}</arg>
-<kw name="POST Session" library="SessionsRoute">
+<kw name="DELETE" library="RequestsLibrary">
 <var>${response}</var>
-<arg>${user}</arg>
-<kw name="POST" library="RequestsLibrary">
-<var>${response}</var>
-<arg>${API_USERS_URL}/sessions</arg>
-<arg>json=${user}</arg>
+<arg>${API_USERS_URL}/users</arg>
+<arg>headers=${headers}</arg>
 <arg>expected_status=any</arg>
-<doc>Sends a POST request.</doc>
-<msg timestamp="20231010 20:13:25.202" level="INFO">POST Request : url=https://api-geek.fly.dev/sessions 
- path_url=/sessions 
- headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '52', 'Content-Type': 'application/json'} 
- body=b'{"email": "lolita@bag.com", "password": "Kika.1234"}' 
+<doc>Sends a DELETE request.</doc>
+<msg timestamp="20231013 19:54:54.326" level="INFO">DELETE Request : url=https://api-geek.fly.dev/users 
+ path_url=/users 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjEzLCJpYXQiOjE2OTcyMjMyOTYsImV4cCI6MTY5ODA4NzI5Nn0.osX6tun2cWJSXOjZlhrpJ5oOzaDon3TXJUTHfLD27u0', 'Content-Length': '0'} 
+ body=None 
  </msg>
-<msg timestamp="20231010 20:13:25.202" level="INFO">POST Response : url=https://api-geek.fly.dev/sessions 
- status=200, reason=OK 
- headers={'x-powered-by': 'Express', 'access-control-allow-origin': '*', 'content-type': 'application/json; charset=utf-8', 'content-encoding': 'gzip', 'etag': 'W/"168-ZuMZH8OkIAeAGVlIiDD73OEqttQ"', 'date': 'Tue, 10 Oct 2023 19:13:27 GMT', 'connection': 'keep-alive', 'keep-alive': 'timeout=5', 'transfer-encoding': 'chunked', 'server': 'Fly/55f8eaa0 (2023-10-09)', 'via': '1.1 fly.io', 'fly-request-id': '01HCDG4939068XA7XWRDCE5SQH-mad'} 
- body={"user":{"id":182,"email":"lolita@bag.com","password_hash":"$2b$08$dXn0Fw7654mnmnyfvx4OP.vNoPChm1d0li/ZJRe7E8FPEUtMm9NVe","name":"Lolita Bags","avatar":null,"whatsapp":null,"is_geek":false},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTgyLCJpYXQiOjE2OTY5NjUyMDcsImV4cCI6MTY5NzgyOTIwN30._pUIYsb_6NHrcO2Nu9ObCjAzDZkbq9RpWPoM_8a1lK0","expires_in":"10d"} 
+<msg timestamp="20231013 19:54:54.326" level="INFO">DELETE Response : url=https://api-geek.fly.dev/users 
+ status=204, reason=No Content 
+ headers={'x-powered-by': 'Express', 'access-control-allow-origin': '*', 'date': 'Fri, 13 Oct 2023 18:54:57 GMT', 'connection': 'keep-alive', 'keep-alive': 'timeout=5', 'server': 'Fly/55f8eaa0 (2023-10-09)', 'via': '1.1 fly.io', 'fly-request-id': '01HCN68H9XW9SQSSQFDD389BKY-mad'} 
+ body=None 
  </msg>
-<msg timestamp="20231010 20:13:25.202" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20231010 20:13:24.738" endtime="20231010 20:13:25.202"/>
+<msg timestamp="20231013 19:54:54.327" level="INFO">${response} = &lt;Response [204]&gt;</msg>
+<status status="PASS" starttime="20231013 19:54:53.087" endtime="20231013 19:54:54.327"/>
 </kw>
-<msg timestamp="20231010 20:13:25.203" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20231010 20:13:24.738" endtime="20231010 20:13:25.203"/>
+<status status="PASS" starttime="20231013 19:54:52.590" endtime="20231013 19:54:54.327"/>
 </kw>
-<kw name="Should Be Equal" library="BuiltIn">
-<arg>10d</arg>
-<arg>${response.json()}[expires_in]</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20231010 20:13:25.203" endtime="20231010 20:13:25.204"/>
-</kw>
-<status status="PASS" starttime="20231010 20:13:24.738" endtime="20231010 20:13:25.204"/>
+<status status="PASS" starttime="20231013 19:54:52.590" endtime="20231013 19:54:54.327"/>
 </kw>
 <tag>happy_way</tag>
-<status status="PASS" starttime="20231010 20:13:22.461" endtime="20231010 20:13:25.204"/>
-</test>
-<test id="s1-s1-t2" name="Incorrect pass" line="19">
-<kw name="User Signup" library="meta" type="SETUP">
-<kw name="Factory Api User" library="Users">
-<var>${user}</var>
-<arg>signin</arg>
-<msg timestamp="20231010 20:13:25.205" level="INFO">${user} = {'name': 'Lolita Bags', 'email': 'lolita@bag.com', 'password': 'Kika.1234'}</msg>
-<status status="PASS" starttime="20231010 20:13:25.205" endtime="20231010 20:13:25.205"/>
-</kw>
-<kw name="POST User" library="SessionsRoute">
-<arg>${user}</arg>
-<kw name="POST" library="RequestsLibrary">
-<var>${response}</var>
-<arg>${API_USERS_URL}/users</arg>
-<arg>json=${user}</arg>
-<arg>expected_status=any</arg>
-<doc>Sends a POST request.</doc>
-<msg timestamp="20231010 20:13:25.678" level="INFO">POST Request : url=https://api-geek.fly.dev/users 
- path_url=/users 
- headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '75', 'Content-Type': 'application/json'} 
- body=b'{"name": "Lolita Bags", "email": "lolita@bag.com", "password": "Kika.1234"}' 
- </msg>
-<msg timestamp="20231010 20:13:25.678" level="INFO">POST Response : url=https://api-geek.fly.dev/users 
- status=400, reason=Bad Request 
- headers={'x-powered-by': 'Express', 'access-control-allow-origin': '*', 'content-type': 'application/json; charset=utf-8', 'content-encoding': 'gzip', 'etag': 'W/"1f-lFUySNKwX3L5eGEwGcNcUoVKWhE"', 'date': 'Tue, 10 Oct 2023 19:13:27 GMT', 'connection': 'keep-alive', 'keep-alive': 'timeout=5', 'transfer-encoding': 'chunked', 'server': 'Fly/55f8eaa0 (2023-10-09)', 'via': '1.1 fly.io', 'fly-request-id': '01HCDG49JBHY21KSDG4FWB1GST-mad'} 
- body={"error":"User already exists"} 
- </msg>
-<msg timestamp="20231010 20:13:25.679" level="INFO">${response} = &lt;Response [400]&gt;</msg>
-<status status="PASS" starttime="20231010 20:13:25.205" endtime="20231010 20:13:25.679"/>
-</kw>
-<status status="PASS" starttime="20231010 20:13:25.205" endtime="20231010 20:13:25.679"/>
-</kw>
-<status status="PASS" starttime="20231010 20:13:25.205" endtime="20231010 20:13:25.679"/>
-</kw>
-<kw name="Factory Api User" library="Users">
-<var>${user}</var>
-<arg>incorrect_pass</arg>
-<msg timestamp="20231010 20:13:25.679" level="INFO">${user} = {'email': 'lolita@bag.com', 'password': 'Kika1234'}</msg>
-<status status="PASS" starttime="20231010 20:13:25.679" endtime="20231010 20:13:25.679"/>
-</kw>
-<kw name="Tests status code 401" library="meta">
-<arg>${user}</arg>
-<kw name="POST Session" library="SessionsRoute">
-<var>${response}</var>
-<arg>${user}</arg>
-<kw name="POST" library="RequestsLibrary">
-<var>${response}</var>
-<arg>${API_USERS_URL}/sessions</arg>
-<arg>json=${user}</arg>
-<arg>expected_status=any</arg>
-<doc>Sends a POST request.</doc>
-<msg timestamp="20231010 20:13:26.367" level="INFO">POST Request : url=https://api-geek.fly.dev/sessions 
- path_url=/sessions 
- headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '51', 'Content-Type': 'application/json'} 
- body=b'{"email": "lolita@bag.com", "password": "Kika1234"}' 
- </msg>
-<msg timestamp="20231010 20:13:26.367" level="INFO">POST Response : url=https://api-geek.fly.dev/sessions 
- status=401, reason=Unauthorized 
- headers={'x-powered-by': 'Express', 'access-control-allow-origin': '*', 'content-type': 'application/json; charset=utf-8', 'content-encoding': 'gzip', 'etag': 'W/"18-XPDV80vbMk4yY1/PADG4jYM4rSI"', 'date': 'Tue, 10 Oct 2023 19:13:28 GMT', 'connection': 'keep-alive', 'keep-alive': 'timeout=5', 'transfer-encoding': 'chunked', 'server': 'Fly/55f8eaa0 (2023-10-09)', 'via': '1.1 fly.io', 'fly-request-id': '01HCDG4A14HBKEK81N83C61CMZ-mad'} 
- body={"error":"Unauthorized"} 
- </msg>
-<msg timestamp="20231010 20:13:26.367" level="INFO">${response} = &lt;Response [401]&gt;</msg>
-<status status="PASS" starttime="20231010 20:13:25.680" endtime="20231010 20:13:26.367"/>
-</kw>
-<msg timestamp="20231010 20:13:26.367" level="INFO">${response} = &lt;Response [401]&gt;</msg>
-<status status="PASS" starttime="20231010 20:13:25.679" endtime="20231010 20:13:26.367"/>
-</kw>
-<kw name="Status Should Be" library="RequestsLibrary">
-<arg>401</arg>
-<arg>${response}</arg>
-<doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" starttime="20231010 20:13:26.367" endtime="20231010 20:13:26.367"/>
-</kw>
-<status status="PASS" starttime="20231010 20:13:25.679" endtime="20231010 20:13:26.367"/>
-</kw>
-<kw name="Test message Unauthorized be equal" library="meta">
-<arg>${user}</arg>
-<kw name="POST Session" library="SessionsRoute">
-<var>${response}</var>
-<arg>${user}</arg>
-<kw name="POST" library="RequestsLibrary">
-<var>${response}</var>
-<arg>${API_USERS_URL}/sessions</arg>
-<arg>json=${user}</arg>
-<arg>expected_status=any</arg>
-<doc>Sends a POST request.</doc>
-<msg timestamp="20231010 20:13:26.848" level="INFO">POST Request : url=https://api-geek.fly.dev/sessions 
- path_url=/sessions 
- headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '51', 'Content-Type': 'application/json'} 
- body=b'{"email": "lolita@bag.com", "password": "Kika1234"}' 
- </msg>
-<msg timestamp="20231010 20:13:26.848" level="INFO">POST Response : url=https://api-geek.fly.dev/sessions 
- status=401, reason=Unauthorized 
- headers={'x-powered-by': 'Express', 'access-control-allow-origin': '*', 'content-type': 'application/json; charset=utf-8', 'content-encoding': 'gzip', 'etag': 'W/"18-XPDV80vbMk4yY1/PADG4jYM4rSI"', 'date': 'Tue, 10 Oct 2023 19:13:29 GMT', 'connection': 'keep-alive', 'keep-alive': 'timeout=5', 'transfer-encoding': 'chunked', 'server': 'Fly/55f8eaa0 (2023-10-09)', 'via': '1.1 fly.io', 'fly-request-id': '01HCDG4APQSWFG4YFJ6S5AQZMY-mad'} 
- body={"error":"Unauthorized"} 
- </msg>
-<msg timestamp="20231010 20:13:26.848" level="INFO">${response} = &lt;Response [401]&gt;</msg>
-<status status="PASS" starttime="20231010 20:13:26.368" endtime="20231010 20:13:26.848"/>
-</kw>
-<msg timestamp="20231010 20:13:26.848" level="INFO">${response} = &lt;Response [401]&gt;</msg>
-<status status="PASS" starttime="20231010 20:13:26.368" endtime="20231010 20:13:26.848"/>
-</kw>
-<kw name="Should Be Equal" library="BuiltIn">
-<arg>Unauthorized</arg>
-<arg>${response.json()}[error]</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20231010 20:13:26.848" endtime="20231010 20:13:26.849"/>
-</kw>
-<status status="PASS" starttime="20231010 20:13:26.368" endtime="20231010 20:13:26.849"/>
-</kw>
-<tag>attempt</tag>
-<status status="PASS" starttime="20231010 20:13:25.204" endtime="20231010 20:13:26.849"/>
-</test>
-<test id="s1-s1-t3" name="User not found" line="26">
-<kw name="User Signup" library="meta" type="SETUP">
-<kw name="Factory Api User" library="Users">
-<var>${user}</var>
-<arg>signin</arg>
-<msg timestamp="20231010 20:13:26.850" level="INFO">${user} = {'name': 'Lolita Bags', 'email': 'lolita@bag.com', 'password': 'Kika.1234'}</msg>
-<status status="PASS" starttime="20231010 20:13:26.850" endtime="20231010 20:13:26.850"/>
-</kw>
-<kw name="POST User" library="SessionsRoute">
-<arg>${user}</arg>
-<kw name="POST" library="RequestsLibrary">
-<var>${response}</var>
-<arg>${API_USERS_URL}/users</arg>
-<arg>json=${user}</arg>
-<arg>expected_status=any</arg>
-<doc>Sends a POST request.</doc>
-<msg timestamp="20231010 20:13:27.316" level="INFO">POST Request : url=https://api-geek.fly.dev/users 
- path_url=/users 
- headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '75', 'Content-Type': 'application/json'} 
- body=b'{"name": "Lolita Bags", "email": "lolita@bag.com", "password": "Kika.1234"}' 
- </msg>
-<msg timestamp="20231010 20:13:27.316" level="INFO">POST Response : url=https://api-geek.fly.dev/users 
- status=400, reason=Bad Request 
- headers={'x-powered-by': 'Express', 'access-control-allow-origin': '*', 'content-type': 'application/json; charset=utf-8', 'content-encoding': 'gzip', 'etag': 'W/"1f-lFUySNKwX3L5eGEwGcNcUoVKWhE"', 'date': 'Tue, 10 Oct 2023 19:13:29 GMT', 'connection': 'keep-alive', 'keep-alive': 'timeout=5', 'transfer-encoding': 'chunked', 'server': 'Fly/55f8eaa0 (2023-10-09)', 'via': '1.1 fly.io', 'fly-request-id': '01HCDG4B5KXGKKXS1CDZW0JSBV-mad'} 
- body={"error":"User already exists"} 
- </msg>
-<msg timestamp="20231010 20:13:27.316" level="INFO">${response} = &lt;Response [400]&gt;</msg>
-<status status="PASS" starttime="20231010 20:13:26.850" endtime="20231010 20:13:27.316"/>
-</kw>
-<status status="PASS" starttime="20231010 20:13:26.850" endtime="20231010 20:13:27.317"/>
-</kw>
-<status status="PASS" starttime="20231010 20:13:26.850" endtime="20231010 20:13:27.317"/>
-</kw>
-<kw name="Factory Api User" library="Users">
-<var>${user}</var>
-<arg>user_not_found</arg>
-<msg timestamp="20231010 20:13:27.317" level="INFO">${user} = {'email': 'Bagsbags@lolita.com', 'password': 'Kika.1234'}</msg>
-<status status="PASS" starttime="20231010 20:13:27.317" endtime="20231010 20:13:27.317"/>
-</kw>
-<kw name="Tests status code 401" library="meta">
-<arg>${user}</arg>
-<kw name="POST Session" library="SessionsRoute">
-<var>${response}</var>
-<arg>${user}</arg>
-<kw name="POST" library="RequestsLibrary">
-<var>${response}</var>
-<arg>${API_USERS_URL}/sessions</arg>
-<arg>json=${user}</arg>
-<arg>expected_status=any</arg>
-<doc>Sends a POST request.</doc>
-<msg timestamp="20231010 20:13:27.770" level="INFO">POST Request : url=https://api-geek.fly.dev/sessions 
- path_url=/sessions 
- headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '57', 'Content-Type': 'application/json'} 
- body=b'{"email": "Bagsbags@lolita.com", "password": "Kika.1234"}' 
- </msg>
-<msg timestamp="20231010 20:13:27.770" level="INFO">POST Response : url=https://api-geek.fly.dev/sessions 
- status=401, reason=Unauthorized 
- headers={'x-powered-by': 'Express', 'access-control-allow-origin': '*', 'content-type': 'application/json; charset=utf-8', 'content-encoding': 'gzip', 'etag': 'W/"18-XPDV80vbMk4yY1/PADG4jYM4rSI"', 'date': 'Tue, 10 Oct 2023 19:13:30 GMT', 'connection': 'keep-alive', 'keep-alive': 'timeout=5', 'transfer-encoding': 'chunked', 'server': 'Fly/55f8eaa0 (2023-10-09)', 'via': '1.1 fly.io', 'fly-request-id': '01HCDG4BM35XNAAEEKCSC795KK-mad'} 
- body={"error":"Unauthorized"} 
- </msg>
-<msg timestamp="20231010 20:13:27.771" level="INFO">${response} = &lt;Response [401]&gt;</msg>
-<status status="PASS" starttime="20231010 20:13:27.317" endtime="20231010 20:13:27.771"/>
-</kw>
-<msg timestamp="20231010 20:13:27.771" level="INFO">${response} = &lt;Response [401]&gt;</msg>
-<status status="PASS" starttime="20231010 20:13:27.317" endtime="20231010 20:13:27.771"/>
-</kw>
-<kw name="Status Should Be" library="RequestsLibrary">
-<arg>401</arg>
-<arg>${response}</arg>
-<doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" starttime="20231010 20:13:27.771" endtime="20231010 20:13:27.771"/>
-</kw>
-<status status="PASS" starttime="20231010 20:13:27.317" endtime="20231010 20:13:27.771"/>
-</kw>
-<kw name="Test message Unauthorized be equal" library="meta">
-<arg>${user}</arg>
-<kw name="POST Session" library="SessionsRoute">
-<var>${response}</var>
-<arg>${user}</arg>
-<kw name="POST" library="RequestsLibrary">
-<var>${response}</var>
-<arg>${API_USERS_URL}/sessions</arg>
-<arg>json=${user}</arg>
-<arg>expected_status=any</arg>
-<doc>Sends a POST request.</doc>
-<msg timestamp="20231010 20:13:28.233" level="INFO">POST Request : url=https://api-geek.fly.dev/sessions 
- path_url=/sessions 
- headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '57', 'Content-Type': 'application/json'} 
- body=b'{"email": "Bagsbags@lolita.com", "password": "Kika.1234"}' 
- </msg>
-<msg timestamp="20231010 20:13:28.233" level="INFO">POST Response : url=https://api-geek.fly.dev/sessions 
- status=401, reason=Unauthorized 
- headers={'x-powered-by': 'Express', 'access-control-allow-origin': '*', 'content-type': 'application/json; charset=utf-8', 'content-encoding': 'gzip', 'etag': 'W/"18-XPDV80vbMk4yY1/PADG4jYM4rSI"', 'date': 'Tue, 10 Oct 2023 19:13:30 GMT', 'connection': 'keep-alive', 'keep-alive': 'timeout=5', 'transfer-encoding': 'chunked', 'server': 'Fly/55f8eaa0 (2023-10-09)', 'via': '1.1 fly.io', 'fly-request-id': '01HCDG4C2F6Q8SD027R9C0WEVJ-mad'} 
- body={"error":"Unauthorized"} 
- </msg>
-<msg timestamp="20231010 20:13:28.233" level="INFO">${response} = &lt;Response [401]&gt;</msg>
-<status status="PASS" starttime="20231010 20:13:27.771" endtime="20231010 20:13:28.233"/>
-</kw>
-<msg timestamp="20231010 20:13:28.233" level="INFO">${response} = &lt;Response [401]&gt;</msg>
-<status status="PASS" starttime="20231010 20:13:27.771" endtime="20231010 20:13:28.233"/>
-</kw>
-<kw name="Should Be Equal" library="BuiltIn">
-<arg>Unauthorized</arg>
-<arg>${response.json()}[error]</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20231010 20:13:28.234" endtime="20231010 20:13:28.234"/>
-</kw>
-<status status="PASS" starttime="20231010 20:13:27.771" endtime="20231010 20:13:28.234"/>
-</kw>
-<tag>attempt</tag>
-<status status="PASS" starttime="20231010 20:13:26.849" endtime="20231010 20:13:28.234"/>
-</test>
-<test id="s1-s1-t4" name="Incorrect email" line="33">
-<kw name="User Signup" library="meta" type="SETUP">
-<kw name="Factory Api User" library="Users">
-<var>${user}</var>
-<arg>signin</arg>
-<msg timestamp="20231010 20:13:28.235" level="INFO">${user} = {'name': 'Lolita Bags', 'email': 'lolita@bag.com', 'password': 'Kika.1234'}</msg>
-<status status="PASS" starttime="20231010 20:13:28.235" endtime="20231010 20:13:28.235"/>
-</kw>
-<kw name="POST User" library="SessionsRoute">
-<arg>${user}</arg>
-<kw name="POST" library="RequestsLibrary">
-<var>${response}</var>
-<arg>${API_USERS_URL}/users</arg>
-<arg>json=${user}</arg>
-<arg>expected_status=any</arg>
-<doc>Sends a POST request.</doc>
-<msg timestamp="20231010 20:13:28.688" level="INFO">POST Request : url=https://api-geek.fly.dev/users 
- path_url=/users 
- headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '75', 'Content-Type': 'application/json'} 
- body=b'{"name": "Lolita Bags", "email": "lolita@bag.com", "password": "Kika.1234"}' 
- </msg>
-<msg timestamp="20231010 20:13:28.688" level="INFO">POST Response : url=https://api-geek.fly.dev/users 
- status=400, reason=Bad Request 
- headers={'x-powered-by': 'Express', 'access-control-allow-origin': '*', 'content-type': 'application/json; charset=utf-8', 'content-encoding': 'gzip', 'etag': 'W/"1f-lFUySNKwX3L5eGEwGcNcUoVKWhE"', 'date': 'Tue, 10 Oct 2023 19:13:30 GMT', 'connection': 'keep-alive', 'keep-alive': 'timeout=5', 'transfer-encoding': 'chunked', 'server': 'Fly/55f8eaa0 (2023-10-09)', 'via': '1.1 fly.io', 'fly-request-id': '01HCDG4CGN2152BMJNN83NXG7C-mad'} 
- body={"error":"User already exists"} 
- </msg>
-<msg timestamp="20231010 20:13:28.688" level="INFO">${response} = &lt;Response [400]&gt;</msg>
-<status status="PASS" starttime="20231010 20:13:28.235" endtime="20231010 20:13:28.688"/>
-</kw>
-<status status="PASS" starttime="20231010 20:13:28.235" endtime="20231010 20:13:28.688"/>
-</kw>
-<status status="PASS" starttime="20231010 20:13:28.235" endtime="20231010 20:13:28.688"/>
-</kw>
-<kw name="Factory Api User" library="Users">
-<var>${user}</var>
-<arg>incorrect_email</arg>
-<msg timestamp="20231010 20:13:28.688" level="INFO">${user} = {'email': 'Bagsbags.lolita.com', 'password': 'Kika.1234'}</msg>
-<status status="PASS" starttime="20231010 20:13:28.688" endtime="20231010 20:13:28.688"/>
-</kw>
-<kw name="Tests status code 400" library="meta">
-<arg>${user}</arg>
-<kw name="POST Session" library="SessionsRoute">
-<var>${response}</var>
-<arg>${user}</arg>
-<kw name="POST" library="RequestsLibrary">
-<var>${response}</var>
-<arg>${API_USERS_URL}/sessions</arg>
-<arg>json=${user}</arg>
-<arg>expected_status=any</arg>
-<doc>Sends a POST request.</doc>
-<msg timestamp="20231010 20:13:28.948" level="INFO">POST Request : url=https://api-geek.fly.dev/sessions 
- path_url=/sessions 
- headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '57', 'Content-Type': 'application/json'} 
- body=b'{"email": "Bagsbags.lolita.com", "password": "Kika.1234"}' 
- </msg>
-<msg timestamp="20231010 20:13:28.948" level="INFO">POST Response : url=https://api-geek.fly.dev/sessions 
- status=400, reason=Bad Request 
- headers={'x-powered-by': 'Express', 'access-control-allow-origin': '*', 'content-type': 'application/json; charset=utf-8', 'content-encoding': 'gzip', 'etag': 'W/"1b-/TOfJuE8lwSWEXvBl7o6iRstTo0"', 'date': 'Tue, 10 Oct 2023 19:13:31 GMT', 'connection': 'keep-alive', 'keep-alive': 'timeout=5', 'transfer-encoding': 'chunked', 'server': 'Fly/55f8eaa0 (2023-10-09)', 'via': '1.1 fly.io', 'fly-request-id': '01HCDG4CYVB2V8Y1R2TVG695YW-mad'} 
- body={"error":"Incorrect email"} 
- </msg>
-<msg timestamp="20231010 20:13:28.948" level="INFO">${response} = &lt;Response [400]&gt;</msg>
-<status status="PASS" starttime="20231010 20:13:28.688" endtime="20231010 20:13:28.948"/>
-</kw>
-<msg timestamp="20231010 20:13:28.948" level="INFO">${response} = &lt;Response [400]&gt;</msg>
-<status status="PASS" starttime="20231010 20:13:28.688" endtime="20231010 20:13:28.948"/>
-</kw>
-<kw name="Status Should Be" library="RequestsLibrary">
-<arg>400</arg>
-<arg>${response}</arg>
-<doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" starttime="20231010 20:13:28.948" endtime="20231010 20:13:28.948"/>
-</kw>
-<status status="PASS" starttime="20231010 20:13:28.688" endtime="20231010 20:13:28.948"/>
-</kw>
-<kw name="Test message wrong format email be equal" library="meta">
-<arg>${user}</arg>
-<kw name="POST Session" library="SessionsRoute">
-<var>${response}</var>
-<arg>${user}</arg>
-<kw name="POST" library="RequestsLibrary">
-<var>${response}</var>
-<arg>${API_USERS_URL}/sessions</arg>
-<arg>json=${user}</arg>
-<arg>expected_status=any</arg>
-<doc>Sends a POST request.</doc>
-<msg timestamp="20231010 20:13:29.220" level="INFO">POST Request : url=https://api-geek.fly.dev/sessions 
- path_url=/sessions 
- headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '57', 'Content-Type': 'application/json'} 
- body=b'{"email": "Bagsbags.lolita.com", "password": "Kika.1234"}' 
- </msg>
-<msg timestamp="20231010 20:13:29.221" level="INFO">POST Response : url=https://api-geek.fly.dev/sessions 
- status=400, reason=Bad Request 
- headers={'x-powered-by': 'Express', 'access-control-allow-origin': '*', 'content-type': 'application/json; charset=utf-8', 'content-encoding': 'gzip', 'etag': 'W/"1b-/TOfJuE8lwSWEXvBl7o6iRstTo0"', 'date': 'Tue, 10 Oct 2023 19:13:31 GMT', 'connection': 'keep-alive', 'keep-alive': 'timeout=5', 'transfer-encoding': 'chunked', 'server': 'Fly/55f8eaa0 (2023-10-09)', 'via': '1.1 fly.io', 'fly-request-id': '01HCDG4D713WDH2CGWXJK0KTKJ-mad'} 
- body={"error":"Incorrect email"} 
- </msg>
-<msg timestamp="20231010 20:13:29.222" level="INFO">${response} = &lt;Response [400]&gt;</msg>
-<status status="PASS" starttime="20231010 20:13:28.949" endtime="20231010 20:13:29.222"/>
-</kw>
-<msg timestamp="20231010 20:13:29.222" level="INFO">${response} = &lt;Response [400]&gt;</msg>
-<status status="PASS" starttime="20231010 20:13:28.949" endtime="20231010 20:13:29.222"/>
-</kw>
-<kw name="Should Be Equal" library="BuiltIn">
-<arg>Incorrect email</arg>
-<arg>${response.json()}[error]</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20231010 20:13:29.222" endtime="20231010 20:13:29.223"/>
-</kw>
-<status status="PASS" starttime="20231010 20:13:28.948" endtime="20231010 20:13:29.223"/>
-</kw>
-<tag>attempt</tag>
-<status status="PASS" starttime="20231010 20:13:28.234" endtime="20231010 20:13:29.223"/>
-</test>
-<test id="s1-s1-t5" name="Empty email" line="40">
-<kw name="User Signup" library="meta" type="SETUP">
-<kw name="Factory Api User" library="Users">
-<var>${user}</var>
-<arg>signin</arg>
-<msg timestamp="20231010 20:13:29.224" level="INFO">${user} = {'name': 'Lolita Bags', 'email': 'lolita@bag.com', 'password': 'Kika.1234'}</msg>
-<status status="PASS" starttime="20231010 20:13:29.224" endtime="20231010 20:13:29.224"/>
-</kw>
-<kw name="POST User" library="SessionsRoute">
-<arg>${user}</arg>
-<kw name="POST" library="RequestsLibrary">
-<var>${response}</var>
-<arg>${API_USERS_URL}/users</arg>
-<arg>json=${user}</arg>
-<arg>expected_status=any</arg>
-<doc>Sends a POST request.</doc>
-<msg timestamp="20231010 20:13:29.687" level="INFO">POST Request : url=https://api-geek.fly.dev/users 
- path_url=/users 
- headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '75', 'Content-Type': 'application/json'} 
- body=b'{"name": "Lolita Bags", "email": "lolita@bag.com", "password": "Kika.1234"}' 
- </msg>
-<msg timestamp="20231010 20:13:29.687" level="INFO">POST Response : url=https://api-geek.fly.dev/users 
- status=400, reason=Bad Request 
- headers={'x-powered-by': 'Express', 'access-control-allow-origin': '*', 'content-type': 'application/json; charset=utf-8', 'content-encoding': 'gzip', 'etag': 'W/"1f-lFUySNKwX3L5eGEwGcNcUoVKWhE"', 'date': 'Tue, 10 Oct 2023 19:13:31 GMT', 'connection': 'keep-alive', 'keep-alive': 'timeout=5', 'transfer-encoding': 'chunked', 'server': 'Fly/55f8eaa0 (2023-10-09)', 'via': '1.1 fly.io', 'fly-request-id': '01HCDG4DFHWN0WYG7ASBE3E7NT-mad'} 
- body={"error":"User already exists"} 
- </msg>
-<msg timestamp="20231010 20:13:29.687" level="INFO">${response} = &lt;Response [400]&gt;</msg>
-<status status="PASS" starttime="20231010 20:13:29.224" endtime="20231010 20:13:29.687"/>
-</kw>
-<status status="PASS" starttime="20231010 20:13:29.224" endtime="20231010 20:13:29.687"/>
-</kw>
-<status status="PASS" starttime="20231010 20:13:29.224" endtime="20231010 20:13:29.687"/>
-</kw>
-<kw name="Factory Api User" library="Users">
-<var>${user}</var>
-<arg>empty_email</arg>
-<msg timestamp="20231010 20:13:29.687" level="INFO">${user} = {'email': '', 'password': 'Kika.1234'}</msg>
-<status status="PASS" starttime="20231010 20:13:29.687" endtime="20231010 20:13:29.687"/>
-</kw>
-<kw name="Tests status code 400" library="meta">
-<arg>${user}</arg>
-<kw name="POST Session" library="SessionsRoute">
-<var>${response}</var>
-<arg>${user}</arg>
-<kw name="POST" library="RequestsLibrary">
-<var>${response}</var>
-<arg>${API_USERS_URL}/sessions</arg>
-<arg>json=${user}</arg>
-<arg>expected_status=any</arg>
-<doc>Sends a POST request.</doc>
-<msg timestamp="20231010 20:13:29.949" level="INFO">POST Request : url=https://api-geek.fly.dev/sessions 
- path_url=/sessions 
- headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '38', 'Content-Type': 'application/json'} 
- body=b'{"email": "", "password": "Kika.1234"}' 
- </msg>
-<msg timestamp="20231010 20:13:29.949" level="INFO">POST Response : url=https://api-geek.fly.dev/sessions 
- status=400, reason=Bad Request 
- headers={'x-powered-by': 'Express', 'access-control-allow-origin': '*', 'content-type': 'application/json; charset=utf-8', 'content-encoding': 'gzip', 'etag': 'W/"1a-ztWLEO5pP/4DOQYYgf8vh7rMmRI"', 'date': 'Tue, 10 Oct 2023 19:13:32 GMT', 'connection': 'keep-alive', 'keep-alive': 'timeout=5', 'transfer-encoding': 'chunked', 'server': 'Fly/55f8eaa0 (2023-10-09)', 'via': '1.1 fly.io', 'fly-request-id': '01HCDG4DY2CKX9TRHF58RRSEZ6-mad'} 
- body={"error":"Required email"} 
- </msg>
-<msg timestamp="20231010 20:13:29.949" level="INFO">${response} = &lt;Response [400]&gt;</msg>
-<status status="PASS" starttime="20231010 20:13:29.687" endtime="20231010 20:13:29.949"/>
-</kw>
-<msg timestamp="20231010 20:13:29.949" level="INFO">${response} = &lt;Response [400]&gt;</msg>
-<status status="PASS" starttime="20231010 20:13:29.687" endtime="20231010 20:13:29.949"/>
-</kw>
-<kw name="Status Should Be" library="RequestsLibrary">
-<arg>400</arg>
-<arg>${response}</arg>
-<doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" starttime="20231010 20:13:29.949" endtime="20231010 20:13:29.950"/>
-</kw>
-<status status="PASS" starttime="20231010 20:13:29.687" endtime="20231010 20:13:29.950"/>
-</kw>
-<kw name="Test message empty email be equal" library="meta">
-<arg>${user}</arg>
-<kw name="POST Session" library="SessionsRoute">
-<var>${response}</var>
-<arg>${user}</arg>
-<kw name="POST" library="RequestsLibrary">
-<var>${response}</var>
-<arg>${API_USERS_URL}/sessions</arg>
-<arg>json=${user}</arg>
-<arg>expected_status=any</arg>
-<doc>Sends a POST request.</doc>
-<msg timestamp="20231010 20:13:30.224" level="INFO">POST Request : url=https://api-geek.fly.dev/sessions 
- path_url=/sessions 
- headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '38', 'Content-Type': 'application/json'} 
- body=b'{"email": "", "password": "Kika.1234"}' 
- </msg>
-<msg timestamp="20231010 20:13:30.224" level="INFO">POST Response : url=https://api-geek.fly.dev/sessions 
- status=400, reason=Bad Request 
- headers={'x-powered-by': 'Express', 'access-control-allow-origin': '*', 'content-type': 'application/json; charset=utf-8', 'content-encoding': 'gzip', 'etag': 'W/"1a-ztWLEO5pP/4DOQYYgf8vh7rMmRI"', 'date': 'Tue, 10 Oct 2023 19:13:32 GMT', 'connection': 'keep-alive', 'keep-alive': 'timeout=5', 'transfer-encoding': 'chunked', 'server': 'Fly/55f8eaa0 (2023-10-09)', 'via': '1.1 fly.io', 'fly-request-id': '01HCDG4E68FQW7R7F0RJDN9HCT-mad'} 
- body={"error":"Required email"} 
- </msg>
-<msg timestamp="20231010 20:13:30.224" level="INFO">${response} = &lt;Response [400]&gt;</msg>
-<status status="PASS" starttime="20231010 20:13:29.950" endtime="20231010 20:13:30.224"/>
-</kw>
-<msg timestamp="20231010 20:13:30.224" level="INFO">${response} = &lt;Response [400]&gt;</msg>
-<status status="PASS" starttime="20231010 20:13:29.950" endtime="20231010 20:13:30.224"/>
-</kw>
-<kw name="Should Be Equal" library="BuiltIn">
-<arg>Required email</arg>
-<arg>${response.json()}[error]</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20231010 20:13:30.224" endtime="20231010 20:13:30.225"/>
-</kw>
-<status status="PASS" starttime="20231010 20:13:29.950" endtime="20231010 20:13:30.225"/>
-</kw>
-<tag>attempt</tag>
-<status status="PASS" starttime="20231010 20:13:29.223" endtime="20231010 20:13:30.225"/>
-</test>
-<test id="s1-s1-t6" name="Without email" line="47">
-<kw name="User Signup" library="meta" type="SETUP">
-<kw name="Factory Api User" library="Users">
-<var>${user}</var>
-<arg>signin</arg>
-<msg timestamp="20231010 20:13:30.225" level="INFO">${user} = {'name': 'Lolita Bags', 'email': 'lolita@bag.com', 'password': 'Kika.1234'}</msg>
-<status status="PASS" starttime="20231010 20:13:30.225" endtime="20231010 20:13:30.225"/>
-</kw>
-<kw name="POST User" library="SessionsRoute">
-<arg>${user}</arg>
-<kw name="POST" library="RequestsLibrary">
-<var>${response}</var>
-<arg>${API_USERS_URL}/users</arg>
-<arg>json=${user}</arg>
-<arg>expected_status=any</arg>
-<doc>Sends a POST request.</doc>
-<msg timestamp="20231010 20:13:30.675" level="INFO">POST Request : url=https://api-geek.fly.dev/users 
- path_url=/users 
- headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '75', 'Content-Type': 'application/json'} 
- body=b'{"name": "Lolita Bags", "email": "lolita@bag.com", "password": "Kika.1234"}' 
- </msg>
-<msg timestamp="20231010 20:13:30.675" level="INFO">POST Response : url=https://api-geek.fly.dev/users 
- status=400, reason=Bad Request 
- headers={'x-powered-by': 'Express', 'access-control-allow-origin': '*', 'content-type': 'application/json; charset=utf-8', 'content-encoding': 'gzip', 'etag': 'W/"1f-lFUySNKwX3L5eGEwGcNcUoVKWhE"', 'date': 'Tue, 10 Oct 2023 19:13:32 GMT', 'connection': 'keep-alive', 'keep-alive': 'timeout=5', 'transfer-encoding': 'chunked', 'server': 'Fly/55f8eaa0 (2023-10-09)', 'via': '1.1 fly.io', 'fly-request-id': '01HCDG4EEW85R5E4E9SXJXA1RG-mad'} 
- body={"error":"User already exists"} 
- </msg>
-<msg timestamp="20231010 20:13:30.676" level="INFO">${response} = &lt;Response [400]&gt;</msg>
-<status status="PASS" starttime="20231010 20:13:30.226" endtime="20231010 20:13:30.676"/>
-</kw>
-<status status="PASS" starttime="20231010 20:13:30.225" endtime="20231010 20:13:30.676"/>
-</kw>
-<status status="PASS" starttime="20231010 20:13:30.225" endtime="20231010 20:13:30.676"/>
-</kw>
-<kw name="Factory Api User" library="Users">
-<var>${user}</var>
-<arg>without_email</arg>
-<msg timestamp="20231010 20:13:30.677" level="INFO">${user} = {'password': 'Kika.1234'}</msg>
-<status status="PASS" starttime="20231010 20:13:30.677" endtime="20231010 20:13:30.677"/>
-</kw>
-<kw name="Tests status code 400" library="meta">
-<arg>${user}</arg>
-<kw name="POST Session" library="SessionsRoute">
-<var>${response}</var>
-<arg>${user}</arg>
-<kw name="POST" library="RequestsLibrary">
-<var>${response}</var>
-<arg>${API_USERS_URL}/sessions</arg>
-<arg>json=${user}</arg>
-<arg>expected_status=any</arg>
-<doc>Sends a POST request.</doc>
-<msg timestamp="20231010 20:13:30.941" level="INFO">POST Request : url=https://api-geek.fly.dev/sessions 
- path_url=/sessions 
- headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '25', 'Content-Type': 'application/json'} 
- body=b'{"password": "Kika.1234"}' 
- </msg>
-<msg timestamp="20231010 20:13:30.941" level="INFO">POST Response : url=https://api-geek.fly.dev/sessions 
- status=400, reason=Bad Request 
- headers={'x-powered-by': 'Express', 'access-control-allow-origin': '*', 'content-type': 'application/json; charset=utf-8', 'content-encoding': 'gzip', 'etag': 'W/"1a-ztWLEO5pP/4DOQYYgf8vh7rMmRI"', 'date': 'Tue, 10 Oct 2023 19:13:33 GMT', 'connection': 'keep-alive', 'keep-alive': 'timeout=5', 'transfer-encoding': 'chunked', 'server': 'Fly/55f8eaa0 (2023-10-09)', 'via': '1.1 fly.io', 'fly-request-id': '01HCDG4EX2TKPYVS5AGFCXDJZR-mad'} 
- body={"error":"Required email"} 
- </msg>
-<msg timestamp="20231010 20:13:30.941" level="INFO">${response} = &lt;Response [400]&gt;</msg>
-<status status="PASS" starttime="20231010 20:13:30.677" endtime="20231010 20:13:30.941"/>
-</kw>
-<msg timestamp="20231010 20:13:30.941" level="INFO">${response} = &lt;Response [400]&gt;</msg>
-<status status="PASS" starttime="20231010 20:13:30.677" endtime="20231010 20:13:30.941"/>
-</kw>
-<kw name="Status Should Be" library="RequestsLibrary">
-<arg>400</arg>
-<arg>${response}</arg>
-<doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" starttime="20231010 20:13:30.941" endtime="20231010 20:13:30.941"/>
-</kw>
-<status status="PASS" starttime="20231010 20:13:30.677" endtime="20231010 20:13:30.941"/>
-</kw>
-<kw name="Test message empty email be equal" library="meta">
-<arg>${user}</arg>
-<kw name="POST Session" library="SessionsRoute">
-<var>${response}</var>
-<arg>${user}</arg>
-<kw name="POST" library="RequestsLibrary">
-<var>${response}</var>
-<arg>${API_USERS_URL}/sessions</arg>
-<arg>json=${user}</arg>
-<arg>expected_status=any</arg>
-<doc>Sends a POST request.</doc>
-<msg timestamp="20231010 20:13:31.212" level="INFO">POST Request : url=https://api-geek.fly.dev/sessions 
- path_url=/sessions 
- headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '25', 'Content-Type': 'application/json'} 
- body=b'{"password": "Kika.1234"}' 
- </msg>
-<msg timestamp="20231010 20:13:31.212" level="INFO">POST Response : url=https://api-geek.fly.dev/sessions 
- status=400, reason=Bad Request 
- headers={'x-powered-by': 'Express', 'access-control-allow-origin': '*', 'content-type': 'application/json; charset=utf-8', 'content-encoding': 'gzip', 'etag': 'W/"1a-ztWLEO5pP/4DOQYYgf8vh7rMmRI"', 'date': 'Tue, 10 Oct 2023 19:13:33 GMT', 'connection': 'keep-alive', 'keep-alive': 'timeout=5', 'transfer-encoding': 'chunked', 'server': 'Fly/55f8eaa0 (2023-10-09)', 'via': '1.1 fly.io', 'fly-request-id': '01HCDG4F5JV4AKR601JMY42RM1-mad'} 
- body={"error":"Required email"} 
- </msg>
-<msg timestamp="20231010 20:13:31.212" level="INFO">${response} = &lt;Response [400]&gt;</msg>
-<status status="PASS" starttime="20231010 20:13:30.942" endtime="20231010 20:13:31.212"/>
-</kw>
-<msg timestamp="20231010 20:13:31.212" level="INFO">${response} = &lt;Response [400]&gt;</msg>
-<status status="PASS" starttime="20231010 20:13:30.941" endtime="20231010 20:13:31.212"/>
-</kw>
-<kw name="Should Be Equal" library="BuiltIn">
-<arg>Required email</arg>
-<arg>${response.json()}[error]</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20231010 20:13:31.212" endtime="20231010 20:13:31.213"/>
-</kw>
-<status status="PASS" starttime="20231010 20:13:30.941" endtime="20231010 20:13:31.213"/>
-</kw>
-<tag>attempt</tag>
-<status status="PASS" starttime="20231010 20:13:30.225" endtime="20231010 20:13:31.213"/>
-</test>
-<test id="s1-s1-t7" name="Empty pass" line="54">
-<kw name="User Signup" library="meta" type="SETUP">
-<kw name="Factory Api User" library="Users">
-<var>${user}</var>
-<arg>signin</arg>
-<msg timestamp="20231010 20:13:31.213" level="INFO">${user} = {'name': 'Lolita Bags', 'email': 'lolita@bag.com', 'password': 'Kika.1234'}</msg>
-<status status="PASS" starttime="20231010 20:13:31.213" endtime="20231010 20:13:31.213"/>
-</kw>
-<kw name="POST User" library="SessionsRoute">
-<arg>${user}</arg>
-<kw name="POST" library="RequestsLibrary">
-<var>${response}</var>
-<arg>${API_USERS_URL}/users</arg>
-<arg>json=${user}</arg>
-<arg>expected_status=any</arg>
-<doc>Sends a POST request.</doc>
-<msg timestamp="20231010 20:13:31.672" level="INFO">POST Request : url=https://api-geek.fly.dev/users 
- path_url=/users 
- headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '75', 'Content-Type': 'application/json'} 
- body=b'{"name": "Lolita Bags", "email": "lolita@bag.com", "password": "Kika.1234"}' 
- </msg>
-<msg timestamp="20231010 20:13:31.672" level="INFO">POST Response : url=https://api-geek.fly.dev/users 
- status=400, reason=Bad Request 
- headers={'x-powered-by': 'Express', 'access-control-allow-origin': '*', 'content-type': 'application/json; charset=utf-8', 'content-encoding': 'gzip', 'etag': 'W/"1f-lFUySNKwX3L5eGEwGcNcUoVKWhE"', 'date': 'Tue, 10 Oct 2023 19:13:33 GMT', 'connection': 'keep-alive', 'keep-alive': 'timeout=5', 'transfer-encoding': 'chunked', 'server': 'Fly/55f8eaa0 (2023-10-09)', 'via': '1.1 fly.io', 'fly-request-id': '01HCDG4FDZ4TRFA7R0NA4RWFD3-mad'} 
- body={"error":"User already exists"} 
- </msg>
-<msg timestamp="20231010 20:13:31.672" level="INFO">${response} = &lt;Response [400]&gt;</msg>
-<status status="PASS" starttime="20231010 20:13:31.214" endtime="20231010 20:13:31.672"/>
-</kw>
-<status status="PASS" starttime="20231010 20:13:31.214" endtime="20231010 20:13:31.672"/>
-</kw>
-<status status="PASS" starttime="20231010 20:13:31.213" endtime="20231010 20:13:31.672"/>
-</kw>
-<kw name="Factory Api User" library="Users">
-<var>${user}</var>
-<arg>empty_pass</arg>
-<msg timestamp="20231010 20:13:31.672" level="INFO">${user} = {'email': 'lolita@bag.com', 'password': ''}</msg>
-<status status="PASS" starttime="20231010 20:13:31.672" endtime="20231010 20:13:31.672"/>
-</kw>
-<kw name="Tests status code 400" library="meta">
-<arg>${user}</arg>
-<kw name="POST Session" library="SessionsRoute">
-<var>${response}</var>
-<arg>${user}</arg>
-<kw name="POST" library="RequestsLibrary">
-<var>${response}</var>
-<arg>${API_USERS_URL}/sessions</arg>
-<arg>json=${user}</arg>
-<arg>expected_status=any</arg>
-<doc>Sends a POST request.</doc>
-<msg timestamp="20231010 20:13:31.931" level="INFO">POST Request : url=https://api-geek.fly.dev/sessions 
- path_url=/sessions 
- headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '43', 'Content-Type': 'application/json'} 
- body=b'{"email": "lolita@bag.com", "password": ""}' 
- </msg>
-<msg timestamp="20231010 20:13:31.931" level="INFO">POST Response : url=https://api-geek.fly.dev/sessions 
- status=400, reason=Bad Request 
- headers={'x-powered-by': 'Express', 'access-control-allow-origin': '*', 'content-type': 'application/json; charset=utf-8', 'content-encoding': 'gzip', 'etag': 'W/"19-XQPKZGB2rC+TLudFQKbwFLPwbR0"', 'date': 'Tue, 10 Oct 2023 19:13:34 GMT', 'connection': 'keep-alive', 'keep-alive': 'timeout=5', 'transfer-encoding': 'chunked', 'server': 'Fly/55f8eaa0 (2023-10-09)', 'via': '1.1 fly.io', 'fly-request-id': '01HCDG4FW2D93PEX4NTXHYN2YQ-mad'} 
- body={"error":"Required pass"} 
- </msg>
-<msg timestamp="20231010 20:13:31.932" level="INFO">${response} = &lt;Response [400]&gt;</msg>
-<status status="PASS" starttime="20231010 20:13:31.672" endtime="20231010 20:13:31.932"/>
-</kw>
-<msg timestamp="20231010 20:13:31.932" level="INFO">${response} = &lt;Response [400]&gt;</msg>
-<status status="PASS" starttime="20231010 20:13:31.672" endtime="20231010 20:13:31.932"/>
-</kw>
-<kw name="Status Should Be" library="RequestsLibrary">
-<arg>400</arg>
-<arg>${response}</arg>
-<doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" starttime="20231010 20:13:31.933" endtime="20231010 20:13:31.933"/>
-</kw>
-<status status="PASS" starttime="20231010 20:13:31.672" endtime="20231010 20:13:31.933"/>
-</kw>
-<kw name="Test message empty pass be equal" library="meta">
-<arg>${user}</arg>
-<kw name="POST Session" library="SessionsRoute">
-<var>${response}</var>
-<arg>${user}</arg>
-<kw name="POST" library="RequestsLibrary">
-<var>${response}</var>
-<arg>${API_USERS_URL}/sessions</arg>
-<arg>json=${user}</arg>
-<arg>expected_status=any</arg>
-<doc>Sends a POST request.</doc>
-<msg timestamp="20231010 20:13:32.196" level="INFO">POST Request : url=https://api-geek.fly.dev/sessions 
- path_url=/sessions 
- headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '43', 'Content-Type': 'application/json'} 
- body=b'{"email": "lolita@bag.com", "password": ""}' 
- </msg>
-<msg timestamp="20231010 20:13:32.196" level="INFO">POST Response : url=https://api-geek.fly.dev/sessions 
- status=400, reason=Bad Request 
- headers={'x-powered-by': 'Express', 'access-control-allow-origin': '*', 'content-type': 'application/json; charset=utf-8', 'content-encoding': 'gzip', 'etag': 'W/"19-XQPKZGB2rC+TLudFQKbwFLPwbR0"', 'date': 'Tue, 10 Oct 2023 19:13:34 GMT', 'connection': 'keep-alive', 'keep-alive': 'timeout=5', 'transfer-encoding': 'chunked', 'server': 'Fly/55f8eaa0 (2023-10-09)', 'via': '1.1 fly.io', 'fly-request-id': '01HCDG4G47HEQPP73MR1BHRVQJ-mad'} 
- body={"error":"Required pass"} 
- </msg>
-<msg timestamp="20231010 20:13:32.197" level="INFO">${response} = &lt;Response [400]&gt;</msg>
-<status status="PASS" starttime="20231010 20:13:31.933" endtime="20231010 20:13:32.197"/>
-</kw>
-<msg timestamp="20231010 20:13:32.197" level="INFO">${response} = &lt;Response [400]&gt;</msg>
-<status status="PASS" starttime="20231010 20:13:31.933" endtime="20231010 20:13:32.197"/>
-</kw>
-<kw name="Should Be Equal" library="BuiltIn">
-<arg>Required pass</arg>
-<arg>${response.json()}[error]</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20231010 20:13:32.197" endtime="20231010 20:13:32.197"/>
-</kw>
-<status status="PASS" starttime="20231010 20:13:31.933" endtime="20231010 20:13:32.197"/>
-</kw>
-<tag>attempt</tag>
-<status status="PASS" starttime="20231010 20:13:31.213" endtime="20231010 20:13:32.197"/>
-</test>
-<test id="s1-s1-t8" name="Without pass" line="61">
-<kw name="User Signup" library="meta" type="SETUP">
-<kw name="Factory Api User" library="Users">
-<var>${user}</var>
-<arg>signin</arg>
-<msg timestamp="20231010 20:13:32.198" level="INFO">${user} = {'name': 'Lolita Bags', 'email': 'lolita@bag.com', 'password': 'Kika.1234'}</msg>
-<status status="PASS" starttime="20231010 20:13:32.198" endtime="20231010 20:13:32.198"/>
-</kw>
-<kw name="POST User" library="SessionsRoute">
-<arg>${user}</arg>
-<kw name="POST" library="RequestsLibrary">
-<var>${response}</var>
-<arg>${API_USERS_URL}/users</arg>
-<arg>json=${user}</arg>
-<arg>expected_status=any</arg>
-<doc>Sends a POST request.</doc>
-<msg timestamp="20231010 20:13:32.657" level="INFO">POST Request : url=https://api-geek.fly.dev/users 
- path_url=/users 
- headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '75', 'Content-Type': 'application/json'} 
- body=b'{"name": "Lolita Bags", "email": "lolita@bag.com", "password": "Kika.1234"}' 
- </msg>
-<msg timestamp="20231010 20:13:32.657" level="INFO">POST Response : url=https://api-geek.fly.dev/users 
- status=400, reason=Bad Request 
- headers={'x-powered-by': 'Express', 'access-control-allow-origin': '*', 'content-type': 'application/json; charset=utf-8', 'content-encoding': 'gzip', 'etag': 'W/"1f-lFUySNKwX3L5eGEwGcNcUoVKWhE"', 'date': 'Tue, 10 Oct 2023 19:13:34 GMT', 'connection': 'keep-alive', 'keep-alive': 'timeout=5', 'transfer-encoding': 'chunked', 'server': 'Fly/55f8eaa0 (2023-10-09)', 'via': '1.1 fly.io', 'fly-request-id': '01HCDG4GCQ89Y20B9R6P01D9Z4-mad'} 
- body={"error":"User already exists"} 
- </msg>
-<msg timestamp="20231010 20:13:32.657" level="INFO">${response} = &lt;Response [400]&gt;</msg>
-<status status="PASS" starttime="20231010 20:13:32.199" endtime="20231010 20:13:32.657"/>
-</kw>
-<status status="PASS" starttime="20231010 20:13:32.198" endtime="20231010 20:13:32.657"/>
-</kw>
-<status status="PASS" starttime="20231010 20:13:32.198" endtime="20231010 20:13:32.658"/>
-</kw>
-<kw name="Factory Api User" library="Users">
-<var>${user}</var>
-<arg>without_pass</arg>
-<msg timestamp="20231010 20:13:32.658" level="INFO">${user} = {'email': 'lolita@bag.com'}</msg>
-<status status="PASS" starttime="20231010 20:13:32.658" endtime="20231010 20:13:32.658"/>
-</kw>
-<kw name="Tests status code 400" library="meta">
-<arg>${user}</arg>
-<kw name="POST Session" library="SessionsRoute">
-<var>${response}</var>
-<arg>${user}</arg>
-<kw name="POST" library="RequestsLibrary">
-<var>${response}</var>
-<arg>${API_USERS_URL}/sessions</arg>
-<arg>json=${user}</arg>
-<arg>expected_status=any</arg>
-<doc>Sends a POST request.</doc>
-<msg timestamp="20231010 20:13:32.922" level="INFO">POST Request : url=https://api-geek.fly.dev/sessions 
- path_url=/sessions 
- headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '27', 'Content-Type': 'application/json'} 
- body=b'{"email": "lolita@bag.com"}' 
- </msg>
-<msg timestamp="20231010 20:13:32.922" level="INFO">POST Response : url=https://api-geek.fly.dev/sessions 
- status=400, reason=Bad Request 
- headers={'x-powered-by': 'Express', 'access-control-allow-origin': '*', 'content-type': 'application/json; charset=utf-8', 'content-encoding': 'gzip', 'etag': 'W/"19-XQPKZGB2rC+TLudFQKbwFLPwbR0"', 'date': 'Tue, 10 Oct 2023 19:13:35 GMT', 'connection': 'keep-alive', 'keep-alive': 'timeout=5', 'transfer-encoding': 'chunked', 'server': 'Fly/55f8eaa0 (2023-10-09)', 'via': '1.1 fly.io', 'fly-request-id': '01HCDG4GV2JZ1XP3BD8MYDNYWB-mad'} 
- body={"error":"Required pass"} 
- </msg>
-<msg timestamp="20231010 20:13:32.922" level="INFO">${response} = &lt;Response [400]&gt;</msg>
-<status status="PASS" starttime="20231010 20:13:32.659" endtime="20231010 20:13:32.922"/>
-</kw>
-<msg timestamp="20231010 20:13:32.922" level="INFO">${response} = &lt;Response [400]&gt;</msg>
-<status status="PASS" starttime="20231010 20:13:32.658" endtime="20231010 20:13:32.922"/>
-</kw>
-<kw name="Status Should Be" library="RequestsLibrary">
-<arg>400</arg>
-<arg>${response}</arg>
-<doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" starttime="20231010 20:13:32.922" endtime="20231010 20:13:32.922"/>
-</kw>
-<status status="PASS" starttime="20231010 20:13:32.658" endtime="20231010 20:13:32.922"/>
-</kw>
-<kw name="Test message empty pass be equal" library="meta">
-<arg>${user}</arg>
-<kw name="POST Session" library="SessionsRoute">
-<var>${response}</var>
-<arg>${user}</arg>
-<kw name="POST" library="RequestsLibrary">
-<var>${response}</var>
-<arg>${API_USERS_URL}/sessions</arg>
-<arg>json=${user}</arg>
-<arg>expected_status=any</arg>
-<doc>Sends a POST request.</doc>
-<msg timestamp="20231010 20:13:33.204" level="INFO">POST Request : url=https://api-geek.fly.dev/sessions 
- path_url=/sessions 
- headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '27', 'Content-Type': 'application/json'} 
- body=b'{"email": "lolita@bag.com"}' 
- </msg>
-<msg timestamp="20231010 20:13:33.204" level="INFO">POST Response : url=https://api-geek.fly.dev/sessions 
- status=400, reason=Bad Request 
- headers={'x-powered-by': 'Express', 'access-control-allow-origin': '*', 'content-type': 'application/json; charset=utf-8', 'content-encoding': 'gzip', 'etag': 'W/"19-XQPKZGB2rC+TLudFQKbwFLPwbR0"', 'date': 'Tue, 10 Oct 2023 19:13:35 GMT', 'connection': 'keep-alive', 'keep-alive': 'timeout=5', 'transfer-encoding': 'chunked', 'server': 'Fly/55f8eaa0 (2023-10-09)', 'via': '1.1 fly.io', 'fly-request-id': '01HCDG4H3W434S0Q4XQG772S7J-mad'} 
- body={"error":"Required pass"} 
- </msg>
-<msg timestamp="20231010 20:13:33.206" level="INFO">${response} = &lt;Response [400]&gt;</msg>
-<status status="PASS" starttime="20231010 20:13:32.923" endtime="20231010 20:13:33.206"/>
-</kw>
-<msg timestamp="20231010 20:13:33.206" level="INFO">${response} = &lt;Response [400]&gt;</msg>
-<status status="PASS" starttime="20231010 20:13:32.923" endtime="20231010 20:13:33.206"/>
-</kw>
-<kw name="Should Be Equal" library="BuiltIn">
-<arg>Required pass</arg>
-<arg>${response.json()}[error]</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20231010 20:13:33.206" endtime="20231010 20:13:33.206"/>
-</kw>
-<status status="PASS" starttime="20231010 20:13:32.923" endtime="20231010 20:13:33.207"/>
-</kw>
-<tag>attempt</tag>
-<status status="PASS" starttime="20231010 20:13:32.198" endtime="20231010 20:13:33.207"/>
-</test>
-<test id="s1-s1-t9" name="Should Not Get token" line="68">
-<kw name="User Signup" library="meta" type="SETUP">
-<kw name="Factory Api User" library="Users">
-<var>${user}</var>
-<arg>signin</arg>
-<msg timestamp="20231010 20:13:33.207" level="INFO">${user} = {'name': 'Lolita Bags', 'email': 'lolita@bag.com', 'password': 'Kika.1234'}</msg>
-<status status="PASS" starttime="20231010 20:13:33.207" endtime="20231010 20:13:33.207"/>
-</kw>
-<kw name="POST User" library="SessionsRoute">
-<arg>${user}</arg>
-<kw name="POST" library="RequestsLibrary">
-<var>${response}</var>
-<arg>${API_USERS_URL}/users</arg>
-<arg>json=${user}</arg>
-<arg>expected_status=any</arg>
-<doc>Sends a POST request.</doc>
-<msg timestamp="20231010 20:13:33.661" level="INFO">POST Request : url=https://api-geek.fly.dev/users 
- path_url=/users 
- headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '75', 'Content-Type': 'application/json'} 
- body=b'{"name": "Lolita Bags", "email": "lolita@bag.com", "password": "Kika.1234"}' 
- </msg>
-<msg timestamp="20231010 20:13:33.661" level="INFO">POST Response : url=https://api-geek.fly.dev/users 
- status=400, reason=Bad Request 
- headers={'x-powered-by': 'Express', 'access-control-allow-origin': '*', 'content-type': 'application/json; charset=utf-8', 'content-encoding': 'gzip', 'etag': 'W/"1f-lFUySNKwX3L5eGEwGcNcUoVKWhE"', 'date': 'Tue, 10 Oct 2023 19:13:35 GMT', 'connection': 'keep-alive', 'keep-alive': 'timeout=5', 'transfer-encoding': 'chunked', 'server': 'Fly/55f8eaa0 (2023-10-09)', 'via': '1.1 fly.io', 'fly-request-id': '01HCDG4HC5Q2DQ1KS74QHA6CS6-mad'} 
- body={"error":"User already exists"} 
- </msg>
-<msg timestamp="20231010 20:13:33.661" level="INFO">${response} = &lt;Response [400]&gt;</msg>
-<status status="PASS" starttime="20231010 20:13:33.207" endtime="20231010 20:13:33.661"/>
-</kw>
-<status status="PASS" starttime="20231010 20:13:33.207" endtime="20231010 20:13:33.661"/>
-</kw>
-<status status="PASS" starttime="20231010 20:13:33.207" endtime="20231010 20:13:33.661"/>
-</kw>
-<kw name="Attempt POST Session" library="meta">
-<arg>incorrect_pass</arg>
-<arg>401</arg>
-<arg>Unauthorized</arg>
-<kw name="Factory Api User" library="Users">
-<var>${user}</var>
-<arg>${user_db}</arg>
-<msg timestamp="20231010 20:13:33.662" level="INFO">${user} = {'email': 'lolita@bag.com', 'password': 'Kika1234'}</msg>
-<status status="PASS" starttime="20231010 20:13:33.661" endtime="20231010 20:13:33.662"/>
-</kw>
-<kw name="POST Session" library="SessionsRoute">
-<var>${response}</var>
-<arg>${user}</arg>
-<kw name="POST" library="RequestsLibrary">
-<var>${response}</var>
-<arg>${API_USERS_URL}/sessions</arg>
-<arg>json=${user}</arg>
-<arg>expected_status=any</arg>
-<doc>Sends a POST request.</doc>
-<msg timestamp="20231010 20:13:34.131" level="INFO">POST Request : url=https://api-geek.fly.dev/sessions 
- path_url=/sessions 
- headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '51', 'Content-Type': 'application/json'} 
- body=b'{"email": "lolita@bag.com", "password": "Kika1234"}' 
- </msg>
-<msg timestamp="20231010 20:13:34.131" level="INFO">POST Response : url=https://api-geek.fly.dev/sessions 
- status=401, reason=Unauthorized 
- headers={'x-powered-by': 'Express', 'access-control-allow-origin': '*', 'content-type': 'application/json; charset=utf-8', 'content-encoding': 'gzip', 'etag': 'W/"18-XPDV80vbMk4yY1/PADG4jYM4rSI"', 'date': 'Tue, 10 Oct 2023 19:13:36 GMT', 'connection': 'keep-alive', 'keep-alive': 'timeout=5', 'transfer-encoding': 'chunked', 'server': 'Fly/55f8eaa0 (2023-10-09)', 'via': '1.1 fly.io', 'fly-request-id': '01HCDG4HT9H4EW0X4EGHTCGYQD-mad'} 
- body={"error":"Unauthorized"} 
- </msg>
-<msg timestamp="20231010 20:13:34.131" level="INFO">${response} = &lt;Response [401]&gt;</msg>
-<status status="PASS" starttime="20231010 20:13:33.662" endtime="20231010 20:13:34.131"/>
-</kw>
-<msg timestamp="20231010 20:13:34.131" level="INFO">${response} = &lt;Response [401]&gt;</msg>
-<status status="PASS" starttime="20231010 20:13:33.662" endtime="20231010 20:13:34.131"/>
-</kw>
-<kw name="Status Should Be" library="RequestsLibrary">
-<arg>${status_code}</arg>
-<arg>${response}</arg>
-<doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" starttime="20231010 20:13:34.131" endtime="20231010 20:13:34.131"/>
-</kw>
-<kw name="Should Be Equal" library="BuiltIn">
-<arg>${error_message}</arg>
-<arg>${response.json()}[error]</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20231010 20:13:34.132" endtime="20231010 20:13:34.132"/>
-</kw>
-<status status="PASS" starttime="20231010 20:13:33.661" endtime="20231010 20:13:34.132"/>
-</kw>
-<kw name="Attempt POST Session" library="meta">
-<arg>user_not_found</arg>
-<arg>401</arg>
-<arg>Unauthorized</arg>
-<kw name="Factory Api User" library="Users">
-<var>${user}</var>
-<arg>${user_db}</arg>
-<msg timestamp="20231010 20:13:34.132" level="INFO">${user} = {'email': 'Bagsbags@lolita.com', 'password': 'Kika.1234'}</msg>
-<status status="PASS" starttime="20231010 20:13:34.132" endtime="20231010 20:13:34.132"/>
-</kw>
-<kw name="POST Session" library="SessionsRoute">
-<var>${response}</var>
-<arg>${user}</arg>
-<kw name="POST" library="RequestsLibrary">
-<var>${response}</var>
-<arg>${API_USERS_URL}/sessions</arg>
-<arg>json=${user}</arg>
-<arg>expected_status=any</arg>
-<doc>Sends a POST request.</doc>
-<msg timestamp="20231010 20:13:34.591" level="INFO">POST Request : url=https://api-geek.fly.dev/sessions 
- path_url=/sessions 
- headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '57', 'Content-Type': 'application/json'} 
- body=b'{"email": "Bagsbags@lolita.com", "password": "Kika.1234"}' 
- </msg>
-<msg timestamp="20231010 20:13:34.591" level="INFO">POST Response : url=https://api-geek.fly.dev/sessions 
- status=401, reason=Unauthorized 
- headers={'x-powered-by': 'Express', 'access-control-allow-origin': '*', 'content-type': 'application/json; charset=utf-8', 'content-encoding': 'gzip', 'etag': 'W/"18-XPDV80vbMk4yY1/PADG4jYM4rSI"', 'date': 'Tue, 10 Oct 2023 19:13:36 GMT', 'connection': 'keep-alive', 'keep-alive': 'timeout=5', 'transfer-encoding': 'chunked', 'server': 'Fly/55f8eaa0 (2023-10-09)', 'via': '1.1 fly.io', 'fly-request-id': '01HCDG4J94TXV71ZB6ADP9VNYB-mad'} 
- body={"error":"Unauthorized"} 
- </msg>
-<msg timestamp="20231010 20:13:34.591" level="INFO">${response} = &lt;Response [401]&gt;</msg>
-<status status="PASS" starttime="20231010 20:13:34.133" endtime="20231010 20:13:34.591"/>
-</kw>
-<msg timestamp="20231010 20:13:34.591" level="INFO">${response} = &lt;Response [401]&gt;</msg>
-<status status="PASS" starttime="20231010 20:13:34.132" endtime="20231010 20:13:34.591"/>
-</kw>
-<kw name="Status Should Be" library="RequestsLibrary">
-<arg>${status_code}</arg>
-<arg>${response}</arg>
-<doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" starttime="20231010 20:13:34.591" endtime="20231010 20:13:34.591"/>
-</kw>
-<kw name="Should Be Equal" library="BuiltIn">
-<arg>${error_message}</arg>
-<arg>${response.json()}[error]</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20231010 20:13:34.591" endtime="20231010 20:13:34.592"/>
-</kw>
-<status status="PASS" starttime="20231010 20:13:34.132" endtime="20231010 20:13:34.592"/>
-</kw>
-<kw name="Attempt POST Session" library="meta">
-<arg>incorrect_email</arg>
-<arg>400</arg>
-<arg>Incorrect email</arg>
-<kw name="Factory Api User" library="Users">
-<var>${user}</var>
-<arg>${user_db}</arg>
-<msg timestamp="20231010 20:13:34.593" level="INFO">${user} = {'email': 'Bagsbags.lolita.com', 'password': 'Kika.1234'}</msg>
-<status status="PASS" starttime="20231010 20:13:34.592" endtime="20231010 20:13:34.593"/>
-</kw>
-<kw name="POST Session" library="SessionsRoute">
-<var>${response}</var>
-<arg>${user}</arg>
-<kw name="POST" library="RequestsLibrary">
-<var>${response}</var>
-<arg>${API_USERS_URL}/sessions</arg>
-<arg>json=${user}</arg>
-<arg>expected_status=any</arg>
-<doc>Sends a POST request.</doc>
-<msg timestamp="20231010 20:13:34.855" level="INFO">POST Request : url=https://api-geek.fly.dev/sessions 
- path_url=/sessions 
- headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '57', 'Content-Type': 'application/json'} 
- body=b'{"email": "Bagsbags.lolita.com", "password": "Kika.1234"}' 
- </msg>
-<msg timestamp="20231010 20:13:34.855" level="INFO">POST Response : url=https://api-geek.fly.dev/sessions 
- status=400, reason=Bad Request 
- headers={'x-powered-by': 'Express', 'access-control-allow-origin': '*', 'content-type': 'application/json; charset=utf-8', 'content-encoding': 'gzip', 'etag': 'W/"1b-/TOfJuE8lwSWEXvBl7o6iRstTo0"', 'date': 'Tue, 10 Oct 2023 19:13:37 GMT', 'connection': 'keep-alive', 'keep-alive': 'timeout=5', 'transfer-encoding': 'chunked', 'server': 'Fly/55f8eaa0 (2023-10-09)', 'via': '1.1 fly.io', 'fly-request-id': '01HCDG4JQFCW4KZP47NQBXCS3D-mad'} 
- body={"error":"Incorrect email"} 
- </msg>
-<msg timestamp="20231010 20:13:34.857" level="INFO">${response} = &lt;Response [400]&gt;</msg>
-<status status="PASS" starttime="20231010 20:13:34.594" endtime="20231010 20:13:34.857"/>
-</kw>
-<msg timestamp="20231010 20:13:34.857" level="INFO">${response} = &lt;Response [400]&gt;</msg>
-<status status="PASS" starttime="20231010 20:13:34.593" endtime="20231010 20:13:34.857"/>
-</kw>
-<kw name="Status Should Be" library="RequestsLibrary">
-<arg>${status_code}</arg>
-<arg>${response}</arg>
-<doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" starttime="20231010 20:13:34.857" endtime="20231010 20:13:34.858"/>
-</kw>
-<kw name="Should Be Equal" library="BuiltIn">
-<arg>${error_message}</arg>
-<arg>${response.json()}[error]</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20231010 20:13:34.858" endtime="20231010 20:13:34.859"/>
-</kw>
-<status status="PASS" starttime="20231010 20:13:34.592" endtime="20231010 20:13:34.859"/>
-</kw>
-<kw name="Attempt POST Session" library="meta">
-<arg>empty_email</arg>
-<arg>400</arg>
-<arg>Required email</arg>
-<kw name="Factory Api User" library="Users">
-<var>${user}</var>
-<arg>${user_db}</arg>
-<msg timestamp="20231010 20:13:34.859" level="INFO">${user} = {'email': '', 'password': 'Kika.1234'}</msg>
-<status status="PASS" starttime="20231010 20:13:34.859" endtime="20231010 20:13:34.859"/>
-</kw>
-<kw name="POST Session" library="SessionsRoute">
-<var>${response}</var>
-<arg>${user}</arg>
-<kw name="POST" library="RequestsLibrary">
-<var>${response}</var>
-<arg>${API_USERS_URL}/sessions</arg>
-<arg>json=${user}</arg>
-<arg>expected_status=any</arg>
-<doc>Sends a POST request.</doc>
-<msg timestamp="20231010 20:13:35.135" level="INFO">POST Request : url=https://api-geek.fly.dev/sessions 
- path_url=/sessions 
- headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '38', 'Content-Type': 'application/json'} 
- body=b'{"email": "", "password": "Kika.1234"}' 
- </msg>
-<msg timestamp="20231010 20:13:35.135" level="INFO">POST Response : url=https://api-geek.fly.dev/sessions 
- status=400, reason=Bad Request 
- headers={'x-powered-by': 'Express', 'access-control-allow-origin': '*', 'content-type': 'application/json; charset=utf-8', 'content-encoding': 'gzip', 'etag': 'W/"1a-ztWLEO5pP/4DOQYYgf8vh7rMmRI"', 'date': 'Tue, 10 Oct 2023 19:13:37 GMT', 'connection': 'keep-alive', 'keep-alive': 'timeout=5', 'transfer-encoding': 'chunked', 'server': 'Fly/55f8eaa0 (2023-10-09)', 'via': '1.1 fly.io', 'fly-request-id': '01HCDG4K04RDKZ78ATGCYGBFQ5-mad'} 
- body={"error":"Required email"} 
- </msg>
-<msg timestamp="20231010 20:13:35.135" level="INFO">${response} = &lt;Response [400]&gt;</msg>
-<status status="PASS" starttime="20231010 20:13:34.860" endtime="20231010 20:13:35.135"/>
-</kw>
-<msg timestamp="20231010 20:13:35.136" level="INFO">${response} = &lt;Response [400]&gt;</msg>
-<status status="PASS" starttime="20231010 20:13:34.860" endtime="20231010 20:13:35.136"/>
-</kw>
-<kw name="Status Should Be" library="RequestsLibrary">
-<arg>${status_code}</arg>
-<arg>${response}</arg>
-<doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" starttime="20231010 20:13:35.136" endtime="20231010 20:13:35.136"/>
-</kw>
-<kw name="Should Be Equal" library="BuiltIn">
-<arg>${error_message}</arg>
-<arg>${response.json()}[error]</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20231010 20:13:35.136" endtime="20231010 20:13:35.137"/>
-</kw>
-<status status="PASS" starttime="20231010 20:13:34.859" endtime="20231010 20:13:35.137"/>
-</kw>
-<kw name="Attempt POST Session" library="meta">
-<arg>without_email</arg>
-<arg>400</arg>
-<arg>Required email</arg>
-<kw name="Factory Api User" library="Users">
-<var>${user}</var>
-<arg>${user_db}</arg>
-<msg timestamp="20231010 20:13:35.139" level="INFO">${user} = {'password': 'Kika.1234'}</msg>
-<status status="PASS" starttime="20231010 20:13:35.138" endtime="20231010 20:13:35.139"/>
-</kw>
-<kw name="POST Session" library="SessionsRoute">
-<var>${response}</var>
-<arg>${user}</arg>
-<kw name="POST" library="RequestsLibrary">
-<var>${response}</var>
-<arg>${API_USERS_URL}/sessions</arg>
-<arg>json=${user}</arg>
-<arg>expected_status=any</arg>
-<doc>Sends a POST request.</doc>
-<msg timestamp="20231010 20:13:35.418" level="INFO">POST Request : url=https://api-geek.fly.dev/sessions 
- path_url=/sessions 
- headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '25', 'Content-Type': 'application/json'} 
- body=b'{"password": "Kika.1234"}' 
- </msg>
-<msg timestamp="20231010 20:13:35.419" level="INFO">POST Response : url=https://api-geek.fly.dev/sessions 
- status=400, reason=Bad Request 
- headers={'x-powered-by': 'Express', 'access-control-allow-origin': '*', 'content-type': 'application/json; charset=utf-8', 'content-encoding': 'gzip', 'etag': 'W/"1a-ztWLEO5pP/4DOQYYgf8vh7rMmRI"', 'date': 'Tue, 10 Oct 2023 19:13:37 GMT', 'connection': 'keep-alive', 'keep-alive': 'timeout=5', 'transfer-encoding': 'chunked', 'server': 'Fly/55f8eaa0 (2023-10-09)', 'via': '1.1 fly.io', 'fly-request-id': '01HCDG4K8WW953H3329PGD4VG4-mad'} 
- body={"error":"Required email"} 
- </msg>
-<msg timestamp="20231010 20:13:35.420" level="INFO">${response} = &lt;Response [400]&gt;</msg>
-<status status="PASS" starttime="20231010 20:13:35.139" endtime="20231010 20:13:35.420"/>
-</kw>
-<msg timestamp="20231010 20:13:35.420" level="INFO">${response} = &lt;Response [400]&gt;</msg>
-<status status="PASS" starttime="20231010 20:13:35.139" endtime="20231010 20:13:35.420"/>
-</kw>
-<kw name="Status Should Be" library="RequestsLibrary">
-<arg>${status_code}</arg>
-<arg>${response}</arg>
-<doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" starttime="20231010 20:13:35.421" endtime="20231010 20:13:35.421"/>
-</kw>
-<kw name="Should Be Equal" library="BuiltIn">
-<arg>${error_message}</arg>
-<arg>${response.json()}[error]</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20231010 20:13:35.421" endtime="20231010 20:13:35.422"/>
-</kw>
-<status status="PASS" starttime="20231010 20:13:35.138" endtime="20231010 20:13:35.422"/>
-</kw>
-<kw name="Attempt POST Session" library="meta">
-<arg>empty_pass</arg>
-<arg>400</arg>
-<arg>Required pass</arg>
-<kw name="Factory Api User" library="Users">
-<var>${user}</var>
-<arg>${user_db}</arg>
-<msg timestamp="20231010 20:13:35.423" level="INFO">${user} = {'email': 'lolita@bag.com', 'password': ''}</msg>
-<status status="PASS" starttime="20231010 20:13:35.423" endtime="20231010 20:13:35.423"/>
-</kw>
-<kw name="POST Session" library="SessionsRoute">
-<var>${response}</var>
-<arg>${user}</arg>
-<kw name="POST" library="RequestsLibrary">
-<var>${response}</var>
-<arg>${API_USERS_URL}/sessions</arg>
-<arg>json=${user}</arg>
-<arg>expected_status=any</arg>
-<doc>Sends a POST request.</doc>
-<msg timestamp="20231010 20:13:35.706" level="INFO">POST Request : url=https://api-geek.fly.dev/sessions 
- path_url=/sessions 
- headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '43', 'Content-Type': 'application/json'} 
- body=b'{"email": "lolita@bag.com", "password": ""}' 
- </msg>
-<msg timestamp="20231010 20:13:35.706" level="INFO">POST Response : url=https://api-geek.fly.dev/sessions 
- status=400, reason=Bad Request 
- headers={'x-powered-by': 'Express', 'access-control-allow-origin': '*', 'content-type': 'application/json; charset=utf-8', 'content-encoding': 'gzip', 'etag': 'W/"19-XQPKZGB2rC+TLudFQKbwFLPwbR0"', 'date': 'Tue, 10 Oct 2023 19:13:37 GMT', 'connection': 'keep-alive', 'keep-alive': 'timeout=5', 'transfer-encoding': 'chunked', 'server': 'Fly/55f8eaa0 (2023-10-09)', 'via': '1.1 fly.io', 'fly-request-id': '01HCDG4KJ3P8J0F5FE1EE8J4WD-mad'} 
- body={"error":"Required pass"} 
- </msg>
-<msg timestamp="20231010 20:13:35.706" level="INFO">${response} = &lt;Response [400]&gt;</msg>
-<status status="PASS" starttime="20231010 20:13:35.424" endtime="20231010 20:13:35.706"/>
-</kw>
-<msg timestamp="20231010 20:13:35.706" level="INFO">${response} = &lt;Response [400]&gt;</msg>
-<status status="PASS" starttime="20231010 20:13:35.424" endtime="20231010 20:13:35.706"/>
-</kw>
-<kw name="Status Should Be" library="RequestsLibrary">
-<arg>${status_code}</arg>
-<arg>${response}</arg>
-<doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" starttime="20231010 20:13:35.706" endtime="20231010 20:13:35.706"/>
-</kw>
-<kw name="Should Be Equal" library="BuiltIn">
-<arg>${error_message}</arg>
-<arg>${response.json()}[error]</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20231010 20:13:35.706" endtime="20231010 20:13:35.707"/>
-</kw>
-<status status="PASS" starttime="20231010 20:13:35.422" endtime="20231010 20:13:35.707"/>
-</kw>
-<kw name="Attempt POST Session" library="meta">
-<arg>without_pass</arg>
-<arg>400</arg>
-<arg>Required pass</arg>
-<kw name="Factory Api User" library="Users">
-<var>${user}</var>
-<arg>${user_db}</arg>
-<msg timestamp="20231010 20:13:35.708" level="INFO">${user} = {'email': 'lolita@bag.com'}</msg>
-<status status="PASS" starttime="20231010 20:13:35.707" endtime="20231010 20:13:35.708"/>
-</kw>
-<kw name="POST Session" library="SessionsRoute">
-<var>${response}</var>
-<arg>${user}</arg>
-<kw name="POST" library="RequestsLibrary">
-<var>${response}</var>
-<arg>${API_USERS_URL}/sessions</arg>
-<arg>json=${user}</arg>
-<arg>expected_status=any</arg>
-<doc>Sends a POST request.</doc>
-<msg timestamp="20231010 20:13:35.993" level="INFO">POST Request : url=https://api-geek.fly.dev/sessions 
- path_url=/sessions 
- headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '27', 'Content-Type': 'application/json'} 
- body=b'{"email": "lolita@bag.com"}' 
- </msg>
-<msg timestamp="20231010 20:13:35.993" level="INFO">POST Response : url=https://api-geek.fly.dev/sessions 
- status=400, reason=Bad Request 
- headers={'x-powered-by': 'Express', 'access-control-allow-origin': '*', 'content-type': 'application/json; charset=utf-8', 'content-encoding': 'gzip', 'etag': 'W/"19-XQPKZGB2rC+TLudFQKbwFLPwbR0"', 'date': 'Tue, 10 Oct 2023 19:13:38 GMT', 'connection': 'keep-alive', 'keep-alive': 'timeout=5', 'transfer-encoding': 'chunked', 'server': 'Fly/55f8eaa0 (2023-10-09)', 'via': '1.1 fly.io', 'fly-request-id': '01HCDG4KTTGMWF281XH0TZV539-mad'} 
- body={"error":"Required pass"} 
- </msg>
-<msg timestamp="20231010 20:13:35.994" level="INFO">${response} = &lt;Response [400]&gt;</msg>
-<status status="PASS" starttime="20231010 20:13:35.708" endtime="20231010 20:13:35.994"/>
-</kw>
-<msg timestamp="20231010 20:13:35.994" level="INFO">${response} = &lt;Response [400]&gt;</msg>
-<status status="PASS" starttime="20231010 20:13:35.708" endtime="20231010 20:13:35.994"/>
-</kw>
-<kw name="Status Should Be" library="RequestsLibrary">
-<arg>${status_code}</arg>
-<arg>${response}</arg>
-<doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" starttime="20231010 20:13:35.994" endtime="20231010 20:13:35.995"/>
-</kw>
-<kw name="Should Be Equal" library="BuiltIn">
-<arg>${error_message}</arg>
-<arg>${response.json()}[error]</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20231010 20:13:35.995" endtime="20231010 20:13:35.996"/>
-</kw>
-<status status="PASS" starttime="20231010 20:13:35.707" endtime="20231010 20:13:35.996"/>
-</kw>
-<tag>attempts</tag>
-<status status="PASS" starttime="20231010 20:13:33.207" endtime="20231010 20:13:35.996"/>
+<status status="PASS" starttime="20231013 19:54:51.037" endtime="20231013 19:54:54.329"/>
 </test>
 <doc>Session route test suite</doc>
-<status status="PASS" starttime="20231010 20:13:22.220" endtime="20231010 20:13:35.997"/>
-</suite>
-<status status="PASS" starttime="20231010 20:13:22.193" endtime="20231010 20:13:35.998"/>
+<status status="PASS" starttime="20231013 19:54:50.928" endtime="20231013 19:54:54.333"/>
 </suite>
 <statistics>
 <total>
-<stat pass="9" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="7" fail="0" skip="0">attempt</stat>
-<stat pass="1" fail="0" skip="0">attempts</stat>
 <stat pass="1" fail="0" skip="0">happy_way</stat>
 </tag>
 <suite>
-<stat pass="9" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
-<stat pass="9" fail="0" skip="0" id="s1-s1" name="Sessions">Tests.Sessions</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Users">Users</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20231013 19:54:51.032" level="ERROR">Error in file 'D:\OneDrive - Novabase\Documents\1.AutomaticTests\robot_framework--advanced\.history\Front\resources\4.geeks\meta_20230918152353.robot' on line 4: Resource file '..\0.default\Base.robot' does not exist.</msg>
+<msg timestamp="20231013 19:54:51.033" level="ERROR">Error in file 'D:\OneDrive - Novabase\Documents\1.AutomaticTests\robot_framework--advanced\.history\Front\resources\4.geeks\meta_20230918152353.robot' on line 5: Resource file 'data.robot' does not exist.</msg>
 </errors>
 </robot>
