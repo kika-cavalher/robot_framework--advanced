@@ -11,6 +11,6 @@ Add new user
     [Tags]                                       happy_way
     ${user}                                      Factory User              signin
 
-
-    User Signup                                  ${user}                    
+    User Signup                                  ${user}   
+    Tests signup status code 201                  
     Del User

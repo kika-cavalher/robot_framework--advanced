@@ -2,7 +2,6 @@
 
 Documentation                Session route 
 Resource                     ../default/Base.robot
-Resource    ../../.history/Front/resources/4.geeks/meta_20230918152353.robot
 
 
 *** Keywords ***
@@ -12,6 +11,18 @@ POST User
 
     ${response}             POST                   
     ...                     ${API_USERS_URL}/users
+    ...                     json=${user}           
+    ...                     expected_status=any
+    
+    [Return]                ${response}
+
+
+#Signin endpoint
+POST Session 
+    [Arguments]             ${user}
+
+    ${response}             POST                   
+    ...                     ${API_USERS_URL}/sessions
     ...                     json=${user}           
     ...                     expected_status=any
     
@@ -33,19 +44,6 @@ DELETE User
     ${response}             DELETE                   
     ...                     ${API_USERS_URL}/users
     ...                     headers=${headers}    
-    ...                     expected_status=any
-    
-    [Return]                ${response}
-
-
-
-#Signin endpoint
-POST Session 
-    [Arguments]             ${user}
-
-    ${response}             POST                   
-    ...                     ${API_USERS_URL}/sessions
-    ...                     json=${user}           
     ...                     expected_status=any
     
     [Return]                ${response}

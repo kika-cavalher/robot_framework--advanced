@@ -12,10 +12,12 @@ User Signup
     ${response}             POST Session                      ${user}
     
     POST User           ${user}
-    Status Should Be    201
 
 Del User
     DELETE User
+
+Tests signup status code 201 
+    Status Should Be        201
 
 Tests signup status code 400 
     Status Should Be        400
