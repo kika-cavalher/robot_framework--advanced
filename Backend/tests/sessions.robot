@@ -2,19 +2,19 @@
 
 Documentation                                    Session route test suite
 Resource                                         ../resources/signin/meta.robot
-Resource                                         ../resources/signup/meta.robot
 Resource                                         ../default/Base.robot
 Resource                                         ../routes/SessionsRoute.robot
     
-Test Setup                                       User Signup
-
 *** Test Cases ***
 User Session Login
     [Tags]                                       happy_way
-    ${user}                                      Factory Session User               session
-    Tests status code 200                        ${user}
-    Tests Length equal                           ${user}
-    Test message expired be equal                ${user}
+    ${user_session}                              Factory Session User               session
+    ${user_login}                                Factory User                       signin
+    POST User                                    ${user_login}                         
+
+    Tests status code 200                        ${user_session}
+    Tests Length equal                           ${user_session}
+    Test message expired be equal                ${user_session}
 
 Incorrect pass
     [Tags]                                       attempt

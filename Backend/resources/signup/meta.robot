@@ -11,7 +11,7 @@ User Signup
     [Arguments]             ${user} 
     ${response}             POST Session                      ${user}
     
-    POST User           ${user}
+    POST User               ${user}
 
 Del User
     DELETE User

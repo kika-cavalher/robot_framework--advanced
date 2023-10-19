@@ -74,7 +74,7 @@ Attempt POST Session
     [Arguments]              ${user_db}                
     ...                      ${status_code}        ${error_message}
     
-    ${user}                  Factory API User      ${user_db}    
+    ${user}                  Factory Session User  ${user_db}    
     ${response}              POST Session          ${user}
     
     Status Should Be         ${status_code}        ${response}

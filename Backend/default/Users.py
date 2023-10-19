@@ -2,7 +2,7 @@
 def factory_session_user(target):
     data = {
         'session': {
-            'email': 'lolita@bag.com',
+            'email': 'bags@lolis.com',
             'password': 'Kika.1234'
         },
         'incorrect_pass': {
