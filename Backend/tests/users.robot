@@ -12,21 +12,13 @@ Add new user
     ${user}                                      Factory User                       signin
 
     User Signup                                  ${user}   
-    Del User                 
-
-User id
-    [Tags]                                       attempt
-    ${user}                                      Factory User                       signin
-
-    Test id Required                             ${user}  
+    Tests signup status code 201     
+    Test id Required                  
 
 User data
     [Tags]                                       happy_way
     ${user}                                      Factory User                       signin
+    
     Get data User                                ${user}
     Tests signup status code 200    
-
-User validations
-    [Tags]                                       attempt
-
-     Tests signup right user   
+    Tests signup right user   
