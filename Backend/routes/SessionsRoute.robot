@@ -31,19 +31,23 @@ POST Session
 Token User                        
     ${user}                 Factory Session User              session_token
     ${response}             POST Session                      ${user}
-    ${token}                Set Variable
-    ...                     ${response.json()}[token]
-    
+    ${result}               Set Variable                      ${EMPTY}
 
-    [Return]                ${token}
+    IF    "200" in "${response}"
+        ${result}            Set Variable                     ${response.json()}[token]
+    END
+
+    [Return]                ${result}
 
 DELETE User 
     ${token}                Token User
     ${headers}              Create Dictionary                Authorization=Bearer ${token}
-
-    ${response}             DELETE                   
-    ...                     ${API_USERS_URL}/users
-    ...                     headers=${headers}    
-    ...                     expected_status=any
+    
+    IF   "${token}"
+          ${response}             DELETE                   
+          ...                     ${API_USERS_URL}/users
+          ...                     headers=${headers}    
+          ...                     expected_status=any
+    END
     
     [Return]                ${response}

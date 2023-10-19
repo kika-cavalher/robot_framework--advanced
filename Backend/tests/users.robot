@@ -12,7 +12,8 @@ Add new user
     ${user}                                      Factory User                       signin
 
     User Signup                                  ${user}   
-    Tests signup status code 201                  
+    Tests signup status code 201 
+    Del User                 
 
 User id
     [Tags]                                       attempt
