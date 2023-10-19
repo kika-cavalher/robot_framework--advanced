@@ -51,3 +51,14 @@ DELETE User
     END
     
     [Return]                ${response}
+
+GET User
+    ${token}                Token User
+    ${headers}              Create Dictionary                Authorization=Bearer ${token}
+
+    ${response}             GET                   
+    ...                     ${API_USERS_URL}/users
+    ...                     headers=${headers}    
+    ...                     expected_status=any
+    
+    [Return]                ${response}
