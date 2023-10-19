@@ -12,13 +12,16 @@ User Signup
     [Arguments]                     ${user} 
     ${response}                     POST Session                      ${user}
     ${response}                     POST User                         ${user}
-Del User
-    DELETE User
 
 Get data User
     [Arguments]                      ${user} 
     POST User                        ${user}
     GET User
+
+Del User
+    ${user}                          Factory User                      signin
+    ${response}                      POST User                         ${user}
+    DELETE User
 
 Tests signup status code 200 
     ${user}                          Factory User                      signin
@@ -34,10 +37,12 @@ Tests signup status code 201
     Status Should Be                 201                               ${response}
 
 
-Tests signup status code 401 
+Tests signup status code 204 
     ${user}                          Factory User                      signin
-    ${response}                      POST Session                      ${user}
-    Status Should Be                 401                               ${response}
+    ${response}                      POST User                         ${user}
+    ${response}                      DELETE User                      
+    
+    Status Should Be                 204                               ${response}
 
 
 Tests signup right user
@@ -53,7 +58,7 @@ Tests signup right user
 Test id Required
     ${user}                           Factory User                      signin
     
-    Del User
+    DELETE User
     ${response}                       POST User                         ${user}
     ${user_id}                        Set Variable                      ${response.json()}[id]
     

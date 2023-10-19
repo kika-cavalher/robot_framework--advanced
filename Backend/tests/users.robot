@@ -22,3 +22,10 @@ User data
     Get data User                                ${user}
     Tests signup status code 200    
     Tests signup right user   
+
+Remove user
+    [Tags]                                       happy_way
+    ${user}                                      Factory User                       signin
+    
+    Del User                                
+    Tests signup status code 204 
