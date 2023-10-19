@@ -27,21 +27,11 @@ Tests signup status code 401
 
 
 #Messages validations
-Test signup message wrong format email be equal
-    [Arguments]             ${user}    
-    ${response}             POST User                 ${user}
+Test id Required
+    [Arguments]             ${user} 
+    ${response}             POST User                         ${user}
+    ${user_id}              Set Variable                      ${response.json()}[id]
 
-    Should Be Equal         Incorrect email           ${response.json()}[error]
+    Should Be True          ${user_id} > 0
 
 
-Test signup message empty email be equal
-    [Arguments]             ${user}    
-    ${response}             POST User                 ${user}
-
-    Should Be Equal         Required email            ${response.json()}[error]
-
-Test signup message empty pass be equal
-    [Arguments]             ${user}    
-    ${response}             POST User                 ${user}
-        
-    Should Be Equal         Required pass             ${response.json()}[error]
