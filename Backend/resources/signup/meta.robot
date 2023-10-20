@@ -64,3 +64,20 @@ Test id Required
     
     Should Be True                    ${user_id} > 0
 
+Update form user
+    ${user_before}                    Factory User                     signin           
+    ${user_after}                     Factory User                     update
+
+    POST User                         ${user_before}
+    PUT User                          ${user_after}
+
+Tests update right user
+    ${user}                           Factory User                     update           
+    POST User                         ${user}
+    ${response}                       GET User 
+
+    Should Be Equal As Strings        ${user}[name]                    ${response.json()}[name]
+    Should Be Equal As Strings        ${user}[email]                   ${response.json()}[email]
+    Should Be Equal As Strings        ${user}[whatsapp]                ${response.json()}[whatsapp]
+    Should Be Equal As Strings        ${user}[avatar]                  ${response.json()}[avatar]
+    Should Be Equal As Strings        False                            ${response.json()}[is_geek]

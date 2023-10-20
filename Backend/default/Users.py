@@ -40,11 +40,22 @@ def factory_session_user(target):
     return data[target]
 
 def factory_user(target):
+
+    name = 'Baguera Loli'    
+    email = 'bags@lolis.com'
+
+
     data = {
         'signin': {
-            'name': 'Baguera Loli',
-            'email': 'bags@lolis.com',
+            'name': name,
+            'email': email,
             'password': 'Kika.1234'
+        },
+        'update': {
+            'name': name,
+            'email': email,
+            'whatsapp': '985584356',
+            'avatar': 'https://avatars.githubusercontent.com/u/60945965'
         }
     }
 

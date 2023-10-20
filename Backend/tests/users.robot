@@ -29,3 +29,10 @@ Remove user
     
     Del User                                
     Tests signup status code 204 
+
+Update User
+
+    Update form user
+    Tests signup status code 200 
+    Tests update right user
+
