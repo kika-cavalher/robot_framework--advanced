@@ -2,6 +2,6 @@
 # ./run.sh 
 
 
-robot -d ./Backend/logs ./Backend/tests
+robot -d ./Backend/logs ./tests
 
 
