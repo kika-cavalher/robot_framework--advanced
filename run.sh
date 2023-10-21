@@ -1,11 +1,8 @@
 #Rodas esse arquivo
-# .\run.sh
+# .\Backend\run.sh 
 
 
-#Limpar Banco. 
-robot -l NONE -o NONE -r NONE Frontend/tasks/Delorean.robot
-
-
-
+robot -d ./Backend/logs ./Backend/tests
+pabot -d ./Frontend/logs ./Frontend/tests
 
 

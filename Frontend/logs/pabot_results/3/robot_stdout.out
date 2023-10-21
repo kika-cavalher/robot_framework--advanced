@@ -3,30 +3,115 @@ Tests
 ==============================================================================
 Tests.4.AttemptBeGeek :: Geek Attempt Test Suite                              
 ==============================================================================
-Short desc                                                            | PASS |
+  
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\OneDrive - Novabase\Documents\1.AutomaticTests\robot_framework--advanced\Frontend\tests\4.AttemptBeGeek.robot:9
+      Start Session For Attempt Be geek    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\OneDrive - Novabase\Documents\1.AutomaticTests\robot_framework--advanced\Frontend\resources\4.geeks\meta.robot:67
+      Do Login    ${user}
+      |  ${user} = {'name': 'Rodrigo', 'lastname': 'Sagaz', 'email': 'rodrigo.sagaz@gmail.com', 'password': 'Kika1234', 'geek_profile': {'whats': '11999999999', 'desc': 'There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain', 'printer_repair': 'Sim', 'work': 'Remoto', 'cost': '500'}} (dict)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\OneDrive - Novabase\Documents\1.AutomaticTests\robot_framework--advanced\Frontend\resources\0.default\Helpers.robot:23
+      User shold Be Logged in    ${user}
+      |  ${user} = {'name': 'Rodrigo', 'lastname': 'Sagaz', 'email': 'rodrigo.sagaz@gmail.com', 'password': 'Kika1234', 'geek_profile': {'whats': '11999999999', 'desc': 'There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain', 'printer_repair': 'Sim', 'work': 'Remoto', 'cost': '500'}} (dict)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\OneDrive - Novabase\Documents\1.AutomaticTests\robot_framework--advanced\Frontend\resources\2.signin\meta.robot:30
+      Wait For Elements State    ${element_home}    visible    5
+      |  ${element_home} = a[href="/profile"] (str)
+______________________________________________________________________________
+Short desc                                                            | FAIL |
+Parent suite setup failed:
+TimeoutError: locator.waitFor: Timeout 5000ms exceeded.
+=========================== logs ===========================
+waiting for locator('a[href="/profile"]') to be visible
+============================================================
+Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.
 ------------------------------------------------------------------------------
-Long desc                                                             | PASS |
+Long desc                                                             | FAIL |
+Parent suite setup failed:
+TimeoutError: locator.waitFor: Timeout 5000ms exceeded.
+=========================== logs ===========================
+waiting for locator('a[href="/profile"]') to be visible
+============================================================
+Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.
 ------------------------------------------------------------------------------
-Empty Desc                                                            | PASS |
+Empty Desc                                                            | FAIL |
+Parent suite setup failed:
+TimeoutError: locator.waitFor: Timeout 5000ms exceeded.
+=========================== logs ===========================
+waiting for locator('a[href="/profile"]') to be visible
+============================================================
+Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.
 ------------------------------------------------------------------------------
-All Number empty                                                      | PASS |
+All Number empty                                                      | FAIL |
+Parent suite setup failed:
+TimeoutError: locator.waitFor: Timeout 5000ms exceeded.
+=========================== logs ===========================
+waiting for locator('a[href="/profile"]') to be visible
+============================================================
+Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.
 ------------------------------------------------------------------------------
-DDD empty                                                             | PASS |
+DDD empty                                                             | FAIL |
+Parent suite setup failed:
+TimeoutError: locator.waitFor: Timeout 5000ms exceeded.
+=========================== logs ===========================
+waiting for locator('a[href="/profile"]') to be visible
+============================================================
+Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.
 ------------------------------------------------------------------------------
-Just Number empty                                                     | PASS |
+Just Number empty                                                     | FAIL |
+Parent suite setup failed:
+TimeoutError: locator.waitFor: Timeout 5000ms exceeded.
+=========================== logs ===========================
+waiting for locator('a[href="/profile"]') to be visible
+============================================================
+Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.
 ------------------------------------------------------------------------------
-Cost letters                                                          | PASS |
+Cost letters                                                          | FAIL |
+Parent suite setup failed:
+TimeoutError: locator.waitFor: Timeout 5000ms exceeded.
+=========================== logs ===========================
+waiting for locator('a[href="/profile"]') to be visible
+============================================================
+Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.
 ------------------------------------------------------------------------------
-Cost Alpha                                                            | PASS |
+Cost Alpha                                                            | FAIL |
+Parent suite setup failed:
+TimeoutError: locator.waitFor: Timeout 5000ms exceeded.
+=========================== logs ===========================
+waiting for locator('a[href="/profile"]') to be visible
+============================================================
+Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.
 ------------------------------------------------------------------------------
-Cost SpecialChars                                                     | PASS |
+Cost SpecialChars                                                     | FAIL |
+Parent suite setup failed:
+TimeoutError: locator.waitFor: Timeout 5000ms exceeded.
+=========================== logs ===========================
+waiting for locator('a[href="/profile"]') to be visible
+============================================================
+Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.
 ------------------------------------------------------------------------------
-Empty Cost                                                            | PASS |
+Empty Cost                                                            | FAIL |
+Parent suite setup failed:
+TimeoutError: locator.waitFor: Timeout 5000ms exceeded.
+=========================== logs ===========================
+waiting for locator('a[href="/profile"]') to be visible
+============================================================
+Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.
 ------------------------------------------------------------------------------
-Tests.4.AttemptBeGeek :: Geek Attempt Test Suite                      | PASS |
-10 tests, 10 passed, 0 failed
+Tests.4.AttemptBeGeek :: Geek Attempt Test Suite                      | FAIL |
+Suite setup failed:
+TimeoutError: locator.waitFor: Timeout 5000ms exceeded.
+=========================== logs ===========================
+waiting for locator('a[href="/profile"]') to be visible
+============================================================
+Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.
+
+10 tests, 0 passed, 10 failed
 ==============================================================================
-Tests                                                                 | PASS |
-10 tests, 10 passed, 0 failed
+Tests                                                                 | FAIL |
+10 tests, 0 passed, 10 failed
 ==============================================================================
 Output:  D:\OneDrive - Novabase\Documents\1.AutomaticTests\robot_framework--advanced\Frontend\logs\pabot_results\3\output.xml
