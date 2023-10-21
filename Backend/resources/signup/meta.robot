@@ -4,8 +4,6 @@ Documentation                Session Actions
 Resource                     ../../default/Base.robot
 Resource                     ../../routes/SessionsRoute.robot
 
-Library    String
-
 *** Keywords ***
 #validate status codes
 User Signup
@@ -28,6 +26,10 @@ Tests signup status code 200
     ${response}                      POST Session                      ${user}
     Status Should Be                 200                               ${response}
 
+Tests signup status code 200 update 
+    ${user}                          Factory User                      update
+    ${response}                      PUT User                      ${user}
+    Status Should Be                 200                               ${response}
 
 Tests signup status code 201 
     ${user}                          Factory User                      signin

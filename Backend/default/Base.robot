@@ -3,6 +3,7 @@ Documentation                              Base Test API
 
 Library                                    DatabaseLibrary
 Library                                    RequestsLibrary
+Library                                    String
 Library                                    ./Users.py
 
 *** Variables ***

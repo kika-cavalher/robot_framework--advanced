@@ -31,8 +31,8 @@ Remove user
     Tests signup status code 204 
 
 Update User
-
+    [Tags]                                       happy_way
     Update form user
-    Tests signup status code 200 
+    Tests signup status code 200 update
     Tests update right user
 

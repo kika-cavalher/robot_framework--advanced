@@ -61,3 +61,22 @@ def factory_user(target):
 
 #otimizar a utilização dos testes
     return data[target]
+
+def factory_geek(target):
+    data = {
+        'be_geek': {
+            'name': 'Baguera Loli' ,
+            'email': 'bags@lolis.com',
+            'password': 'Kika1234',
+            'geek_profile': {
+                'whatsapp': '11999999999',
+                'desc': 'Sou bom em abrir embalagem de pc, depois me esconder e arranhar ela. Eu já destruir inumeras embalagens, as vezes com a boca, as vezes com a unha, mas pode ficar tranquilo que eu sempre consigo!',
+                'printer_repair': 'Sim',
+                'work': 'Remoto',
+                'cost': '500'
+            }   
+        }
+    }
+
+#otimizar a utilização dos testes
+    return data[target]
