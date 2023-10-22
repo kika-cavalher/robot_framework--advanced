@@ -39,9 +39,8 @@ jobs:
         name: api-reports
         path: Backend/logs
 
-    - name: Test Reporter
-      uses: dorny/test-reporter@v1.7.0
+    - name: Robot Reporter
+      uses: joonvena/robotframework-reporter-action@v2.3
       with:
           name: API Test Result
-          path: Backend/logs/xunit.xml
-          reporter: java-junit
+          path: Backend/logs
