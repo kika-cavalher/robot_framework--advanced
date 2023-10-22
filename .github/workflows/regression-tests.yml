@@ -43,6 +43,6 @@ jobs:
       uses: dorny/test-reporter@v1.7.0
       with:
           name: API Test Result
-          path: Backend/Backend/logs/xunit.xml
+          path: Backend/logs/xunit.xml
           reporter: jest-junit
 
