@@ -4,7 +4,7 @@
 
 #Limpar Banco. 
 robot -l NONE -o NONE -r NONE ./tasks/Delorean.robot
-robot -x xunit.xml -d ./logs ./tests
+robot --xunit xunit.xml -d ./logs ./tests
 
 #pabot diminui o tempo de execução. 
 
