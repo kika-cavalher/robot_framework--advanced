@@ -59,7 +59,7 @@ jobs:
       uses: joonvena/robotframework-reporter-action@v2.3
       with:
           gh_access_token: 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
-          path: Backend/logs
+          report_path: Backend/logs/output.xml
 
 
   web_tests:
