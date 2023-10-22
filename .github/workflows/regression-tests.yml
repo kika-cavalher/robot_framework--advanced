@@ -34,7 +34,7 @@ jobs:
 
     - name: Upload a API Tests Results
       uses: actions/upload-artifact@v3.1.3
-      if: awalys()
+      if: always()
       with: 
         name: api-reports
         path: Backend/logs
