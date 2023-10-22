@@ -44,5 +44,5 @@ jobs:
       with:
           name: API Test Result
           path: Backend/logs/xunit.xml
-          reporter: jest-junit
+          reporter: java-junit
 
