@@ -2,6 +2,5 @@
 # ./run.sh 
 
 
-robot --xunit xunit.xml -d ./logs ./tests
-
+robot -d ./logs -x xunit.xml ./tests
 

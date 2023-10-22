@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Tests" tests="15" errors="0" failures="0" skipped="0" time="51.713" timestamp="2023-10-22T14:56:20.375000">
+<testsuite name="beGeek" tests="2" errors="0" failures="0" skipped="0" time="16.234" timestamp="2023-10-22T14:56:20.398000">
+<testcase classname="Tests.beGeek" name="Be a geek" time="5.926">
+</testcase>
+<testcase classname="Tests.beGeek" name="Search for geeks" time="10.050">
+</testcase>
+<properties>
+<property name="Documentation" value="Session route test suite"/>
+</properties>
+</testsuite>
+<testsuite name="Sessions" tests="9" errors="0" failures="0" skipped="0" time="9.163" timestamp="2023-10-22T14:56:36.633000">
+<testcase classname="Tests.Sessions" name="User Session Login" time="1.966">
+</testcase>
+<testcase classname="Tests.Sessions" name="Incorrect pass" time="0.994">
+</testcase>
+<testcase classname="Tests.Sessions" name="User not found" time="0.948">
+</testcase>
+<testcase classname="Tests.Sessions" name="Incorrect email" time="0.578">
+</testcase>
+<testcase classname="Tests.Sessions" name="Empty email" time="0.540">
+</testcase>
+<testcase classname="Tests.Sessions" name="Without email" time="0.546">
+</testcase>
+<testcase classname="Tests.Sessions" name="Empty pass" time="0.528">
+</testcase>
+<testcase classname="Tests.Sessions" name="Without pass" time="0.568">
+</testcase>
+<testcase classname="Tests.Sessions" name="Should Not Get token" time="2.448">
+</testcase>
+<properties>
+<property name="Documentation" value="Session route test suite"/>
+</properties>
+</testsuite>
+<testsuite name="Users" tests="4" errors="0" failures="0" skipped="0" time="26.288" timestamp="2023-10-22T14:56:45.798000">
+<testcase classname="Tests.Users" name="Add new user" time="8.856">
+</testcase>
+<testcase classname="Tests.Users" name="User data" time="5.000">
+</testcase>
+<testcase classname="Tests.Users" name="Remove user" time="6.124">
+</testcase>
+<testcase classname="Tests.Users" name="Update User" time="6.181">
+</testcase>
+<properties>
+<property name="Documentation" value="Session route test suite"/>
+</properties>
+</testsuite>
+</testsuite>
