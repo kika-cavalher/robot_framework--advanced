@@ -6,6 +6,7 @@ on:
   pull_request:
     branches: [ "main" ]
 
+
 jobs:
   api_tests:
     runs-on: ubuntu-latest
@@ -13,6 +14,7 @@ jobs:
       fail-fast: false
       matrix:
         python-version: ["3.9"]
+
 
     steps:
     - uses: actions/checkout@v3
@@ -36,12 +38,14 @@ jobs:
         chmod +x ./Backend/run.sh
         cd Backend && ./run.sh
 
+
     - name: Upload a API Tests Results
       uses: actions/upload-artifact@v3.1.3
       if: always()
       with: 
         name: api-reports
         path: Backend/logs
+
 
     - name: Test Reporter
       uses: dorny/test-reporter@v1.7.0
@@ -67,18 +71,35 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
 
+        
+    - name: Set up Node
+      run: |
+        curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+        sudo apt-get install -y nodejs
+
+
+    - name: Preparation
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y xvfb ca-certificates net-tools netcat gnupg ffmpeg libgtk-3-0 libgdk-pixbuf2.0-dev libxcomposite-dev libdbus-glib-1-2 libatk-bridge2.0-0 wget libgbm1 libnss3 libxss1 libasound2
+
 
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install build
         pip install -r requirements.txt
-        
+
+
+    - name: Run Browser Init
+      run: rfbrowser init
+  
                 
     - name: Run WEB tests
       run: |
         chmod +x ./Frontend/run.sh
         cd Frontend && ./run.sh
+
         
     - name: Upload a WEB Tests Results
       uses: actions/upload-artifact@v3.1.3
@@ -86,6 +107,7 @@ jobs:
       with: 
         name: web-reports
         path: Frontend/logs
+
         
     - name: Test Reporter
       uses: dorny/test-reporter@v1.7.0
