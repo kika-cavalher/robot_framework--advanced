@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1 (Python 3.11.4 on win32)" generated="20231021 19:46:26.258" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1 (Python 3.11.4 on win32)" generated="20231022 14:07:08.978" rpa="false" schemaversion="4">
 <suite id="s1" name="Tests" source="D:\OneDrive - Novabase\Documents\1.AutomaticTests\robot_framework--advanced\Frontend\tests">
 <suite id="s1-s1" name="4.AttemptBeGeek" source="D:\OneDrive - Novabase\Documents\1.AutomaticTests\robot_framework--advanced\Frontend\tests\4.AttemptBeGeek.robot">
 <kw name="Start Session For Attempt Be geek" library="meta" type="SETUP">
 <kw name="Factory User" library="Users">
 <var>${user}</var>
 <arg>attempt_geek</arg>
-<msg timestamp="20231021 19:46:32.536" level="INFO">${user} = {'name': 'Rodrigo', 'lastname': 'Sagaz', 'email': 'rodrigo.sagaz@gmail.com', 'password': 'Kika1234', 'geek_profile': {'whats': '11999999999', 'desc': 'There is no one who loves pain itself, who seeks ...</msg>
-<status status="PASS" starttime="20231021 19:46:32.534" endtime="20231021 19:46:32.536"/>
+<msg timestamp="20231022 14:07:11.787" level="INFO">${user} = {'name': 'Rodrigo', 'lastname': 'Sagaz', 'email': 'rodrigo.sagaz@gmail.com', 'password': 'Kika1234', 'geek_profile': {'whats': '11999999999', 'desc': 'There is no one who loves pain itself, who seeks ...</msg>
+<status status="PASS" starttime="20231022 14:07:11.785" endtime="20231022 14:07:11.787"/>
 </kw>
 <kw name="Start Session" library="Base">
 <kw name="New Browser" library="Browser">
@@ -17,18 +17,18 @@
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<msg timestamp="20231021 19:46:32.539" level="INFO">{"browser": "chromium", "headless": true, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "deprecated_pos_args": [], "tracesDir": "D:\\OneDrive - Novabase\\Documents\\1.AutomaticTests\\robot_framework--advanced\\Frontend\\logs\\pabot_results\\3\\browser\\traces\\2170c898-7eeb-4db9-8fdf-b0f835b50817"}</msg>
-<msg timestamp="20231021 19:46:36.842" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"deprecated_pos_args":[],"tracesDir":"D:\\OneDrive - Novabase\\Documents\\1.AutomaticTests\\robot_framework--advanced\\Frontend\\logs\\pabot_results\\3\\browser\\traces\\2170c898-7eeb-4db9-8fdf-b0f835b50817"}</msg>
-<status status="PASS" starttime="20231021 19:46:32.537" endtime="20231021 19:46:36.843"/>
+<msg timestamp="20231022 14:07:11.790" level="INFO">{"browser": "chromium", "headless": true, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "deprecated_pos_args": [], "tracesDir": "D:\\OneDrive - Novabase\\Documents\\1.AutomaticTests\\robot_framework--advanced\\Frontend\\logs\\pabot_results\\3\\browser\\traces\\ef87114d-9fa9-49af-adbf-4673e459552a"}</msg>
+<msg timestamp="20231022 14:07:13.780" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"deprecated_pos_args":[],"tracesDir":"D:\\OneDrive - Novabase\\Documents\\1.AutomaticTests\\robot_framework--advanced\\Frontend\\logs\\pabot_results\\3\\browser\\traces\\ef87114d-9fa9-49af-adbf-4673e459552a"}</msg>
+<status status="PASS" starttime="20231022 14:07:11.788" endtime="20231022 14:07:13.780"/>
 </kw>
 <kw name="New Page" library="Browser">
 <arg>${BASE_URL}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<msg timestamp="20231021 19:46:42.494" level="INFO">Successfully initialized new page object and opened url: https://web-geek.fly.dev</msg>
-<msg timestamp="20231021 19:46:42.495" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
-<status status="PASS" starttime="20231021 19:46:36.844" endtime="20231021 19:46:42.495"/>
+<msg timestamp="20231022 14:07:19.005" level="INFO">Successfully initialized new page object and opened url: https://web-geek.fly.dev</msg>
+<msg timestamp="20231022 14:07:19.005" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<status status="PASS" starttime="20231022 14:07:13.780" endtime="20231022 14:07:19.005"/>
 </kw>
 <kw name="Set Viewport Size" library="Browser">
 <arg>1280</arg>
@@ -36,10 +36,10 @@
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Sets current Pages viewport size to specified dimensions.</doc>
-<msg timestamp="20231021 19:46:42.504" level="INFO">Set viewport size to: [object Object]</msg>
-<status status="PASS" starttime="20231021 19:46:42.496" endtime="20231021 19:46:42.504"/>
+<msg timestamp="20231022 14:07:19.060" level="INFO">Set viewport size to: [object Object]</msg>
+<status status="PASS" starttime="20231022 14:07:19.006" endtime="20231022 14:07:19.060"/>
 </kw>
-<status status="PASS" starttime="20231021 19:46:32.536" endtime="20231021 19:46:42.506"/>
+<status status="PASS" starttime="20231022 14:07:11.787" endtime="20231022 14:07:19.060"/>
 </kw>
 <kw name="Do Login" library="Helpers">
 <arg>${user}</arg>
@@ -49,8 +49,8 @@
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Navigates to the given ``url``.</doc>
-<msg timestamp="20231021 19:46:43.290" level="INFO">Successfully opened URL https://web-geek.fly.dev</msg>
-<status status="PASS" starttime="20231021 19:46:42.508" endtime="20231021 19:46:43.291"/>
+<msg timestamp="20231022 14:07:19.809" level="INFO">Successfully opened URL https://web-geek.fly.dev</msg>
+<status status="PASS" starttime="20231022 14:07:19.063" endtime="20231022 14:07:19.809"/>
 </kw>
 <kw name="Wait For Elements State" library="Browser">
 <arg>${element_form}</arg>
@@ -59,10 +59,10 @@
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<msg timestamp="20231021 19:46:43.349" level="INFO">Waited for Element with selector css=.login-form at state visible</msg>
-<status status="PASS" starttime="20231021 19:46:43.291" endtime="20231021 19:46:43.349"/>
+<msg timestamp="20231022 14:07:19.949" level="INFO">Waited for Element with selector css=.login-form at state visible</msg>
+<status status="PASS" starttime="20231022 14:07:19.810" endtime="20231022 14:07:19.949"/>
 </kw>
-<status status="PASS" starttime="20231021 19:46:42.507" endtime="20231021 19:46:43.349"/>
+<status status="PASS" starttime="20231022 14:07:19.062" endtime="20231022 14:07:19.949"/>
 </kw>
 <kw name="Fill Credentials" library="meta">
 <arg>${user}</arg>
@@ -72,8 +72,8 @@
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<msg timestamp="20231021 19:46:43.351" level="INFO">Fills the text 'rodrigo.sagaz@gmail.com' in the given field.</msg>
-<status status="PASS" starttime="20231021 19:46:43.350" endtime="20231021 19:46:43.389"/>
+<msg timestamp="20231022 14:07:19.954" level="INFO">Fills the text 'rodrigo.sagaz@gmail.com' in the given field.</msg>
+<status status="PASS" starttime="20231022 14:07:19.953" endtime="20231022 14:07:20.031"/>
 </kw>
 <kw name="Fill Text" library="Browser">
 <arg>${input_pass}</arg>
@@ -81,10 +81,10 @@
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<msg timestamp="20231021 19:46:43.390" level="INFO">Fills the text 'Kika1234' in the given field.</msg>
-<status status="PASS" starttime="20231021 19:46:43.390" endtime="20231021 19:46:43.418"/>
+<msg timestamp="20231022 14:07:20.033" level="INFO">Fills the text 'Kika1234' in the given field.</msg>
+<status status="PASS" starttime="20231022 14:07:20.032" endtime="20231022 14:07:20.080"/>
 </kw>
-<status status="PASS" starttime="20231021 19:46:43.350" endtime="20231021 19:46:43.418"/>
+<status status="PASS" starttime="20231022 14:07:19.950" endtime="20231022 14:07:20.080"/>
 </kw>
 <kw name="Submit Credentials" library="meta">
 <kw name="Click" library="Browser">
@@ -92,9 +92,9 @@
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20231021 19:46:43.418" endtime="20231021 19:46:43.503"/>
+<status status="PASS" starttime="20231022 14:07:20.083" endtime="20231022 14:07:20.197"/>
 </kw>
-<status status="PASS" starttime="20231021 19:46:43.418" endtime="20231021 19:46:43.504"/>
+<status status="PASS" starttime="20231022 14:07:20.081" endtime="20231022 14:07:20.198"/>
 </kw>
 <kw name="User shold Be Logged in" library="meta">
 <arg>${user}</arg>
@@ -102,8 +102,8 @@
 <var>${fullName}</var>
 <arg>${user}[name] ${user}[lastname]</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20231021 19:46:43.505" level="INFO">${fullName} = Rodrigo Sagaz</msg>
-<status status="PASS" starttime="20231021 19:46:43.505" endtime="20231021 19:46:43.506"/>
+<msg timestamp="20231022 14:07:20.200" level="INFO">${fullName} = Rodrigo Sagaz</msg>
+<status status="PASS" starttime="20231022 14:07:20.199" endtime="20231022 14:07:20.200"/>
 </kw>
 <kw name="Wait For Elements State" library="Browser">
 <arg>${element_home}</arg>
@@ -112,13 +112,13 @@
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<msg timestamp="20231021 19:46:48.834" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/fail-screenshot-1.png"&gt;&lt;img src="browser/screenshot/fail-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20231021 19:46:48.834" level="FAIL">TimeoutError: locator.waitFor: Timeout 5000ms exceeded.
+<msg timestamp="20231022 14:07:25.535" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/fail-screenshot-1.png"&gt;&lt;img src="browser/screenshot/fail-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20231022 14:07:25.536" level="FAIL">TimeoutError: locator.waitFor: Timeout 5000ms exceeded.
 =========================== logs ===========================
 waiting for locator('a[href="/profile"]') to be visible
 ============================================================
 Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.</msg>
-<status status="FAIL" starttime="20231021 19:46:43.506" endtime="20231021 19:46:48.841"/>
+<status status="FAIL" starttime="20231022 14:07:20.201" endtime="20231022 14:07:25.541"/>
 </kw>
 <kw name="Get Text" library="Browser">
 <arg>${element_home}</arg>
@@ -128,19 +128,19 @@ Tip: Use "Set Browser Timeout" for increasing the timeout or double check your l
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="NOT RUN" starttime="20231021 19:46:48.842" endtime="20231021 19:46:48.842"/>
+<status status="NOT RUN" starttime="20231022 14:07:25.543" endtime="20231022 14:07:25.543"/>
 </kw>
-<status status="FAIL" starttime="20231021 19:46:43.504" endtime="20231021 19:46:48.843"/>
+<status status="FAIL" starttime="20231022 14:07:20.198" endtime="20231022 14:07:25.543"/>
 </kw>
-<status status="FAIL" starttime="20231021 19:46:42.506" endtime="20231021 19:46:48.843"/>
+<status status="FAIL" starttime="20231022 14:07:19.061" endtime="20231022 14:07:25.543"/>
 </kw>
 <kw name="Go to Geek form" library="meta">
-<status status="NOT RUN" starttime="20231021 19:46:48.844" endtime="20231021 19:46:48.844"/>
+<status status="NOT RUN" starttime="20231022 14:07:25.544" endtime="20231022 14:07:25.544"/>
 </kw>
-<status status="FAIL" starttime="20231021 19:46:32.532" endtime="20231021 19:46:48.844"/>
+<status status="FAIL" starttime="20231022 14:07:11.784" endtime="20231022 14:07:25.544"/>
 </kw>
 <test id="s1-s1-t1" name="Short desc" line="20">
-<status status="FAIL" starttime="20231021 19:46:48.845" endtime="20231021 19:46:48.855">Parent suite setup failed:
+<status status="FAIL" starttime="20231022 14:07:25.545" endtime="20231022 14:07:25.554">Parent suite setup failed:
 TimeoutError: locator.waitFor: Timeout 5000ms exceeded.
 =========================== logs ===========================
 waiting for locator('a[href="/profile"]') to be visible
@@ -148,7 +148,7 @@ waiting for locator('a[href="/profile"]') to be visible
 Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.</status>
 </test>
 <test id="s1-s1-t2" name="Long desc" line="21">
-<status status="FAIL" starttime="20231021 19:46:48.869" endtime="20231021 19:46:48.905">Parent suite setup failed:
+<status status="FAIL" starttime="20231022 14:07:25.563" endtime="20231022 14:07:25.615">Parent suite setup failed:
 TimeoutError: locator.waitFor: Timeout 5000ms exceeded.
 =========================== logs ===========================
 waiting for locator('a[href="/profile"]') to be visible
@@ -156,7 +156,7 @@ waiting for locator('a[href="/profile"]') to be visible
 Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.</status>
 </test>
 <test id="s1-s1-t3" name="Empty Desc" line="22">
-<status status="FAIL" starttime="20231021 19:46:48.913" endtime="20231021 19:46:48.923">Parent suite setup failed:
+<status status="FAIL" starttime="20231022 14:07:25.623" endtime="20231022 14:07:25.633">Parent suite setup failed:
 TimeoutError: locator.waitFor: Timeout 5000ms exceeded.
 =========================== logs ===========================
 waiting for locator('a[href="/profile"]') to be visible
@@ -164,7 +164,7 @@ waiting for locator('a[href="/profile"]') to be visible
 Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.</status>
 </test>
 <test id="s1-s1-t4" name="All Number empty" line="25">
-<status status="FAIL" starttime="20231021 19:46:48.932" endtime="20231021 19:46:48.939">Parent suite setup failed:
+<status status="FAIL" starttime="20231022 14:07:25.644" endtime="20231022 14:07:25.650">Parent suite setup failed:
 TimeoutError: locator.waitFor: Timeout 5000ms exceeded.
 =========================== logs ===========================
 waiting for locator('a[href="/profile"]') to be visible
@@ -172,7 +172,7 @@ waiting for locator('a[href="/profile"]') to be visible
 Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.</status>
 </test>
 <test id="s1-s1-t5" name="DDD empty" line="26">
-<status status="FAIL" starttime="20231021 19:46:48.947" endtime="20231021 19:46:48.959">Parent suite setup failed:
+<status status="FAIL" starttime="20231022 14:07:25.659" endtime="20231022 14:07:25.667">Parent suite setup failed:
 TimeoutError: locator.waitFor: Timeout 5000ms exceeded.
 =========================== logs ===========================
 waiting for locator('a[href="/profile"]') to be visible
@@ -180,7 +180,7 @@ waiting for locator('a[href="/profile"]') to be visible
 Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.</status>
 </test>
 <test id="s1-s1-t6" name="Just Number empty" line="27">
-<status status="FAIL" starttime="20231021 19:46:48.968" endtime="20231021 19:46:48.975">Parent suite setup failed:
+<status status="FAIL" starttime="20231022 14:07:25.675" endtime="20231022 14:07:25.682">Parent suite setup failed:
 TimeoutError: locator.waitFor: Timeout 5000ms exceeded.
 =========================== logs ===========================
 waiting for locator('a[href="/profile"]') to be visible
@@ -188,7 +188,7 @@ waiting for locator('a[href="/profile"]') to be visible
 Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.</status>
 </test>
 <test id="s1-s1-t7" name="Cost letters" line="30">
-<status status="FAIL" starttime="20231021 19:46:48.983" endtime="20231021 19:46:48.990">Parent suite setup failed:
+<status status="FAIL" starttime="20231022 14:07:25.688" endtime="20231022 14:07:25.697">Parent suite setup failed:
 TimeoutError: locator.waitFor: Timeout 5000ms exceeded.
 =========================== logs ===========================
 waiting for locator('a[href="/profile"]') to be visible
@@ -196,7 +196,7 @@ waiting for locator('a[href="/profile"]') to be visible
 Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.</status>
 </test>
 <test id="s1-s1-t8" name="Cost Alpha" line="31">
-<status status="FAIL" starttime="20231021 19:46:48.997" endtime="20231021 19:46:49.004">Parent suite setup failed:
+<status status="FAIL" starttime="20231022 14:07:25.703" endtime="20231022 14:07:25.709">Parent suite setup failed:
 TimeoutError: locator.waitFor: Timeout 5000ms exceeded.
 =========================== logs ===========================
 waiting for locator('a[href="/profile"]') to be visible
@@ -204,7 +204,7 @@ waiting for locator('a[href="/profile"]') to be visible
 Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.</status>
 </test>
 <test id="s1-s1-t9" name="Cost SpecialChars" line="32">
-<status status="FAIL" starttime="20231021 19:46:49.011" endtime="20231021 19:46:49.021">Parent suite setup failed:
+<status status="FAIL" starttime="20231022 14:07:25.717" endtime="20231022 14:07:25.726">Parent suite setup failed:
 TimeoutError: locator.waitFor: Timeout 5000ms exceeded.
 =========================== logs ===========================
 waiting for locator('a[href="/profile"]') to be visible
@@ -212,7 +212,7 @@ waiting for locator('a[href="/profile"]') to be visible
 Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.</status>
 </test>
 <test id="s1-s1-t10" name="Empty Cost" line="33">
-<status status="FAIL" starttime="20231021 19:46:49.027" endtime="20231021 19:46:49.036">Parent suite setup failed:
+<status status="FAIL" starttime="20231022 14:07:25.734" endtime="20231022 14:07:25.740">Parent suite setup failed:
 TimeoutError: locator.waitFor: Timeout 5000ms exceeded.
 =========================== logs ===========================
 waiting for locator('a[href="/profile"]') to be visible
@@ -220,14 +220,14 @@ waiting for locator('a[href="/profile"]') to be visible
 Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.</status>
 </test>
 <doc>Geek Attempt Test Suite</doc>
-<status status="FAIL" starttime="20231021 19:46:26.433" endtime="20231021 19:46:49.043">Suite setup failed:
+<status status="FAIL" starttime="20231022 14:07:09.031" endtime="20231022 14:07:25.746">Suite setup failed:
 TimeoutError: locator.waitFor: Timeout 5000ms exceeded.
 =========================== logs ===========================
 waiting for locator('a[href="/profile"]') to be visible
 ============================================================
 Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.</status>
 </suite>
-<status status="FAIL" starttime="20231021 19:46:26.291" endtime="20231021 19:46:49.106"/>
+<status status="FAIL" starttime="20231022 14:07:09.000" endtime="20231022 14:07:25.822"/>
 </suite>
 <statistics>
 <total>

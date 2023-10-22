@@ -3,6 +3,6 @@
 
 
 robot -d ./Backend/logs ./Backend/tests
-pabot -d ./Frontend/logs ./Frontend/tests
+pabot -x xunit.xml -d ./Frontend/logs ./Frontend/tests
 
 

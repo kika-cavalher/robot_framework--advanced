@@ -3,7 +3,25 @@ Tests
 ==============================================================================
 Tests.2.Signup :: Signup Test Suite                                           
 ==============================================================================
-Register a new User                                                   | PASS |
+Register a new User                                                     
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\OneDrive - Novabase\Documents\1.AutomaticTests\robot_framework--advanced\Frontend\tests\2.Signup.robot:13
+    T:  Register a new User    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\OneDrive - Novabase\Documents\1.AutomaticTests\robot_framework--advanced\Frontend\tests\2.Signup.robot:20
+      User Should Be Registered    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\OneDrive - Novabase\Documents\1.AutomaticTests\robot_framework--advanced\Frontend\resources\3.signup\meta.robot:29
+      Wait For Elements State    ${msg_validation_register}    visible    5
+      |  ${msg_validation_register} = css=p >> text=Agor (str)
+______________________________________________________________________________
+| FAIL |
+TimeoutError: locator.waitFor: Timeout 5000ms exceeded.
+=========================== logs ===========================
+waiting for locator('p').locator('text=Agor') to be visible
+============================================================
+Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.
 ------------------------------------------------------------------------------
 Duplicate user                                                        | PASS |
 ------------------------------------------------------------------------------
@@ -13,10 +31,10 @@ Short Password                                                        | PASS |
 ------------------------------------------------------------------------------
  Required Fields SignUp                                               | PASS |
 ------------------------------------------------------------------------------
-Tests.2.Signup :: Signup Test Suite                                   | PASS |
-5 tests, 5 passed, 0 failed
+Tests.2.Signup :: Signup Test Suite                                   | FAIL |
+5 tests, 4 passed, 1 failed
 ==============================================================================
-Tests                                                                 | PASS |
-5 tests, 5 passed, 0 failed
+Tests                                                                 | FAIL |
+5 tests, 4 passed, 1 failed
 ==============================================================================
 Output:  D:\OneDrive - Novabase\Documents\1.AutomaticTests\robot_framework--advanced\Frontend\logs\pabot_results\1\output.xml

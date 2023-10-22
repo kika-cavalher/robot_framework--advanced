@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Tests" tests="23" errors="0" failures="12" skipped="0" time="75.218" timestamp="2023-10-22T14:07:57.696000">
+<testsuite name="1.Signin" tests="7" errors="0" failures="1" skipped="0" time="30.694" timestamp="2023-10-22T14:07:57.723000">
+<testcase classname="Tests.1.Signin" name="User Login" time="8.745">
+<failure message="TimeoutError: locator.waitFor: Timeout 5000ms exceeded.&#10;=========================== logs ===========================&#10;waiting for locator('a[href=&quot;/profile&quot;]') to be visible&#10;============================================================&#10;Tip: Use &quot;Set Browser Timeout&quot; for increasing the timeout or double check your locator as the targeted element(s) couldn't be found." type="AssertionError"/>
+</testcase>
+<testcase classname="Tests.1.Signin" name="Incorrect Pass" time="3.983">
+</testcase>
+<testcase classname="Tests.1.Signin" name="Incorrect E-mail" time="2.746">
+</testcase>
+<testcase classname="Tests.1.Signin" name="User not found" time="4.261">
+</testcase>
+<testcase classname="Tests.1.Signin" name="Required Email" time="2.806">
+</testcase>
+<testcase classname="Tests.1.Signin" name="Required Password" time="2.889">
+</testcase>
+<testcase classname="Tests.1.Signin" name="Required Fields Login" time="3.993">
+</testcase>
+<properties>
+<property name="Documentation" value="Login test Suite"/>
+</properties>
+</testsuite>
+<testsuite name="2.Signup" tests="5" errors="0" failures="0" skipped="0" time="28.408" timestamp="2023-10-22T14:08:28.421000">
+<testcase classname="Tests.2.Signup" name="Register a new User" time="4.396">
+</testcase>
+<testcase classname="Tests.2.Signup" name="Duplicate user" time="5.173">
+</testcase>
+<testcase classname="Tests.2.Signup" name="Wrong Email" time="2.565">
+</testcase>
+<testcase classname="Tests.2.Signup" name="Short Password" time="13.068">
+</testcase>
+<testcase classname="Tests.2.Signup" name=" Required Fields SignUp" time="2.972">
+</testcase>
+<properties>
+<property name="Documentation" value="Signup Test Suite"/>
+</properties>
+</testsuite>
+<testsuite name="3.Geek" tests="1" errors="0" failures="1" skipped="0" time="8.065" timestamp="2023-10-22T14:08:56.840000">
+<testcase classname="Tests.3.Geek" name="Be a Geek" time="7.987">
+<failure message="TimeoutError: locator.waitFor: Timeout 5000ms exceeded.&#10;=========================== logs ===========================&#10;waiting for locator('a[href=&quot;/profile&quot;]') to be visible&#10;============================================================&#10;Tip: Use &quot;Set Browser Timeout&quot; for increasing the timeout or double check your locator as the targeted element(s) couldn't be found." type="AssertionError"/>
+</testcase>
+<properties>
+<property name="Documentation" value="Geek Test Suite"/>
+</properties>
+</testsuite>
+<testsuite name="4.AttemptBeGeek" tests="10" errors="0" failures="10" skipped="0" time="7.963" timestamp="2023-10-22T14:09:04.911000">
+<testcase classname="Tests.4.AttemptBeGeek" name="Short desc" time="0.006">
+<failure message="Parent suite setup failed:&#10;TimeoutError: locator.waitFor: Timeout 5000ms exceeded.&#10;=========================== logs ===========================&#10;waiting for locator('a[href=&quot;/profile&quot;]') to be visible&#10;============================================================&#10;Tip: Use &quot;Set Browser Timeout&quot; for increasing the timeout or double check your locator as the targeted element(s) couldn't be found." type="AssertionError"/>
+</testcase>
+<testcase classname="Tests.4.AttemptBeGeek" name="Long desc" time="0.004">
+<failure message="Parent suite setup failed:&#10;TimeoutError: locator.waitFor: Timeout 5000ms exceeded.&#10;=========================== logs ===========================&#10;waiting for locator('a[href=&quot;/profile&quot;]') to be visible&#10;============================================================&#10;Tip: Use &quot;Set Browser Timeout&quot; for increasing the timeout or double check your locator as the targeted element(s) couldn't be found." type="AssertionError"/>
+</testcase>
+<testcase classname="Tests.4.AttemptBeGeek" name="Empty Desc" time="0.004">
+<failure message="Parent suite setup failed:&#10;TimeoutError: locator.waitFor: Timeout 5000ms exceeded.&#10;=========================== logs ===========================&#10;waiting for locator('a[href=&quot;/profile&quot;]') to be visible&#10;============================================================&#10;Tip: Use &quot;Set Browser Timeout&quot; for increasing the timeout or double check your locator as the targeted element(s) couldn't be found." type="AssertionError"/>
+</testcase>
+<testcase classname="Tests.4.AttemptBeGeek" name="All Number empty" time="0.004">
+<failure message="Parent suite setup failed:&#10;TimeoutError: locator.waitFor: Timeout 5000ms exceeded.&#10;=========================== logs ===========================&#10;waiting for locator('a[href=&quot;/profile&quot;]') to be visible&#10;============================================================&#10;Tip: Use &quot;Set Browser Timeout&quot; for increasing the timeout or double check your locator as the targeted element(s) couldn't be found." type="AssertionError"/>
+</testcase>
+<testcase classname="Tests.4.AttemptBeGeek" name="DDD empty" time="0.004">
+<failure message="Parent suite setup failed:&#10;TimeoutError: locator.waitFor: Timeout 5000ms exceeded.&#10;=========================== logs ===========================&#10;waiting for locator('a[href=&quot;/profile&quot;]') to be visible&#10;============================================================&#10;Tip: Use &quot;Set Browser Timeout&quot; for increasing the timeout or double check your locator as the targeted element(s) couldn't be found." type="AssertionError"/>
+</testcase>
+<testcase classname="Tests.4.AttemptBeGeek" name="Just Number empty" time="0.003">
+<failure message="Parent suite setup failed:&#10;TimeoutError: locator.waitFor: Timeout 5000ms exceeded.&#10;=========================== logs ===========================&#10;waiting for locator('a[href=&quot;/profile&quot;]') to be visible&#10;============================================================&#10;Tip: Use &quot;Set Browser Timeout&quot; for increasing the timeout or double check your locator as the targeted element(s) couldn't be found." type="AssertionError"/>
+</testcase>
+<testcase classname="Tests.4.AttemptBeGeek" name="Cost letters" time="0.004">
+<failure message="Parent suite setup failed:&#10;TimeoutError: locator.waitFor: Timeout 5000ms exceeded.&#10;=========================== logs ===========================&#10;waiting for locator('a[href=&quot;/profile&quot;]') to be visible&#10;============================================================&#10;Tip: Use &quot;Set Browser Timeout&quot; for increasing the timeout or double check your locator as the targeted element(s) couldn't be found." type="AssertionError"/>
+</testcase>
+<testcase classname="Tests.4.AttemptBeGeek" name="Cost Alpha" time="0.004">
+<failure message="Parent suite setup failed:&#10;TimeoutError: locator.waitFor: Timeout 5000ms exceeded.&#10;=========================== logs ===========================&#10;waiting for locator('a[href=&quot;/profile&quot;]') to be visible&#10;============================================================&#10;Tip: Use &quot;Set Browser Timeout&quot; for increasing the timeout or double check your locator as the targeted element(s) couldn't be found." type="AssertionError"/>
+</testcase>
+<testcase classname="Tests.4.AttemptBeGeek" name="Cost SpecialChars" time="0.004">
+<failure message="Parent suite setup failed:&#10;TimeoutError: locator.waitFor: Timeout 5000ms exceeded.&#10;=========================== logs ===========================&#10;waiting for locator('a[href=&quot;/profile&quot;]') to be visible&#10;============================================================&#10;Tip: Use &quot;Set Browser Timeout&quot; for increasing the timeout or double check your locator as the targeted element(s) couldn't be found." type="AssertionError"/>
+</testcase>
+<testcase classname="Tests.4.AttemptBeGeek" name="Empty Cost" time="0.005">
+<failure message="Parent suite setup failed:&#10;TimeoutError: locator.waitFor: Timeout 5000ms exceeded.&#10;=========================== logs ===========================&#10;waiting for locator('a[href=&quot;/profile&quot;]') to be visible&#10;============================================================&#10;Tip: Use &quot;Set Browser Timeout&quot; for increasing the timeout or double check your locator as the targeted element(s) couldn't be found." type="AssertionError"/>
+</testcase>
+<properties>
+<property name="Documentation" value="Geek Attempt Test Suite"/>
+</properties>
+</testsuite>
+</testsuite>

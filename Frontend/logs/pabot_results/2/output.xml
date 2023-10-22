@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1 (Python 3.11.4 on win32)" generated="20231021 19:46:26.245" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1 (Python 3.11.4 on win32)" generated="20231022 14:07:08.976" rpa="false" schemaversion="4">
 <suite id="s1" name="Tests" source="D:\OneDrive - Novabase\Documents\1.AutomaticTests\robot_framework--advanced\Frontend\tests">
 <suite id="s1-s1" name="3.Geek" source="D:\OneDrive - Novabase\Documents\1.AutomaticTests\robot_framework--advanced\Frontend\tests\3.Geek.robot">
 <test id="s1-s1-t1" name="Be a Geek" line="14">
@@ -11,18 +11,18 @@
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<msg timestamp="20231021 19:46:32.782" level="INFO">{"browser": "chromium", "headless": true, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "deprecated_pos_args": [], "tracesDir": "D:\\OneDrive - Novabase\\Documents\\1.AutomaticTests\\robot_framework--advanced\\Frontend\\logs\\pabot_results\\2\\browser\\traces\\6a9cd85c-9e07-4264-9178-d3c76284525e"}</msg>
-<msg timestamp="20231021 19:46:37.336" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"deprecated_pos_args":[],"tracesDir":"D:\\OneDrive - Novabase\\Documents\\1.AutomaticTests\\robot_framework--advanced\\Frontend\\logs\\pabot_results\\2\\browser\\traces\\6a9cd85c-9e07-4264-9178-d3c76284525e"}</msg>
-<status status="PASS" starttime="20231021 19:46:32.780" endtime="20231021 19:46:37.337"/>
+<msg timestamp="20231022 14:07:11.230" level="INFO">{"browser": "chromium", "headless": true, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "deprecated_pos_args": [], "tracesDir": "D:\\OneDrive - Novabase\\Documents\\1.AutomaticTests\\robot_framework--advanced\\Frontend\\logs\\pabot_results\\2\\browser\\traces\\c0ec3230-bdda-4594-8fb7-55c8b5bad004"}</msg>
+<msg timestamp="20231022 14:07:13.791" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"deprecated_pos_args":[],"tracesDir":"D:\\OneDrive - Novabase\\Documents\\1.AutomaticTests\\robot_framework--advanced\\Frontend\\logs\\pabot_results\\2\\browser\\traces\\c0ec3230-bdda-4594-8fb7-55c8b5bad004"}</msg>
+<status status="PASS" starttime="20231022 14:07:11.229" endtime="20231022 14:07:13.791"/>
 </kw>
 <kw name="New Page" library="Browser">
 <arg>${BASE_URL}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<msg timestamp="20231021 19:46:42.089" level="INFO">Successfully initialized new page object and opened url: https://web-geek.fly.dev</msg>
-<msg timestamp="20231021 19:46:42.090" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
-<status status="PASS" starttime="20231021 19:46:37.338" endtime="20231021 19:46:42.090"/>
+<msg timestamp="20231022 14:07:19.023" level="INFO">Successfully initialized new page object and opened url: https://web-geek.fly.dev</msg>
+<msg timestamp="20231022 14:07:19.023" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<status status="PASS" starttime="20231022 14:07:13.791" endtime="20231022 14:07:19.024"/>
 </kw>
 <kw name="Set Viewport Size" library="Browser">
 <arg>1280</arg>
@@ -30,16 +30,16 @@
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Sets current Pages viewport size to specified dimensions.</doc>
-<msg timestamp="20231021 19:46:42.106" level="INFO">Set viewport size to: [object Object]</msg>
-<status status="PASS" starttime="20231021 19:46:42.092" endtime="20231021 19:46:42.107"/>
+<msg timestamp="20231022 14:07:19.041" level="INFO">Set viewport size to: [object Object]</msg>
+<status status="PASS" starttime="20231022 14:07:19.024" endtime="20231022 14:07:19.041"/>
 </kw>
-<status status="PASS" starttime="20231021 19:46:32.779" endtime="20231021 19:46:42.107"/>
+<status status="PASS" starttime="20231022 14:07:11.229" endtime="20231022 14:07:19.042"/>
 </kw>
 <kw name="Factory User" library="Users">
 <var>${user}</var>
 <arg>be_geek</arg>
-<msg timestamp="20231021 19:46:42.110" level="INFO">${user} = {'name': 'Bags', 'lastname': 'Loli', 'email': 'bags.loli@gmail.com', 'password': 'Kika1234', 'geek_profile': {'whats': '11999999999', 'desc': 'Sou bom em abrir embalagem de pc, depois me esconder e ar...</msg>
-<status status="PASS" starttime="20231021 19:46:42.108" endtime="20231021 19:46:42.110"/>
+<msg timestamp="20231022 14:07:19.045" level="INFO">${user} = {'name': 'Bags', 'lastname': 'Loli', 'email': 'bags.loli@gmail.com', 'password': 'Kika1234', 'geek_profile': {'whats': '11999999999', 'desc': 'Sou bom em abrir embalagem de pc, depois me esconder e ar...</msg>
+<status status="PASS" starttime="20231022 14:07:19.043" endtime="20231022 14:07:19.045"/>
 </kw>
 <kw name="Do Login" library="Helpers">
 <arg>${user}</arg>
@@ -49,8 +49,8 @@
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Navigates to the given ``url``.</doc>
-<msg timestamp="20231021 19:46:42.872" level="INFO">Successfully opened URL https://web-geek.fly.dev</msg>
-<status status="PASS" starttime="20231021 19:46:42.114" endtime="20231021 19:46:42.872"/>
+<msg timestamp="20231022 14:07:19.846" level="INFO">Successfully opened URL https://web-geek.fly.dev</msg>
+<status status="PASS" starttime="20231022 14:07:19.048" endtime="20231022 14:07:19.846"/>
 </kw>
 <kw name="Wait For Elements State" library="Browser">
 <arg>${element_form}</arg>
@@ -59,10 +59,10 @@
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<msg timestamp="20231021 19:46:42.930" level="INFO">Waited for Element with selector css=.login-form at state visible</msg>
-<status status="PASS" starttime="20231021 19:46:42.873" endtime="20231021 19:46:42.930"/>
+<msg timestamp="20231022 14:07:19.962" level="INFO">Waited for Element with selector css=.login-form at state visible</msg>
+<status status="PASS" starttime="20231022 14:07:19.847" endtime="20231022 14:07:19.962"/>
 </kw>
-<status status="PASS" starttime="20231021 19:46:42.112" endtime="20231021 19:46:42.930"/>
+<status status="PASS" starttime="20231022 14:07:19.047" endtime="20231022 14:07:19.962"/>
 </kw>
 <kw name="Fill Credentials" library="meta">
 <arg>${user}</arg>
@@ -72,8 +72,8 @@
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<msg timestamp="20231021 19:46:42.932" level="INFO">Fills the text 'bags.loli@gmail.com' in the given field.</msg>
-<status status="PASS" starttime="20231021 19:46:42.931" endtime="20231021 19:46:42.976"/>
+<msg timestamp="20231022 14:07:19.964" level="INFO">Fills the text 'bags.loli@gmail.com' in the given field.</msg>
+<status status="PASS" starttime="20231022 14:07:19.963" endtime="20231022 14:07:20.050"/>
 </kw>
 <kw name="Fill Text" library="Browser">
 <arg>${input_pass}</arg>
@@ -81,10 +81,10 @@
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<msg timestamp="20231021 19:46:42.977" level="INFO">Fills the text 'Kika1234' in the given field.</msg>
-<status status="PASS" starttime="20231021 19:46:42.976" endtime="20231021 19:46:43.013"/>
+<msg timestamp="20231022 14:07:20.054" level="INFO">Fills the text 'Kika1234' in the given field.</msg>
+<status status="PASS" starttime="20231022 14:07:20.050" endtime="20231022 14:07:20.099"/>
 </kw>
-<status status="PASS" starttime="20231021 19:46:42.930" endtime="20231021 19:46:43.013"/>
+<status status="PASS" starttime="20231022 14:07:19.962" endtime="20231022 14:07:20.100"/>
 </kw>
 <kw name="Submit Credentials" library="meta">
 <kw name="Click" library="Browser">
@@ -92,9 +92,9 @@
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20231021 19:46:43.014" endtime="20231021 19:46:43.137"/>
+<status status="PASS" starttime="20231022 14:07:20.101" endtime="20231022 14:07:20.218"/>
 </kw>
-<status status="PASS" starttime="20231021 19:46:43.013" endtime="20231021 19:46:43.137"/>
+<status status="PASS" starttime="20231022 14:07:20.100" endtime="20231022 14:07:20.219"/>
 </kw>
 <kw name="User shold Be Logged in" library="meta">
 <arg>${user}</arg>
@@ -102,8 +102,8 @@
 <var>${fullName}</var>
 <arg>${user}[name] ${user}[lastname]</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20231021 19:46:43.140" level="INFO">${fullName} = Bags Loli</msg>
-<status status="PASS" starttime="20231021 19:46:43.139" endtime="20231021 19:46:43.140"/>
+<msg timestamp="20231022 14:07:20.227" level="INFO">${fullName} = Bags Loli</msg>
+<status status="PASS" starttime="20231022 14:07:20.224" endtime="20231022 14:07:20.227"/>
 </kw>
 <kw name="Wait For Elements State" library="Browser">
 <arg>${element_home}</arg>
@@ -112,13 +112,13 @@
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<msg timestamp="20231021 19:46:48.356" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/fail-screenshot-1.png"&gt;&lt;img src="browser/screenshot/fail-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20231021 19:46:48.357" level="FAIL">TimeoutError: locator.waitFor: Timeout 5000ms exceeded.
+<msg timestamp="20231022 14:07:25.600" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/fail-screenshot-1.png"&gt;&lt;img src="browser/screenshot/fail-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20231022 14:07:25.600" level="FAIL">TimeoutError: locator.waitFor: Timeout 5000ms exceeded.
 =========================== logs ===========================
 waiting for locator('a[href="/profile"]') to be visible
 ============================================================
 Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.</msg>
-<status status="FAIL" starttime="20231021 19:46:43.140" endtime="20231021 19:46:48.473"/>
+<status status="FAIL" starttime="20231022 14:07:20.227" endtime="20231022 14:07:25.606"/>
 </kw>
 <kw name="Get Text" library="Browser">
 <arg>${element_home}</arg>
@@ -128,46 +128,46 @@ Tip: Use "Set Browser Timeout" for increasing the timeout or double check your l
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="NOT RUN" starttime="20231021 19:46:48.473" endtime="20231021 19:46:48.473"/>
+<status status="NOT RUN" starttime="20231022 14:07:25.607" endtime="20231022 14:07:25.607"/>
 </kw>
-<status status="FAIL" starttime="20231021 19:46:43.138" endtime="20231021 19:46:48.473"/>
+<status status="FAIL" starttime="20231022 14:07:20.219" endtime="20231022 14:07:25.608"/>
 </kw>
-<status status="FAIL" starttime="20231021 19:46:42.111" endtime="20231021 19:46:48.474"/>
+<status status="FAIL" starttime="20231022 14:07:19.046" endtime="20231022 14:07:25.608"/>
 </kw>
 <kw name="Go to Geek form" library="meta">
-<status status="NOT RUN" starttime="20231021 19:46:48.474" endtime="20231021 19:46:48.474"/>
+<status status="NOT RUN" starttime="20231022 14:07:25.608" endtime="20231022 14:07:25.609"/>
 </kw>
 <kw name="Fill Geek Forms" library="meta">
 <arg>${user}[geek_profile]</arg>
-<status status="NOT RUN" starttime="20231021 19:46:48.474" endtime="20231021 19:46:48.474"/>
+<status status="NOT RUN" starttime="20231022 14:07:25.609" endtime="20231022 14:07:25.609"/>
 </kw>
 <kw name="Submit Geek Form" library="meta">
-<status status="NOT RUN" starttime="20231021 19:46:48.475" endtime="20231021 19:46:48.475"/>
+<status status="NOT RUN" starttime="20231022 14:07:25.610" endtime="20231022 14:07:25.610"/>
 </kw>
 <kw name="User Should Be Registered" library="meta">
-<status status="NOT RUN" starttime="20231021 19:46:48.475" endtime="20231021 19:46:48.475"/>
+<status status="NOT RUN" starttime="20231022 14:07:25.610" endtime="20231022 14:07:25.611"/>
 </kw>
 <kw name="Finish Session" library="Base" type="TEARDOWN">
 <kw name="Take Screenshot" library="Browser">
 <arg>fullPage=True</arg>
 <tag>PageContent</tag>
 <doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
-<msg timestamp="20231021 19:46:48.767" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-1.png"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20231021 19:46:48.477" endtime="20231021 19:46:48.767"/>
+<msg timestamp="20231022 14:07:25.942" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-1.png"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231022 14:07:25.612" endtime="20231022 14:07:25.943"/>
 </kw>
-<status status="PASS" starttime="20231021 19:46:48.476" endtime="20231021 19:46:48.767"/>
+<status status="PASS" starttime="20231022 14:07:25.611" endtime="20231022 14:07:25.943"/>
 </kw>
 <tag>happy_way</tag>
-<status status="FAIL" starttime="20231021 19:46:32.772" endtime="20231021 19:46:48.767">TimeoutError: locator.waitFor: Timeout 5000ms exceeded.
+<status status="FAIL" starttime="20231022 14:07:11.226" endtime="20231022 14:07:25.943">TimeoutError: locator.waitFor: Timeout 5000ms exceeded.
 =========================== logs ===========================
 waiting for locator('a[href="/profile"]') to be visible
 ============================================================
 Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.</status>
 </test>
 <doc>Geek Test Suite</doc>
-<status status="FAIL" starttime="20231021 19:46:26.402" endtime="20231021 19:46:48.835"/>
+<status status="FAIL" starttime="20231022 14:07:09.033" endtime="20231022 14:07:25.997"/>
 </suite>
-<status status="FAIL" starttime="20231021 19:46:26.276" endtime="20231021 19:46:48.841"/>
+<status status="FAIL" starttime="20231022 14:07:09.000" endtime="20231022 14:07:26.002"/>
 </suite>
 <statistics>
 <total>

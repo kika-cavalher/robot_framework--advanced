@@ -3,8 +3,8 @@
 
 
 #Limpar Banco. 
-robot -l NONE -o NONE -r NONE Frontend/tasks/Delorean.robot
-pabot -d ./Frontend/logs Frontend/tests
+robot -l NONE -o NONE -r NONE /tasks/Delorean.robot
+robot -x xunit.xml -d ./logs ./tests
 
 #pabot diminui o tempo de execução. 
 
