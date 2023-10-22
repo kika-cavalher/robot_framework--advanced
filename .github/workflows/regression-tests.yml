@@ -51,7 +51,16 @@ jobs:
       uses: dorny/test-reporter@v1.7.0
       with:
           name: API Test Result
-          path: Backend/logs/output.xml
+          path: Backend/logs/xunit.xml
+          reporter: java-junit
+
+
+    - name: Robot Reporter
+      uses: joonvena/robotframework-reporter-action@v2.3
+      with:
+          name: API Test Result
+          gh_access_token: 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
+          path: Backend/logs
           reporter: java-junit
 
   web_tests:
