@@ -54,6 +54,14 @@ jobs:
           path: Backend/logs/xunit.xml
           reporter: java-junit
 
+
+    # - name: Robot Reporter
+    #   uses: joonvena/robotframework-reporter-action@v2.3
+    #   with:
+    #       gh_access_token: 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
+    #       report_path: Backend/logs
+
+
   web_tests:
     needs: api_tests
     runs-on: ubuntu-latest
