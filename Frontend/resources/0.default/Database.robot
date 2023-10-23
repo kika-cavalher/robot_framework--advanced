@@ -34,11 +34,13 @@ Insert User
 
 #Esse metodo serve para deixar um usuario criado no banco após limpeza, para fazer o teste de login. 
 Users Seed
-    ${user}                                          Factory User                             login
-    Insert User                                      ${user}                                                                            
 
-    ${user2}                                         Factory User                             be_geek
-    Insert User                                      ${user2}
+    ${users}                                         Users To Insert DB
 
-    ${user3}                                         Factory User                             attempt_geek
-    Insert User                                      ${user3}
+    FOR    ${user}    IN    @{users}
+        Insert User         ${user} 
+    END
+
+
+    #${user3}                                         Factory User                             attempt_geek
+    #Insert User                                      ${user3}

@@ -10,6 +10,14 @@ def get_hashed_pass(password):
     return hashed
 
 
+def users_to_insert_db():
+    return  [
+        factory_user('login'),
+        factory_user('be_geek'),
+        factory_user('attempt_geek')
+    ]
+
+
 def factory_user(target):
     first_name = fake.first_name()
 

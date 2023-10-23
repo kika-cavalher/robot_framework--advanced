@@ -1,11 +1,11 @@
-{"level":30,"time":"2023-10-22T13:16:29.465Z","pid":15408,"hostname":"LT132792","msg":"Listening on 53981"}
-{"level":30,"time":"2023-10-22T13:16:29.490Z","pid":15408,"hostname":"LT132792","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2023-10-22T13:16:29.491Z","pid":15408,"hostname":"LT132792","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2023-10-22T13:16:29.493Z","pid":15408,"hostname":"LT132792","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2023-10-22T13:16:29.494Z","pid":15408,"hostname":"LT132792","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2023-10-22T13:16:30.786Z","pid":15408,"hostname":"LT132792","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2023-10-22T13:16:30.786Z","pid":15408,"hostname":"LT132792","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2023-10-22T13:16:30.790Z","pid":15408,"hostname":"LT132792","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2023-10-22T13:16:30.790Z","pid":15408,"hostname":"LT132792","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2023-10-22T13:16:30.794Z","pid":15408,"hostname":"LT132792","msg":"Start of node method closeAllBrowsers"}
-{"level":30,"time":"2023-10-22T13:16:30.794Z","pid":15408,"hostname":"LT132792","msg":"End of node method closeAllBrowsers"}
+{"level":30,"time":"2023-10-23T14:23:22.358Z","pid":11168,"hostname":"LT132792","msg":"Listening on 62417"}
+{"level":30,"time":"2023-10-23T14:23:22.872Z","pid":11168,"hostname":"LT132792","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-10-23T14:23:22.872Z","pid":11168,"hostname":"LT132792","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-10-23T14:23:22.875Z","pid":11168,"hostname":"LT132792","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-10-23T14:23:22.875Z","pid":11168,"hostname":"LT132792","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-10-23T14:23:24.125Z","pid":11168,"hostname":"LT132792","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-10-23T14:23:24.125Z","pid":11168,"hostname":"LT132792","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-10-23T14:23:24.131Z","pid":11168,"hostname":"LT132792","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-10-23T14:23:24.131Z","pid":11168,"hostname":"LT132792","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-10-23T14:23:24.138Z","pid":11168,"hostname":"LT132792","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2023-10-23T14:23:24.139Z","pid":11168,"hostname":"LT132792","msg":"End of node method closeAllBrowsers"}
